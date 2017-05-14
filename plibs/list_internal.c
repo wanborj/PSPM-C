@@ -1,158 +1,138 @@
 #include "list_internal.h"
-#include "event.h"
+#include "PSPMconfigure.h"
+#include "PSPMport.h"
 
-void prv_list_initialize(list_t * pEventList)
+
+void prv_list_initialize(prv_list_t * L)
 {
-    pEventList->length = 0;
-    pEventList->earliest_time = 100000000; // set to the max time
-    pEventList->first = pEventList->last = NULL;
+    L->length = 0;
+    L->first = L->last = L->current = NULL;
 }
 
-void prv_item_initialize(void * item, item_t * pEventItem)
+void prv_item_initialize(void * entity, prv_item_t * item)
 {
-    pEventItem->item = item;
-    pEventItem->owner = NULL;
-    pEventItem->next = NULL;
-    pEventItem->prev = NULL;
+    item->entity= entity;
+    item->owner = NULL;
+    item->next = NULL;
+    item->prev = NULL;
 }
 
-void prv_list_insert( item_t * pEventItem, list_t * pEventList)
+void prv_list_set_current_item(prv_list_t * l)
 {
-    ps_event_t * pevent = (ps_event_t *)prv_item_get_entity(pEventItem);
+	l->current = l->current->next;
+}
 
-    if(pEventList->length == 0){
-        pEventList->first = pEventList->last = pEventItem;
-        pEventItem->prev = NULL;
-        pEventItem->next = NULL;
+void * prv_list_get_current_entity(prv_list_t * L)
+{
+	void * s = ((prv_list_t *)L)->current->entity;
+	((prv_list_t *)L)->current = ((prv_list_t *)L)->current->next;
+
+	return s;
+}
+
+void prv_list_insert( void * entity, prv_list_t * L)
+{
+	prv_item_t * item = (prv_item_t*)port_malloc(sizeof(prv_item_t));
+	prv_item_initialize(entity, item);
+
+    if(L->length == 0){
+        L->first = L->last = L->current= item;
+        item->prev = item;
+		item->next = item;
     }else{
-        pEventList->last->next = pEventItem;
-        pEventList->first->prev = pEventItem;
+        L->last->next = item;
+        L->first->prev = item;
 
-        pEventItem->prev = pEventList->last;
-        pEventItem->next = pEventList->first;
-        pEventList->last = pEventItem;
+        item->prev = L->last;
+        item->next = L->first;
+		L->last = item; // insert in the end of list
+		//L->fist = item; // insert in the start of list
     }
 
-    pEventList->length ++;
-    pEventItem->owner = (void *)pEventList;
-
-    if( pEventList->earliest_time >  pevent->tag.timestamp){
-        pEventList->earliest_time = pevent->tag.timestamp;
-    }
+    L->length ++;
+    item->owner = (void *)L;
 }
 
-static int tag_compare(ps_event_t * pe1, ps_event_t *pe2)
+
+void prv_list_insert_sorted(void * entity, prv_list_t * L, int (*compare)(void *, void *))
 {
-    if( pe1->tag.timestamp < pe2->tag.timestamp ){
-        return 1;
-    }else if( pe1->tag.timestamp == pe2->tag.timestamp ){
-        if( pe1->tag.microstep < pe2->tag.microstep ){
-            return 1;
-        }else if( pe1->tag.microstep == pe2->tag.microstep ){
-            if( pe1->tag.level < pe2->tag.level ){
-                return 1;
-            }
-        }
-    }
+    volatile  prv_item_t * pIndex;
+    int i;
+	int len = prv_list_get_length(L);
 
-    return 0;
-}
+	prv_item_t * item = (prv_item_t*)port_malloc(sizeof(prv_item_t));
+	prv_item_initialize(entity, item);
 
-void prv_list_insert_sorted(item_t * pEventItem, list_t * pEventList)
-{
-    ps_event_t * pevent = (ps_event_t *)prv_item_get_entity(pEventItem);
-    volatile  item_t * pIndex;
-    int i, len;
-
-    if(pEventList->length == 0){
-        pEventList->first = pEventList->last = pEventItem;
-        pEventItem->prev = pEventItem;
-        pEventItem->next = pEventItem;
+    if(len == 0){
+        L->first = L->last = L->current = item;
+        item->prev = item;
+        item->next = item;
     }else{
-        len = pEventList->length;
-        pIndex = prv_list_get_first_item(pEventList);
-        for( i = 0; i < len; ++i){
-            if(1 == tag_compare(pevent, prv_item_get_entity(pIndex))){
+        pIndex = prv_list_get_first_item(L);
+        for( i = 0; i < len; ++i, pIndex = prv_item_get_next(pIndex)){
+            if(1 == compare(entity, prv_item_get_entity(pIndex))){
                 if( i == 0 ){
-                    pEventList->first = pEventItem;
+					L->first = item;  // the entity should be the first one
                 }
-                break;
+				break; // find the right position
             }
-            pIndex = prv_item_get_next(pIndex);
         }
         if( i == len ){
-            pEventList->last = pEventItem;
+			L->last = item; // the entity should be the last one
         }
-        pEventItem->next = (item_t *)pIndex;
-        pEventItem->prev = pIndex->prev;
-        pIndex->prev->next = pEventItem;
-        pIndex->prev = pEventItem;
+        item->next = (prv_item_t *)pIndex;
+        item->prev = pIndex->prev;
+        pIndex->prev->next = item;
+        pIndex->prev = item;
     }
 
-    pEventList->length ++;
-    pEventItem->owner = (void *)pEventList;
-    if( pEventList->earliest_time >  pevent->tag.timestamp){
-        pEventList->earliest_time = pevent->tag.timestamp;
-    }
+    L->length ++;
+    item->owner = (void *)L;
 }
 
-void prv_list_remove(item_t * pEventItem)
-{
-    list_t * pList = (list_t *)pEventItem->owner;
 
-    if(pList->length == 0){
-        port_print("error: no event could be remove in this event list; in prv_list_remove()\n\r");
+void prv_list_remove(prv_item_t * item)
+{
+    prv_list_t * L = (prv_list_t *)item->owner;
+
+    if(L->length == 0){
+        //port_print("error: no event could be remove in this event list; in prv_list_remove()\n\r");
+		return;
     }
 
-    if(pList->length == 1){
-        pList->first = NULL;
-        pList->last = NULL;
+    if(L->length == 1){
+        L->first = NULL;
+        L->last = NULL;
+		L->current = NULL;
     }else{
-        if(pEventItem == prv_list_get_first_item(pList)){
-            pList->first = pEventItem->next;
+        if(item == prv_list_get_first_item(L)){
+            L->first = item->next;
         }
-        if(pEventItem == prv_list_get_last_item(pList)){
-            pList->last = pEventItem->prev;
+        if(item == prv_list_get_last_item(L)){
+            L->last = item->prev;
         }
-        pEventItem->prev->next = pEventItem->next;
-        pEventItem->next->prev = pEventItem->prev;
+        item->prev->next = item->next;
+        item->next->prev = item->prev;
     }
-    pEventItem->owner = NULL;
-    pList->length --;
+
+	port_free(item); // free the memory of item but not the entity
+	item = NULL;
+    L->length --;
 }
 
 
-void prv_list_earliest_time_update(list_t * pEventList)
+// remove and return the first item of a list
+void * prv_list_pop(prv_list_t * L)
 {
-    int i, len;
-    if(pEventList->length == 0)
-    {
-        pEventList->earliest_time = 100000000;
-    }else{
-        len = prv_list_get_length(pEventList);
-        volatile  item_t * pIndex = prv_list_get_first_item(pEventList);
-        pEventList->earliest_time = ((ps_event_t *)pIndex->item)->tag.timestamp;
-
-        for( i = 0; i < len; i++ , pIndex = prv_item_get_next(pIndex)){
-            if(pEventList->earliest_time > ((ps_event_t *)pIndex->item)->tag.timestamp)
-            {
-                pEventList->earliest_time = ((ps_event_t *)pIndex->item)->tag.timestamp;
-            }
-        }
-    }
-}
-
-
-item_t * prv_list_receive(list_t * pEventList)
-{
-    if(pEventList->length == 0){
+    if(L->length == 0){
         return NULL;
     }
 
-    item_t * pitem = pEventList->first;
-    prv_list_remove(pitem);
+	void * entity = L->first->entity;
+    prv_list_remove(L->first);
 
-    return pitem;
+    return entity;
 }
+
 
 

@@ -1,0 +1,1135 @@
+arm-none-eabi-gcc \
+		-Wl,-Tmain.ld -nostartfiles \
+		-I. -Ilibraries/FreeRTOS/include/ -Ilibraries/FreeRTOS/portable/GCC/ARM_CM3/ \
+		-Ilibraries/CMSIS/CM3/CoreSupport \
+		-Ilibraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
+		-Ilibraries/STM32F10x_StdPeriph_Driver/inc \
+		-Iapps \
+		-Iplibs \
+		-Iplibs/include \
+		-fno-common \
+		-gdwarf-2 -g3 \
+		-mcpu=cortex-m3 -mthumb \
+		-o main.elf \
+		\
+		libraries/CMSIS/CM3/CoreSupport/core_cm3.c \
+		libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c \
+		libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_md.s \
+		libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c \
+		libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c \
+		libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c \
+		libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c \
+		libraries/STM32F10x_StdPeriph_Driver/src/misc.c \
+		\
+		libraries/FreeRTOS/croutine.c \
+		libraries/FreeRTOS/list.c \
+		libraries/FreeRTOS/queue.c \
+		libraries/FreeRTOS/tasks.c \
+		libraries/FreeRTOS/portable/GCC/ARM_CM3/port.c \
+		libraries/FreeRTOS/portable/MemMang/heap_2.c \
+		\
+		plibs/mode.c \
+		plibs/ptask.c \
+		plibs/servant.c \
+		plibs/event.c \
+		plibs/exec_flow.c \
+		plibs/list_internal.c \
+		plibs/model_time.c \
+		plibs/PSEFMstart.c \
+		plibs/hashtable.c \
+		\
+		apps/app.c \
+		apps/stm32_p103.c \
+		\
+		main.c
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/mode.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/mode.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:8:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/mode.c:1:
+plibs/include/exec_flow.h:23:26: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                          ^
+plibs/include/exec_flow.h:23:44: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                                            ^
+plibs/include/exec_flow.h:36:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_get_current_servant();
+ ^
+plibs/include/exec_flow.h:37:41: error: unknown type name 'ps_servant_t'
+ void         prv_ef_set_current_servant(ps_servant_t s);
+                                         ^
+plibs/include/exec_flow.h:53:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_pick_next();
+ ^
+plibs/include/exec_flow.h:65:24: error: unknown type name 'ps_servant_t'
+ void prv_ef_triggering(ps_servant_t s);
+                        ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/mode.c:1:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/mode.c:1:0:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+plibs/mode.c:6:1: warning: excess elements in scalar initializer [enabled by default]
+ ps_mode_array_t marray= {0, modes};
+ ^
+plibs/mode.c:6:1: warning: (near initialization for 'marray') [enabled by default]
+plibs/mode.c:7:1: warning: excess elements in scalar initializer [enabled by default]
+ ps_condition_array_t carray = {0, conditions};
+ ^
+plibs/mode.c:7:1: warning: (near initialization for 'carray') [enabled by default]
+plibs/mode.c: In function 'ps_mode_switch_create':
+plibs/mode.c:55:29: error: 'ps_condition_t' undeclared (first use in this function)
+  carray->conditions[num] = (ps_condition_t)port_malloc(sizeof(struct condition));
+                             ^
+plibs/mode.c:55:29: note: each undeclared identifier is reported only once for each function it appears in
+In file included from plibs/include/list_internal.h:4:0,
+                 from plibs/include/servant.h:5,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/mode.c:1:
+plibs/PSEFMport.h:30:27: error: expected ';' before 'pvPortMalloc'
+ #define port_malloc(size) pvPortMalloc(size)
+                           ^
+plibs/mode.c:55:44: note: in expansion of macro 'port_malloc'
+  carray->conditions[num] = (ps_condition_t)port_malloc(sizeof(struct condition));
+                                            ^
+plibs/mode.c:56:28: error: request for member 'mid' in something not a structure or union
+     carray->conditions[num].mid= target;
+                            ^
+plibs/mode.c:57:28: error: request for member 'condition' in something not a structure or union
+     carray->conditions[num].condition = condition;
+                            ^
+plibs/mode.c: In function 'prv_mode_switch':
+plibs/mode.c:66:35: error: invalid type argument of '->' (have 'int')
+   if( (tmp = carray->conditions[i]->condition()) == 1){
+                                   ^
+plibs/mode.c:67:54: error: invalid type argument of '->' (have 'int')
+    current_mode = marray->modes[carray->conditions[i]->mid];
+                                                      ^
+plibs/mode.c:73:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+  current_mode = marray->modes[0];
+               ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/ptask.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/include/ptask.h:4,
+                 from plibs/ptask.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/include/ptask.h:4,
+                 from plibs/ptask.c:1:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+plibs/include/mode.h:50:50: error: unknown type name 'ps_task_t'
+ void ps_mode_create(prv_id_t mid, prv_num_t num, ps_task_t task_array[]);
+                                                  ^
+In file included from plibs/include/servant.h:8:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/ptask.c:1:
+plibs/include/exec_flow.h:23:26: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                          ^
+plibs/include/exec_flow.h:23:44: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                                            ^
+plibs/include/exec_flow.h:36:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_get_current_servant();
+ ^
+plibs/include/exec_flow.h:37:41: error: unknown type name 'ps_servant_t'
+ void         prv_ef_set_current_servant(ps_servant_t s);
+                                         ^
+plibs/include/exec_flow.h:53:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_pick_next();
+ ^
+plibs/include/exec_flow.h:65:24: error: unknown type name 'ps_servant_t'
+ void prv_ef_triggering(ps_servant_t s);
+                        ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/ptask.c:1:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+plibs/ptask.c:2:23: warning: missing terminating " character [enabled by default]
+ #include "exec_flow.h""
+                       ^
+plibs/ptask.c:2:23: warning: extra tokens at end of #include directive [enabled by default]
+plibs/ptask.c: In function 'ps_task_create':
+plibs/ptask.c:16:12: error: request for member 'tid' in something not a structure or union
+  tasks[tid].tid = tid;
+            ^
+plibs/ptask.c:17:12: error: request for member 'let' in something not a structure or union
+  tasks[tid].let = tasks[tid].period = tasks[tid].deadline = let;
+            ^
+plibs/ptask.c:17:29: error: request for member 'period' in something not a structure or union
+  tasks[tid].let = tasks[tid].period = tasks[tid].deadline = let;
+                             ^
+plibs/ptask.c:17:49: error: request for member 'deadline' in something not a structure or union
+  tasks[tid].let = tasks[tid].period = tasks[tid].deadline = let;
+                                                 ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/servant.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/servant.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/mode.h:5:0,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/include/servant.h:8,
+                 from plibs/servant.c:1:
+plibs/include/ptask.h:47:7: error: unknown type name 'ps_servant_t'
+       ps_servant_t servants[]);
+       ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/servant.c:1:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+In file included from plibs/include/servant.h:8:0,
+                 from plibs/servant.c:1:
+plibs/include/exec_flow.h:23:26: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                          ^
+plibs/include/exec_flow.h:23:44: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                                            ^
+plibs/include/exec_flow.h:36:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_get_current_servant();
+ ^
+plibs/include/exec_flow.h:37:41: error: unknown type name 'ps_servant_t'
+ void         prv_ef_set_current_servant(ps_servant_t s);
+                                         ^
+plibs/include/exec_flow.h:53:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_pick_next();
+ ^
+plibs/include/exec_flow.h:65:24: error: unknown type name 'ps_servant_t'
+ void prv_ef_triggering(ps_servant_t s);
+                        ^
+In file included from plibs/servant.c:1:0:
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/PSEFMport.h:6:0,
+                 from plibs/include/list_internal.h:4,
+                 from plibs/include/servant.h:5,
+                 from plibs/servant.c:1:
+plibs/servant.c: In function 'ps_servant_wake':
+plibs/servant.c:12:23: error: 'servant_id' undeclared (first use in this function)
+     port_trigger( sem[servant_id] );  // trigger the sem of the dest servant
+                       ^
+libraries/FreeRTOS/include/semphr.h:366:77: note: in definition of macro 'xSemaphoreGive'
+ #define xSemaphoreGive( xSemaphore )  xQueueGenericSend( ( xQueueHandle ) ( xSemaphore ), NULL, semGIVE_BLOCK_TIME, queueSEND_TO_BACK )
+                                                                             ^
+plibs/servant.c:12:5: note: in expansion of macro 'port_trigger'
+     port_trigger( sem[servant_id] );  // trigger the sem of the dest servant
+     ^
+plibs/servant.c:12:23: note: each undeclared identifier is reported only once for each function it appears in
+     port_trigger( sem[servant_id] );  // trigger the sem of the dest servant
+                       ^
+libraries/FreeRTOS/include/semphr.h:366:77: note: in definition of macro 'xSemaphoreGive'
+ #define xSemaphoreGive( xSemaphore )  xQueueGenericSend( ( xQueueHandle ) ( xSemaphore ), NULL, semGIVE_BLOCK_TIME, queueSEND_TO_BACK )
+                                                                             ^
+plibs/servant.c:12:5: note: in expansion of macro 'port_trigger'
+     port_trigger( sem[servant_id] );  // trigger the sem of the dest servant
+     ^
+plibs/servant.c: In function 'ps_servant_create':
+plibs/servant.c:34:3: error: 'struct servant' has no member named 'length'
+  s->length = num;
+   ^
+plibs/servant.c:43:22: warning: assignment makes integer from pointer without a cast [enabled by default]
+   message[i]->source = src_array[i];
+                      ^
+plibs/servant.c:44:27: warning: assignment makes integer from pointer without a cast [enabled by default]
+   message[i]->destination = s;
+                           ^
+In file included from plibs/include/servant.h:6:0,
+                 from plibs/servant.c:1:
+plibs/include/hashtable.h:14:74: error: 'free' undeclared (first use in this function)
+ #define prv_hashtable_add(ht,key,value)  prv_hashtable_put2(ht,key,value,free)
+                                                                          ^
+plibs/servant.c:46:12: note: in expansion of macro 'prv_hashtable_add'
+   if(-1 == prv_hashtable_add(ht, ch, message[i]))   // the inbox is a hashtable
+            ^
+plibs/servant.c: In function 'ps_servant_wait':
+plibs/servant.c:61:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+  ps_servant_t * s = prv_ef_get_current_servant();
+                     ^
+plibs/servant.c:62:2: error: unknown type name 'ps_id_t'
+  ps_id_t  sid = prv_servant_get_id(s);
+  ^
+plibs/servant.c: At top level:
+plibs/servant.c:66:6: error: redefinition of 'ps_servant_wake'
+ void ps_servant_wake( ps_servant_t * s )
+      ^
+plibs/servant.c:9:6: note: previous definition of 'ps_servant_wake' was here
+ void ps_servant_wake( ps_servant_t * s)
+      ^
+plibs/servant.c: In function 'ps_message_send':
+plibs/servant.c:75:7: error: 's' undeclared (first use in this function)
+  itoa(s->sid, ch);
+       ^
+In file included from plibs/include/servant.h:6:0,
+                 from plibs/servant.c:1:
+plibs/include/hashtable.h:14:74: error: 'free' undeclared (first use in this function)
+ #define prv_hashtable_add(ht,key,value)  prv_hashtable_put2(ht,key,value,free)
+                                                                          ^
+plibs/servant.c:77:2: note: in expansion of macro 'prv_hashtable_add'
+  prv_hashtable_add(target->inbox, ch, message);
+  ^
+plibs/servant.c: At top level:
+plibs/servant.c:80:1: error: unknown type name 'prv_meesage_t'
+ prv_meesage_t ps_message_receive(ps_servant_t src)
+ ^
+plibs/servant.c: In function 'ps_message_receive':
+plibs/servant.c:84:19: warning: initialization makes pointer from integer without a cast [enabled by default]
+  ps_servant_t s = prv_ef_get_current_servant();
+                   ^
+plibs/servant.c:86:2: error: expected ',' or ';' before 'return'
+  return message;
+  ^
+In file included from plibs/event.c:1:0:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/event.c:3:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/event.c:3:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from plibs/event.c:3:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+In file included from plibs/event.c:5:0:
+plibs/include/model_time.h: In function 'prv_modeltime_time_init':
+plibs/include/model_time.h:7:42: error: expected declaration specifiers before ':' token
+ void prv_modeltime_time_init(ps_mode_t m):
+                                          ^
+plibs/include/model_time.h:24:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'bool'
+ bool prv_modeltime_is_period_start(ps_task_t t)
+ ^
+plibs/include/model_time.h:1:0: error: unterminated #ifndef
+ #ifndef __MODEL_TIME_H
+ ^
+plibs/include/model_time.h:7:6: error: old-style parameter declarations in prototyped function definition
+ void prv_modeltime_time_init(ps_mode_t m):
+      ^
+plibs/event.c:18:1: error: expected '{' at end of input
+ }
+ ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/exec_flow.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from plibs/exec_flow.c:1:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+plibs/exec_flow.c:11:2: error: unknown type name 'prv_servant_t'
+  prv_servant_t servant;
+  ^
+plibs/exec_flow.c:35:1: error: unknown type name 'prv_lsit_t'
+ static prv_lsit_t prv_ef_get_src_list(ps_servant_t s)
+ ^
+plibs/exec_flow.c: In function 'prv_ef_get_src_list':
+plibs/exec_flow.c:37:2: error: incompatible types when returning type 'prv_list_t' but 'int' was expected
+  return relations[s->sid].in;
+  ^
+plibs/exec_flow.c: In function 'prv_ef_add_relation':
+plibs/exec_flow.c:42:2: error: incompatible type for argument 2 of 'prv_list_insert'
+  prv_list_insert(dest, prv_ef_get_dest_list(src));
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:55:6: note: expected 'struct prv_list_t *' but argument is of type 'prv_list_t'
+ void prv_list_insert( void * entity, prv_list_t * L);
+      ^
+plibs/exec_flow.c:43:2: warning: passing argument 2 of 'prv_list_insert' makes pointer from integer without a cast [enabled by default]
+  prv_list_insert(src,  prv_ef_get_src_list(dest));
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:55:6: note: expected 'struct prv_list_t *' but argument is of type 'int'
+ void prv_list_insert( void * entity, prv_list_t * L);
+      ^
+plibs/exec_flow.c: In function 'compare':
+plibs/exec_flow.c:137:2: error: expected ',' or ';' before 'if'
+  if(a->type < b->type){
+  ^
+plibs/exec_flow.c:139:3: error: 'else' without a previous 'if'
+  }else if(a->type == b->type && t1->let < t2->let){
+   ^
+plibs/exec_flow.c: In function 'prv_set_update':
+plibs/exec_flow.c:170:4: error: 'edge' undeclared (first use in this function)
+    edge[sid][i] = 0;
+    ^
+plibs/exec_flow.c:170:4: note: each undeclared identifier is reported only once for each function it appears in
+plibs/exec_flow.c: At top level:
+plibs/exec_flow.c:177:1: error: unknown type name 'prv_servant_t'
+ static prv_servant_t prv_find_servant(prv_stype_t type, prv_list_t * S)
+ ^
+plibs/exec_flow.c: In function 'prv_find_servant':
+plibs/exec_flow.c:184:9: error: incompatible types when assigning to type 'prv_item_t' from type 'struct prv_item_t *'
+   index = prv_list_get_first_item(S);
+         ^
+plibs/exec_flow.c:185:31: error: invalid type argument of '->' (have 'prv_item_t')
+   result = (ps_servant_t)index->entity;
+                               ^
+plibs/exec_flow.c:188:4: warning: return makes integer from pointer without a cast [enabled by default]
+    return result;
+    ^
+plibs/exec_flow.c:191:2: warning: return makes integer from pointer without a cast [enabled by default]
+  return NULL;
+  ^
+plibs/exec_flow.c: In function 'prv_STT_create':
+plibs/exec_flow.c:210:2: error: unknown type name 'prv_servant_t'
+  prv_servant_t tmp_servant;
+  ^
+plibs/exec_flow.c:216:49: warning: comparison between pointer and integer [enabled by default]
+   while((tmp_servant = prv_find_servant(0, &S)) != NULL){
+                                                 ^
+plibs/exec_flow.c:226:4: warning: passing argument 1 of 'prv_set_update' makes pointer from integer without a cast [enabled by default]
+    prv_set_update(tmp_servant, &S);
+    ^
+plibs/exec_flow.c:161:13: note: expected 'ps_servant_t' but argument is of type 'int'
+ static void prv_set_update(ps_servant_t servant, prv_list_t * S)
+             ^
+plibs/exec_flow.c:228:49: warning: comparison between pointer and integer [enabled by default]
+   while((tmp_servant = prv_find_servant(1, &S)) != NULL){
+                                                 ^
+plibs/exec_flow.c:237:4: warning: passing argument 1 of 'prv_set_update' makes pointer from integer without a cast [enabled by default]
+    prv_set_update(tmp_servant, &S);
+    ^
+plibs/exec_flow.c:161:13: note: expected 'ps_servant_t' but argument is of type 'int'
+ static void prv_set_update(ps_servant_t servant, prv_list_t * S)
+             ^
+plibs/exec_flow.c:239:49: warning: comparison between pointer and integer [enabled by default]
+   while((tmp_servant = prv_find_servant(2, &S)) != NULL){
+                                                 ^
+plibs/exec_flow.c:245:5: warning: passing argument 1 of 'prv_set_update' makes pointer from integer without a cast [enabled by default]
+     prv_set_update(tmp_servant, &S);
+     ^
+plibs/exec_flow.c:161:13: note: expected 'ps_servant_t' but argument is of type 'int'
+ static void prv_set_update(ps_servant_t servant, prv_list_t * S)
+             ^
+plibs/exec_flow.c:247:5: warning: passing argument 1 of 'prv_list_insert' makes pointer from integer without a cast [enabled by default]
+     prv_list_insert(tmp_servant, BL);
+     ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:55:6: note: expected 'void *' but argument is of type 'int'
+ void prv_list_insert( void * entity, prv_list_t * L);
+      ^
+plibs/exec_flow.c:247:5: error: incompatible type for argument 2 of 'prv_list_insert'
+     prv_list_insert(tmp_servant, BL);
+     ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:55:6: note: expected 'struct prv_list_t *' but argument is of type 'prv_list_t'
+ void prv_list_insert( void * entity, prv_list_t * L);
+      ^
+plibs/exec_flow.c:251:4: error: incompatible type for argument 1 of 'prv_list_pop'
+    tmp_servant = prv_list_pop(BL);
+    ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:72:8: note: expected 'struct prv_list_t *' but argument is of type 'prv_list_t'
+ void * prv_list_pop(prv_list_t * L);
+        ^
+plibs/exec_flow.c:253:4: warning: passing argument 1 of 'prv_list_insert_sorted' makes pointer from integer without a cast [enabled by default]
+    prv_list_insert_sorted(tmp_servant, &S, compare);
+    ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from plibs/exec_flow.c:1:
+plibs/include/list_internal.h:57:6: note: expected 'void *' but argument is of type 'int'
+ void prv_list_insert_sorted(void * entity, prv_list_t * L, int (*compare)(void *, void *));
+      ^
+plibs/exec_flow.c: In function 'prv_ef_create':
+plibs/exec_flow.c:264:5: warning: assignment makes pointer from integer without a cast [enabled by default]
+   m = marray->modes[count];
+     ^
+plibs/exec_flow.c: In function 'prv_ef_trigger_first':
+plibs/exec_flow.c:274:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+  schedule_node n = prv_list_get_current_entity(&STT[current_mode->mid]);
+                    ^
+plibs/exec_flow.c:275:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+  next_servant = n->servant;
+               ^
+plibs/exec_flow.c: At top level:
+plibs/exec_flow.c:282:6: error: conflicting types for 'prv_ef_pick_next'
+ void prv_ef_pick_next()
+      ^
+In file included from plibs/exec_flow.c:1:0:
+plibs/include/exec_flow.h:53:14: note: previous declaration of 'prv_ef_pick_next' was here
+ ps_servant_t prv_ef_pick_next();
+              ^
+plibs/exec_flow.c: In function 'prv_ef_pick_next':
+plibs/exec_flow.c:285:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+  schedule_node n = prv_list_get_current_entity(&STT[current_mode->mid]);
+                    ^
+plibs/exec_flow.c:286:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+  next_servant = n->servant;
+               ^
+plibs/exec_flow.c: At top level:
+plibs/exec_flow.c:292:13: error: static declaration of 'prv_ef_triggering' follows non-static declaration
+ static void prv_ef_triggering()
+             ^
+In file included from plibs/exec_flow.c:1:0:
+plibs/include/exec_flow.h:65:6: note: previous declaration of 'prv_ef_triggering' was here
+ void prv_ef_triggering(ps_servant_t s);
+      ^
+plibs/exec_flow.c: In function 'prv_ef_triggering':
+plibs/exec_flow.c:293:1: error: number of arguments doesn't match prototype
+ {
+ ^
+In file included from plibs/exec_flow.c:1:0:
+plibs/include/exec_flow.h:65:6: error: prototype declaration
+ void prv_ef_triggering(ps_servant_t s);
+      ^
+plibs/exec_flow.c: In function 'prv_ef_is_time_to_trigger':
+plibs/exec_flow.c:302:5: error: 'next' undeclared (first use in this function)
+  if(next->release <= current_time){
+     ^
+In file included from plibs/list_internal.c:1:0:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+plibs/list_internal.c:4:26: error: unknown type name 'prv_prv_list_t'
+ void prv_list_initialize(prv_prv_list_t * L)
+                          ^
+plibs/list_internal.c: In function 'prv_list_remove':
+plibs/list_internal.c:96:3: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
+   exit(-1);
+   ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/model_time.h:5,
+                 from plibs/model_time.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/model_time.h:5,
+                 from plibs/model_time.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:8:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/model_time.h:5,
+                 from plibs/model_time.c:1:
+plibs/include/exec_flow.h:23:26: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                          ^
+plibs/include/exec_flow.h:23:44: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                                            ^
+plibs/include/exec_flow.h:36:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_get_current_servant();
+ ^
+plibs/include/exec_flow.h:37:41: error: unknown type name 'ps_servant_t'
+ void         prv_ef_set_current_servant(ps_servant_t s);
+                                         ^
+plibs/include/exec_flow.h:53:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_pick_next();
+ ^
+plibs/include/exec_flow.h:65:24: error: unknown type name 'ps_servant_t'
+ void prv_ef_triggering(ps_servant_t s);
+                        ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/model_time.h:5,
+                 from plibs/model_time.c:1:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/include/model_time.h:5:0,
+                 from plibs/model_time.c:1:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+In file included from plibs/model_time.c:1:0:
+plibs/include/model_time.h: In function 'prv_modeltime_time_init':
+plibs/include/model_time.h:7:42: error: expected declaration specifiers before ':' token
+ void prv_modeltime_time_init(ps_mode_t m):
+                                          ^
+plibs/include/model_time.h:24:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'bool'
+ bool prv_modeltime_is_period_start(ps_task_t t)
+ ^
+In file included from plibs/model_time.c:1:0:
+plibs/include/model_time.h:1:0: error: unterminated #ifndef
+ #ifndef __MODEL_TIME_H
+ ^
+plibs/model_time.c:4:19: error: storage class specified for parameter 'modeltime'
+ static prv_tick_t modeltime;
+                   ^
+plibs/model_time.c:5:18: error: storage class specified for parameter 'current_mode'
+ static ps_mode_t current_mode;
+                  ^
+plibs/model_time.c:8:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:16:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:22:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:27:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:32:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:37:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:42:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:48:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:82:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:87:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+plibs/model_time.c:98:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+In file included from plibs/model_time.c:1:0:
+plibs/include/model_time.h:7:6: error: old-style parameter declarations in prototyped function definition
+ void prv_modeltime_time_init(ps_mode_t m):
+      ^
+plibs/model_time.c:104:1: error: expected '{' at end of input
+ }
+ ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/PSEFMstart.c:4:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from plibs/include/servant.h:8,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/PSEFMstart.c:4:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:8:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/PSEFMstart.c:4:
+plibs/include/exec_flow.h:23:26: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                          ^
+plibs/include/exec_flow.h:23:44: error: unknown type name 'ps_servant_t'
+ void prv_ef_add_relation(ps_servant_t src, ps_servant_t dest);
+                                            ^
+plibs/include/exec_flow.h:36:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_get_current_servant();
+ ^
+plibs/include/exec_flow.h:37:41: error: unknown type name 'ps_servant_t'
+ void         prv_ef_set_current_servant(ps_servant_t s);
+                                         ^
+plibs/include/exec_flow.h:53:1: error: unknown type name 'ps_servant_t'
+ ps_servant_t prv_ef_pick_next();
+ ^
+plibs/include/exec_flow.h:65:24: error: unknown type name 'ps_servant_t'
+ void prv_ef_triggering(ps_servant_t s);
+                        ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/PSEFMstart.c:4:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/PSEFMstart.c:4:0:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+In file included from plibs/include/hashtable.h:5:0,
+                 from plibs/hashtable.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+plibs/hashtable.c: In function 'init_kv':
+plibs/hashtable.c:26:17: error: expected ';' before ':' token
+  kv->key  = NULL:
+                 ^
+plibs/hashtable.c: At top level:
+plibs/hashtable.c:31:7: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
+ staic void free_kv(struct kv * kv)
+       ^
+plibs/hashtable.c:51:2: error: expected identifier or '(' before 'return'
+  return hash%TABLESIZE;
+  ^
+plibs/hashtable.c:52:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+plibs/hashtable.c: In function 'memset':
+plibs/hashtable.c:57:5: error: 'address' undeclared (first use in this function)
+  if(address == NULL)
+     ^
+plibs/hashtable.c:57:5: note: each undeclared identifier is reported only once for each function it appears in
+In file included from plibs/include/list_internal.h:4:0,
+                 from plibs/include/hashtable.h:5,
+                 from plibs/hashtable.c:1:
+plibs/hashtable.c: In function 'prv_hashtable_new':
+plibs/hashtable.c:69:63: error: 'HashTable' undeclared (first use in this function)
+  prv_hashtable_t * ht = (prv_hashtable_t *)port_malloc(sizeof(HashTable));
+                                                               ^
+plibs/PSEFMport.h:30:40: note: in definition of macro 'port_malloc'
+ #define port_malloc(size) pvPortMalloc(size)
+                                        ^
+plibs/hashtable.c:70:10: error: lvalue required as left operand of assignment
+  if(NULL = ht){
+          ^
+plibs/hashtable.c:75:10: error: lvalue required as left operand of assignment
+  if(NULL = ht->table){
+          ^
+plibs/hashtable.c: In function 'prv_hashtable_delete':
+plibs/hashtable.c:96:4: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+    free(ht->table);
+    ^
+plibs/hashtable.c: In function 'prv_hashtable_put2':
+plibs/hashtable.c:114:5: error: 'struct kv' has no member named 'vlaue'
+    p->vlaue = value;
+     ^
+In file included from plibs/include/list_internal.h:4:0,
+                 from plibs/include/hashtable.h:5,
+                 from plibs/hashtable.c:1:
+plibs/hashtable.c:123:28: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+   char *kstr = port_malloc(strlen(key) + 1);
+                            ^
+plibs/PSEFMport.h:30:40: note: in definition of macro 'port_malloc'
+ #define port_malloc(size) pvPortMalloc(size)
+                                        ^
+plibs/hashtable.c:129:4: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+    free(kstr);
+    ^
+plibs/hashtable.c:134:3: warning: incompatible implicit declaration of built-in function 'strcpy' [enabled by default]
+   strcpy(kstr, key);
+   ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from apps/app.h:1,
+                 from apps/app.c:1:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from apps/app.c:1:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from apps/app.c:1:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from apps/app.h:1,
+                 from apps/app.c:1:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+apps/app.c: In function 'controller11':
+apps/app.c:22:2: error: unknown type name 'ps_data_t'
+  ps_data_t * data;
+  ^
+apps/app.c:28:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+apps/app.c: In function 'controller12':
+apps/app.c:41:2: error: unknown type name 'ps_data_t'
+  ps_data_t * data;
+  ^
+apps/app.c:47:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+apps/app.c: In function 'actuator1':
+apps/app.c:60:2: error: unknown type name 'ps_data_t'
+  ps_data_t * data;
+  ^
+apps/app.c:64:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+apps/app.c: In function 'controller21':
+apps/app.c:90:5: error: unknown type name 'ps_data_t'
+     ps_data_t * data;
+     ^
+apps/app.c:94:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+apps/app.c: In function 'controller22':
+apps/app.c:107:5: error: unknown type name 'ps_data_t'
+     ps_data_t * data;
+     ^
+apps/app.c:111:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+apps/app.c: In function 'actuator2':
+apps/app.c:124:5: error: unknown type name 'ps_data_t'
+     ps_data_t * data;
+     ^
+apps/app.c:128:8: warning: assignment makes pointer from integer without a cast [enabled by default]
+   data = ps_event_receive();
+        ^
+In file included from plibs/include/exec_flow.h:6:0,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/event.h:8:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t source;
+  ^
+plibs/include/event.h:9:2: error: unknown type name 'ps_servant_t'
+  ps_servant_t destination;
+  ^
+In file included from plibs/include/servant.h:5:0,
+                 from plibs/include/ptask.h:4,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/list_internal.h:51:36: error: unknown type name 'ps_list_t'
+ void * prv_list_get_current_entity(ps_list_t * L);
+                                    ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:14:2: error: unknown type name 'ps_task_t'
+  ps_task_t  tid;
+  ^
+plibs/include/servant.h:15:18: error: field 'inbox' has incomplete type
+  prv_hashtable_t inbox;
+                  ^
+plibs/include/servant.h:113:1: error: unknown type name 'prv_message_t'
+ prv_message_t ps_message_receive();
+ ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/mode.h:22:5: error: unknown type name 'ps_mode_condition_t'
+     ps_mode_condition_t conditions[NUMOFCONDS];
+     ^
+plibs/include/mode.h:27:5: error: unknown type name 'ps_mode_t'
+     ps_mode_t modes[NUMOFMODES];
+     ^
+main.c: In function 'main':
+main.c:15:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[0] = ps_servant_create(0, 0, 10, 0, NULL, sensor1);
+                 ^
+main.c:16:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[1] = ps_servant_create(1, 1, 100, 1, ps_servants, controller11);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:16:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[1] = ps_servant_create(1, 1, 100, 1, ps_servants, controller11);
+                 ^
+main.c:17:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[2] = ps_servant_create(2, 1, 50,  1, ps_servants, controller12);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:17:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[2] = ps_servant_create(2, 1, 50,  1, ps_servants, controller12);
+                 ^
+main.c:18:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[3] = ps_servant_create(3, 2, 10, 2, ps_servants+1, actuator1);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:18:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[3] = ps_servant_create(3, 2, 10, 2, ps_servants+1, actuator1);
+                 ^
+main.c:21:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[4] = ps_servant_create(4, 0, 10, 0, NULL, sensor2);
+                 ^
+main.c:22:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[5] = ps_servant_create(5, 1, 200, 1, ps_servants+4, controller21);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:22:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[5] = ps_servant_create(5, 1, 200, 1, ps_servants+4, controller21);
+                 ^
+main.c:23:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[6] = ps_servant_create(6, 1, 150, 1, ps_servants+5, controller22);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:23:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[6] = ps_servant_create(6, 1, 150, 1, ps_servants+5, controller22);
+                 ^
+main.c:24:2: warning: passing argument 5 of 'ps_servant_create' from incompatible pointer type [enabled by default]
+  ps_servants[7] = ps_servant_create(7, 2, 10, 1, ps_servants+6, actuator2);
+  ^
+In file included from plibs/include/ptask.h:4:0,
+                 from plibs/include/mode.h:5,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/servant.h:58:14: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_servant_t ps_servant_create(   prv_id_t sid,
+              ^
+main.c:24:17: warning: assignment from incompatible pointer type [enabled by default]
+  ps_servants[7] = ps_servant_create(7, 2, 10, 1, ps_servants+6, actuator2);
+                 ^
+main.c:28:2: warning: passing argument 4 of 'ps_task_create' from incompatible pointer type [enabled by default]
+  ps_tasks[0] = ps_task_create(0, 500, 4, ps_servants);
+  ^
+In file included from plibs/include/mode.h:5:0,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/ptask.h:44:12: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_task_t  ps_task_create(prv_id_t  tid,  /* start from zero for saving memory */
+            ^
+main.c:28:14: warning: assignment from incompatible pointer type [enabled by default]
+  ps_tasks[0] = ps_task_create(0, 500, 4, ps_servants);
+              ^
+main.c:29:2: warning: passing argument 4 of 'ps_task_create' from incompatible pointer type [enabled by default]
+  ps_tasks[1] = ps_task_create(1, 1000, 4, ps_servants+4);
+  ^
+In file included from plibs/include/mode.h:5:0,
+                 from plibs/include/exec_flow.h:7,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/ptask.h:44:12: note: expected 'struct servant **' but argument is of type 'struct servant ***'
+ ps_task_t  ps_task_create(prv_id_t  tid,  /* start from zero for saving memory */
+            ^
+main.c:29:14: warning: assignment from incompatible pointer type [enabled by default]
+  ps_tasks[1] = ps_task_create(1, 1000, 4, ps_servants+4);
+              ^
+main.c:32:2: warning: passing argument 3 of 'ps_mode_create' from incompatible pointer type [enabled by default]
+  ps_mode_create(0, 2, ps_tasks);
+  ^
+In file included from plibs/include/exec_flow.h:7:0,
+                 from apps/app.h:1,
+                 from main.c:2:
+plibs/include/mode.h:50:6: note: expected 'struct task **' but argument is of type 'struct task ***'
+ void ps_mode_create(prv_id_t mid, prv_num_t num, ps_task_t task_array[]);
+      ^
+make: *** [main.bin] Error 1

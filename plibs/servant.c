@@ -1,74 +1,79 @@
 #include "servant.h"
-#include "exec_flow.h"
-#include "PSEFMconfigure.h"
+#include "event.h"
+#include "ef.h"
+#include "PSPMconfigure.h"
 
-extern ps_event_sem_t sem[NUMOFSERVANTS];
-
+port_semph_t sem[NUMOFSERVANTS];
 ps_servant_t servants[NUMOFSERVANTS];
 
 
-void prv_servant_set_arrive( ps_servant_t * pservant, int n)
-{
-    pservant->arrive = n;
-}
-
-void prv_servant_clean_arrive( ps_servant_t * pservant)
-{
-    prv_servant_set_arrive(pservant, 0);
-}
-
-void prv_servant_add_arrive(ps_servant_t *pservant)
-{
-    pservant->arrive ++;
-}
-
-void prv_servant_trigger( ps_servant_t * pservant)
-{
-    id_t servant_id = prv_servant_get_id( pservant );
-    port_trigger(sem[servant_id]);  // trigger the sem of the dest servant
-}
-
-void prv_servant_set_start_time ( ps_servant_t *pservant, tick_t start_time)
-{
-    pservant->start_time = start_time;
-}
-
 /* create servant and record the time,relation and function information */
-ps_servant_t * ps_servant_create(id_t servant_id, int servant_type, tick_t LED,
-                                int num,
-                                ps_servant_t *src_array[],
-                                void (*runnable)(void *))
+ps_servant_t ps_servant_create(   prv_id_t sid,
+									prv_stype_t type,
+                                    prv_tick_t wcet,
+                                    prv_num_t  num,   /* number of elements in src_array */
+                                    ps_servant_t src_array[],
+                                    void (*runnable)(void *))
 {
     int i;
-    ps_servant_t * pservant = &servants[servant_id];
+	char ch[10];
+	ps_message_t message[num];
+	servants[sid] = (ps_servant_t)port_malloc(sizeof(struct servant));
+    ps_servant_t s = servants[sid];
+	port_semph_create ( sem[sid] );
+	prv_hashtable_t * ht = prv_hashtable_new();  // memory allocated in heap
 
-    pservant->servant_id = servant_id;
-    pservant->servant_type = servant_type;
-    pservant->start_time = 0;
-    pservant->LED = LED;
-    pservant->num = num;
-    pservant->arrive = 0;
+	s->sid  = sid;
+    s->type = type;
+    s->wcet = wcet;
+	s->inbox = ht;
 
-    port_servant_create(runnable, &pservant->servant_id , 2);
+    port_servant_create(runnable, &s->sid, 2);
 
     for(i = 0; i < num; ++ i){
-        prv_ef_add_relation(src_array[i], pservant);
+		prv_ef_add_relation(src_array[i], s);   // construct topological graph
+		message[i] = port_malloc(sizeof(struct message));   // init the inbox of each servant
+		message[i]->data = 0;
+		message[i]->source = src_array[i];
+		message[i]->destination = s;
+		itoa(src_array[i]->sid, ch);
+		//if(-1 == prv_hashtable_add(ht, ch, message[i]))   // the inbox is a hashtable
+		//{
+		//	port_print("memory allocate failed\n");
+		//}
     }
 
-	return pservant;
+	return s;
 }
 
-void ps_servant_cooperate()
+void ps_servant_wait(prv_id_t sid)
 {
-    // print the start time of current servant
-    ps_servant_t * pservant = prv_ef_get_current_servant();
-    vPrintNumber(pservant->start_time);
-    port_servant_yield();
+	//ps_servant_t s = prv_ef_get_current_servant();
+	//prv_id_t  sid = prv_servant_get_id(s);
+	port_wait( sem[sid] );
 }
 
-//void ps_servant_wait()
-//{
-//
-//}
+void ps_servant_wake( ps_servant_t * s )
+{
+	prv_id_t  sid = prv_servant_get_id(s);
+	port_trigger( sem[sid] );
+}
+
+void ps_message_send( ps_servant_t target, ps_message_t message)
+{
+	char ch[10];
+	itoa(target->sid, ch);
+
+	prv_hashtable_add(target->inbox, ch, message);
+}
+
+ps_message_t ps_message_receive(ps_servant_t src)
+{
+	char ch[10];
+	itoa(src->sid, ch);
+	ps_servant_t s = prv_ef_get_current_servant();
+	ps_message_t message = (ps_message_t)prv_hashtable_get(s->inbox, ch);
+	return message;
+}
 
 

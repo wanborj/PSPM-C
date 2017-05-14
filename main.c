@@ -1,15 +1,12 @@
 #define USE_STDPERIPH_DRIVER
 #include "app.h"
-#include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
-#include "stm32f10x.h"
-#include "PSEFMstart.h"
+#include "PSPMconfigure.h"
 
 
 int main()
 {
-	ps_servant_t * ps_servants[NUMOFSERVANTS];
-	ps_task_t * ps_tasks[NUMOFTASKS];
+	ps_servant_t ps_servants[NUMOFSERVANTS];
+	ps_task_t ps_tasks[NUMOFTASKS];
 
 	/* parameters : servant_id , servant_type, LED, num of src, src_array[], runnable */
 	ps_servants[0] = ps_servant_create(0, 0, 10, 0, NULL, sensor1);
@@ -24,12 +21,12 @@ int main()
 	ps_servants[7] = ps_servant_create(7, 2, 10, 1, ps_servants+6, actuator2);
 
 
-	/* parameters: task_id, LET, servant_array[], servant_num */
-	ps_tasks[0] = ps_task_create(0, 500, ps_servants, 4);
-	ps_tasks[1] = ps_task_create(1, 1000,  ps_servants+4, 4);
+	/* parameters: task_id, LET, servant_num, servant_array[]*/
+	ps_tasks[0] = ps_task_create(0, 500, 4, ps_servants);
+	ps_tasks[1] = ps_task_create(1, 1000, 4, ps_servants+4);
 
-	/* parameters: mode_id, task_array[], task_num */
-	ps_mode_create(0, ps_tasks, 2);
+	/* parameters: mode_id, task_num, task_array[]*/
+	ps_mode_create(0, 2, ps_tasks);
 
 	/* parameters: condition, mode_dest */
 	ps_mode_switch_create( mode_switch1, 0);

@@ -1,83 +1,78 @@
 #include "mode.h"
 
-struct ps_condition_array_t cond;
-struct ps_mode_array_t mod = {0, NULL};
+//ps_mode_t modes[NUMOFMODES];
+//ps_mode_condition_t conditions[NUMOFCONDS];
 
+struct mode_array marray;
+struct condition_array carray;
 
-ps_mode_t modes[NUMOFMODES];
+static prv_tick_t modestart; // record the real time of mode start
+static ps_mode_t current_mode;
 
-static ps_mode_t * current_mode;
-
-void prv_mode_add_task(id_t mode_id, ps_task_t * ptask)
-{
-    int num = modes[mode_id].num;
-    modes[mode_id].tasks[num] = ptask;
-    modes[mode_id].num = num + 1;
-}
-
-ps_mode_t * prv_mode_get_current_mode()
+ps_mode_t prv_mode_get_current_mode()
 {
     return current_mode;
 }
 
-int prv_mode_get_task_num(id_t mode_id)
+prv_tick_t prv_mode_get_modestart()
 {
-    return modes[mode_id].num;
+	return modestart;
 }
 
-tick_t prv_mode_get_mode_period(id_t mode_id)
+int prv_mode_is_period_end()
 {
-    return modes[mode_id].period;
+	prv_tick_t realtime = port_get_current_time();
+	if(realtime == prv_mode_get_period(current_mode) + modestart){
+		return 1;
+	}else{
+		return 0;
+	}
 }
 
-void prv_mode_set_mode_period(id_t mode_id , tick_t period)
-{
-    modes[mode_id].period = period;
-}
-
-tick_t prv_mode_get_mode_unit(id_t mode_id)
-{
-    return modes[mode_id].unit;
-}
-
-void prv_mode_set_mode_unit(id_t mode_id, tick_t unit)
-{
-    modes[mode_id].unit  = unit;
-}
-
-
-// public API
-void ps_mode_create(id_t mode_id, ps_task_t * task_array[], int num)
+void ps_mode_create(prv_id_t mid, prv_num_t num, ps_task_t task_array[])
 {
     int i;
+	int i_gcd = 0 , i_lcm = 1;
+	marray.modes[mid] = (ps_mode_t)port_malloc(sizeof(struct mode));
+	marray.modes[mid]->tasks = (prv_list_t *)port_malloc(sizeof(struct list));
 
-    modes[mode_id].mode_id = mode_id;
+    marray.modes[mid]->mid = mid;
     for(i=0;i<num;++i){
-        prv_mode_add_task(mode_id, task_array[i]);
+		prv_list_insert(task_array[i], marray.modes[mid]->tasks);
+		i_gcd = gcd(task_array[i]->period, i_gcd);
+		i_lcm = lcm(task_array[i]->period, i_lcm);
+
     }
+	marray.modes[mid]->period	= i_lcm;
+	marray.modes[mid]->unit	= i_gcd;
 
-    mod.pmode[mod.num] = &modes[mode_id];
-    mod.num ++;
-
+	marray.num ++;
 }
 
-void prv_mode_start(id_t mode_id)
+
+void ps_mode_switch_create(bool (*condition)(void), prv_id_t target)
 {
-    /*start all the tasks in this mode*/
-    int i;
-    current_mode = &modes[mode_id];
-    for(i=0;i<modes[mode_id].num;++i){
-        prv_task_start( modes[mode_id].tasks[i]);
-    }
+    int num = carray.num;
+	carray.conditions[num] = (ps_mode_condition_t)port_malloc(sizeof(struct condition));
+    carray.conditions[num]->mid= target;
+    carray.conditions[num]->condition = condition;
+    carray.num ++;
 }
 
-
-void ps_mode_switch_create(bool (*condition)(void), id_t mode_dest)
+// being invoked at the end of mode period
+void prv_mode_switch()
 {
-    int num = cond.num;
-    cond.conditions[num].mode_dest = mode_dest;
-    cond.conditions[num].condition = condition;
-    cond.num = num + 1;
-}
+	int i, tmp;
+	for( i = 0; i < carray.num; ++i ){
+		if( (tmp = carray.conditions[i]->condition()) == 1){
+			current_mode = marray.modes[carray.conditions[i]->mid];
+			modestart	= port_get_current_time();
+			return;
+		}
+	}
+	// no mode switch happens
+	current_mode = marray.modes[0];
+	modestart = port_get_current_time();
 
+}
 

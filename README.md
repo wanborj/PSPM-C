@@ -57,12 +57,12 @@ make -j4
 
 #### install PSEFM
 ```
-git clone git://github.com/wanborj/PSEFM-C.git
-cd PSEFM-C
+git clone git://github.com/wanborj/PSPM-C.git
+cd PSPM-C
 make qemu
 ```
 
-The PSEFM example app in ./apps will run after that.
+The PSPM example app in ./apps will run after that.
 
 
 ### How to use PSEFM-C
@@ -83,32 +83,33 @@ runnable     : The run-time function this servant will be invoked
 ```
 #### Task Create
 ```
-ps_task_create(task_id, LET, servant_array[], num_of_servants)
+ps_task_create(task_id, LET, num_of_servants, servant_array[])
 
 task_id: The ID of a task, and this is specified by programmer( must start from 0 )
 LET: The logical execution time of task. It's specified by programmer according to the timing requirements
-servant_array[]: the array of pointer of servants in this task
 num_of_servants: the number of servants in servant_array[]
+servant_array[]: the array of pointer of servants in this task
 ```
 
 #### Mode Create
 ```
-ps_mode_create(mode_id, task_array[], num_of_tasks)
+ps_mode_create(mode_id, num_of_tasks, task_array[])
 
 mode_id: the ID of a mode
-task_array[]: the array of pointer of tasks in this mode
 num_of_tasks: the number of tasks in task_array[]
+task_array[]: the array of pointer of tasks in this mode
+
 ```
 
 #### Mode Switch Create
 ```
-ps_mode_switch_create( bool (*switch_condition)(void ),  destination_mode)
+ps_mode_switch_create( bool (*switch_condition)(void ),  target_mode_id)
 
 switch_condition: The condition that mode switch happened
-destination_mode: The target mode after mode switch
+target_mode_id: The id of target mode after mode switch
 ```
 
-#### PSEFM start
+#### PSPM start
 ```
 system_start()
 ```

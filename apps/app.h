@@ -1,4 +1,7 @@
-#include "exec_flow.h"
+#include "ef.h"
+#include "FreeRTOSConfig.h"
+#include "FreeRTOS.h"
+#include "stm32_p103.h"
 
 void sensor1(void *);
 void sensor2( void * );

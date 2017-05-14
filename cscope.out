@@ -1,4 +1,4 @@
-cscope 15 $HOME/workspace/PSPM-C -q 0000016435 0002479182
+cscope 15 $HOME/workspace/PSPM-C -q 0000016428 0002474768
 	@/home/wanbo/workspace/PSPM-C/apps/FreeRTOSConfig.h
 
 54 #i‚de‡
@@ -85,7 +85,7 @@ p‹tBASE_TYPE
 	#c⁄figTOTAL_HEAP_SIZE
  ( ( 
 size_t
- ) ( 40*1024 ) )
+ ) ( 50*1024 ) )
 
 	)
 
@@ -251,349 +251,285 @@ myTø˚SwôchedOut
 ∑ø
  )
 
-7 
-	`ps_evít_waô
-(
+5 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-10 
-	`p‹t_¥öt
-("sensor 1\t");
-
-13 
-	`ps_evít_¸óã
+9 
+	`ps_£rv™t_waô
 (
-NULL
+id
 );
 
-16 
-	`ps_£rv™t_co›î©e
-();
+11 
+	`p‹t_¥öt
+("sensor 1\n\r");
 
-18 
+13 
 	}
 }
 
-20 
+15 
 	$c⁄åﬁÀr11
 (* 
 ∑ø
 )
 
-22 
-ps_d©a_t
- * 
-d©a
-;
-
-26 
-	`ps_evít_waô
-(
+17 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-28 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
-
-31 
-	`p‹t_¥öt
-("controller 1-1\t");
-
-34 
-	`ps_evít_¸óã
+21 
+	`ps_£rv™t_waô
 (
-d©a
+id
 );
 
-35 
-	`ps_£rv™t_co›î©e
-();
+24 
+	`p‹t_¥öt
+("controller 1-1\n\r");
 
-37 
+26 
 	}
 }
 
-39 
+28 
 	$c⁄åﬁÀr12
 (* 
 ∑ø
 )
 
-41 
-ps_d©a_t
- * 
-d©a
-;
-
-45 
-	`ps_evít_waô
-(
+30 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-47 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
-
-50 
-	`p‹t_¥öt
-("controller 1-2\t");
-
-53 
-	`ps_evít_¸óã
+34 
+	`ps_£rv™t_waô
 (
-d©a
+id
 );
 
-54 
-	`ps_£rv™t_co›î©e
-();
+37 
+	`p‹t_¥öt
+("controller 1-2\n\r");
 
-56 
+39 
 	}
 }
 
-58 
+41 
 	$a˘u©‹1
 (* 
 ∑ø
 )
 
-60 
-ps_d©a_t
- * 
-d©a
-;
-
-63 
-	`ps_evít_waô
-(
+43 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-64 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
+47 
+	`ps_£rv™t_waô
+(
+id
+);
 
-67 
+49 
 	`p‹t_¥öt
-("actuator 1\t");
+("actuator 1\n\r");
 
-70 
-	`ps_£rv™t_co›î©e
-();
-
-72 
+52 
 	}
 }
 
-74 
+54 
 	$£ns‹2
 (* 
 ∑ø
 )
 
-77 
-	`ps_evít_waô
-(
+56 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-80 
-	`p‹t_¥öt
-("sensor 2\t");
-
-82 
-	`ps_evít_¸óã
+60 
+	`ps_£rv™t_waô
 (
-NULL
+id
 );
 
-83 
-	`ps_£rv™t_co›î©e
-();
+63 
+	`p‹t_¥öt
+("sensor 2\n\r");
 
-86 
+66 
 	}
 }
 
-88 
+68 
 	$c⁄åﬁÀr21
 (* 
 ∑ø
 )
 
-90 
-ps_d©a_t
- * 
-d©a
-;
-
-93 
-	`ps_evít_waô
-(
+70 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-94 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
-
-97 
-	`p‹t_¥öt
-("controller 2-1\t");
-
-99 
-	`ps_evít_¸óã
+74 
+	`ps_£rv™t_waô
 (
-d©a
+id
 );
 
-100 
-	`ps_£rv™t_co›î©e
-();
+76 
+	`p‹t_¥öt
+("controller 2-1\n\r");
 
-103 
+79 
 	}
 }
 
-105 
+81 
 	$c⁄åﬁÀr22
 (* 
 ∑ø
 )
 
-107 
-ps_d©a_t
- * 
-d©a
-;
-
-110 
-	`ps_evít_waô
-(
+83 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-111 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
-
-114 
-	`p‹t_¥öt
-("controller 2-2\t");
-
-116 
-	`ps_evít_¸óã
+87 
+	`ps_£rv™t_waô
 (
-d©a
+id
 );
 
-117 
-	`ps_£rv™t_co›î©e
-();
+90 
+	`p‹t_¥öt
+("controller 2-2\n\r");
 
-120 
+94 
 	}
 }
 
-122 
+96 
 	$a˘u©‹2
 (* 
 ∑ø
 )
 
-124 
-ps_d©a_t
- * 
-d©a
-;
-
-127 
-	`ps_evít_waô
-(
+98 
+¥v_id_t
+ 
+id
+ = *(’rv_id_à*)
 ∑ø
 );
 
-128 
-d©a
- = 
-	`ps_evít_ª˚ive
-();
+102 
+	`ps_£rv™t_waô
+(
+id
+);
 
-131 
+105 
 	`p‹t_¥öt
-("actuator 2\t");
+("actuator 2\n\r");
 
-134 
-	`ps_£rv™t_co›î©e
-();
-
-136 
+108 
 	}
 }
 
-139 
+111 
 boﬁ
  
 	$mode_swôch1
 ()
 
-142 
+114 
 	}
 }
 
 	@/home/wanbo/workspace/PSPM-C/apps/app.h
 
 1 
-	~"exec_Êow.h
+	~"ef.h
 "
 
-3 
+2 
+	~"FªeRTOSC⁄fig.h
+"
+
+3 
+	~"FªeRTOS.h
+"
+
+4 
+	~"°m32_p103.h
+"
+
+6 
 £ns‹1
 (*);
 
-4 
+7 
 £ns‹2
 ( * );
 
-7 
+10 
 c⁄åﬁÀr11
 (*);
 
-8 
+11 
 c⁄åﬁÀr12
 (*);
 
-9 
+12 
 c⁄åﬁÀr21
 (*);
 
-10 
+13 
 c⁄åﬁÀr22
 (*);
 
-13 
+16 
 a˘u©‹1
 (*);
 
-14 
+17 
 a˘u©‹2
 (*);
 
-16 
+19 
 boﬁ
  
 mode_swôch1
@@ -1337,6 +1273,10 @@ __STM32F10x_CONF_H
 
 38 
 	~"°m32f10x_gpio.h
+"
+
+42 
+	~"°m32f10x_rcc.h
 "
 
 47 
@@ -58219,7 +58159,7 @@ p‹tCLEAR_INTERRUPT_MASK_FROM_ISR
 uxSavedSètusVÆue
  ) ( Ë
 	)
-uxSavedStatusValue
+uxSavedSètusVÆue
 
 246 #i‚de‡
 p‹tCLEAN_UP_TCB
@@ -279839,17 +279779,17 @@ s‰
  ucCriticalNesting>>8 \
  ucCriticalNesting,BANKED \
  _rtos_R4 \
-_rtos_R3: \
+_πos_R3: \
  PREINC2,BSR \
  PREINC2,WREG \
  PREINC2,STATUS \
  0 ; ReturnÉnabling interrupts \
-_rtos_R4: \
+_πos_R4: \
  PREINC2,BSR \
  PREINC2,WREG \
  PREINC2,STATUS \
  0 ; Return withoutáffecting interrupts \
-_Pragma("asmend") \
+_Pøgma("asmíd"Ë\
 } while(0)
 
 429 
@@ -361859,42 +361799,30 @@ RESET
 "
 
 3 
-	~"FªeRTOSC⁄fig.h
+	~"PSPMc⁄figuª.h
 "
 
-4 
-	~"FªeRTOS.h
-"
-
-5 
-	~"°m32f10x.h
-"
-
-6 
-	~"PSEFM°¨t.h
-"
-
-9 
+6 
 	$maö
 ()
 
-11 
+8 
 ps_£rv™t_t
- * 
+ 
 ps_£rv™ts
 [
 NUMOFSERVANTS
 ];
 
-12 
+9 
 ps_èsk_t
- * 
+ 
 ps_èsks
 [
 NUMOFTASKS
 ];
 
-15 
+12 
 ps_£rv™ts
 [0] = 
 	`ps_£rv™t_¸óã
@@ -361904,7 +361832,7 @@ NULL
 £ns‹1
 );
 
-16 
+13 
 ps_£rv™ts
 [1] = 
 	`ps_£rv™t_¸óã
@@ -361912,7 +361840,7 @@ ps_£rv™ts
 c⁄åﬁÀr11
 );
 
-17 
+14 
 ps_£rv™ts
 [2] = 
 	`ps_£rv™t_¸óã
@@ -361920,7 +361848,7 @@ ps_£rv™ts
 c⁄åﬁÀr12
 );
 
-18 
+15 
 ps_£rv™ts
 [3] = 
 	`ps_£rv™t_¸óã
@@ -361928,7 +361856,7 @@ ps_£rv™ts
 a˘u©‹1
 );
 
-21 
+18 
 ps_£rv™ts
 [4] = 
 	`ps_£rv™t_¸óã
@@ -361938,7 +361866,7 @@ NULL
 £ns‹2
 );
 
-22 
+19 
 ps_£rv™ts
 [5] = 
 	`ps_£rv™t_¸óã
@@ -361946,7 +361874,7 @@ ps_£rv™ts
 c⁄åﬁÀr21
 );
 
-23 
+20 
 ps_£rv™ts
 [6] = 
 	`ps_£rv™t_¸óã
@@ -361954,7 +361882,7 @@ ps_£rv™ts
 c⁄åﬁÀr22
 );
 
-24 
+21 
 ps_£rv™ts
 [7] = 
 	`ps_£rv™t_¸óã
@@ -361962,43 +361890,2387 @@ ps_£rv™ts
 a˘u©‹2
 );
 
-28 
+25 
 ps_èsks
 [0] = 
 	`ps_èsk_¸óã
-(0, 500, 
+(0, 500, 4, 
 ps_£rv™ts
-, 4);
+);
 
-29 
+26 
 ps_èsks
 [1] = 
 	`ps_èsk_¸óã
-(1, 1000, 
+(1, 1000, 4, 
 ps_£rv™ts
-+4, 4);
++4);
+
+29 
+	`ps_mode_¸óã
+(0, 2, 
+ps_èsks
+);
 
 32 
-	`ps_mode_¸óã
-(0, 
-ps_èsks
-, 2);
-
-35 
 	`ps_mode_swôch_¸óã
 –
 mode_swôch1
 , 0);
 
-38 
+35 
 	`sy°em_°¨t
 ();
+
+37 
+	}
+}
+
+	@/home/wanbo/workspace/PSPM-C/plibs/PSPMconfigure.c
+
+1 
+	~"PSPMc⁄figuª.h
+"
+
+2 
+	~"PSPMp‹t.h
+"
+
+3 
+	~"mode.h
+"
+
+6 
+	$¥v_time_åiggî
+()
+
+8 if–
+	`¥v_mode_is_≥riod_íd
+() == 1){
+
+9 
+	`¥v_mode_swôch
+();
+
+12 if(
+	`¥v_ef_is_time_to_åiggî
+() == 1){
+
+13 
+	`¥v_ef_åiggîög
+();
+
+15 
+	}
+}
+
+17 
+	$myH¨dw¨eInô
+(){
+
+18 
+	`öô_Àd
+();
+
+19 
+	`öô_rs232
+();
+
+20 
+	`íabÀ_rs232_öãºu±s
+();
+
+21 
+	`íabÀ_rs232
+();
+
+22 
+	}
+}
+
+24 
+	$sy°em_°¨t
+()
+
+26 
+	`myH¨dw¨eInô
+();
+
+27 
+	`p‹t_¥öt
+("hello,world\n\t");
+
+28 
+	`¥v_ef_¸óã
+();
+
+29 
+	`¥v_mode_swôch
+();
+
+30 
+	`p‹t_scheduÀr_°¨t
+();
+
+31 
+	}
+}
+
+33 
+	$myTø˚Cª©e
+ (){
+
+34 
+	}
+}
+
+36 
+	$myTø˚SwôchedIn
+ (){
+
+37 
+	}
+}
+
+39 
+	$myTø˚SwôchedOut
+ (){
 
 40 
 	}
 }
 
-	@/home/wanbo/workspace/PSPM-C/plibs/PSEFMconfigure.h
+42 
+	$vAµliˇti⁄TickHook
+( )
+
+44 
+	`¥v_time_åiggî
+();
+
+45 
+	}
+}
+
+52 
+	$gcd
+(
+a
+, 
+b
+)
+
+54  
+b
+ =0?
+a
+:
+	`gcd
+(b,a%b);
+
+55 
+	}
+}
+
+57 
+	$lcm
+(
+a
+, 
+b
+)
+
+59  (
+a
+*
+b
+)/
+	`gcd
+(a,b);
+
+60 
+	}
+}
+
+64 
+	$ôﬂ
+(
+n
+ , *
+s
+)
+
+66 
+i
+ = 0;
+
+67 
+n
+){
+
+68 
+s
+[
+i
+++] = 
+n
+%10 + '0';
+
+69 
+n
+ /= 10;
+
+71 
+s
+[
+i
+] = '\0';
+
+72 
+	}
+}
+
+	@/home/wanbo/workspace/PSPM-C/plibs/ef.c
+
+1 
+	~"ef.h
+"
+
+3 
+	sªœti⁄
+{
+
+4 
+¥v_li°_t
+ 
+	mö
+;
+
+5 
+¥v_li°_t
+ 
+	mout
+;
+
+6 } 
+	t¥v_ªœti⁄_t
+;
+
+8 
+¥v_ªœti⁄_t
+ 
+	gªœti⁄s
+[
+NUMOFSERVANTS
+];
+
+10 
+	snode
+{
+
+11 
+ps_£rv™t_t
+ 
+	m£rv™t
+;
+
+12 
+¥v_tick_t
+ 
+	mªÀa£
+;
+
+14 
+node
+ * 
+	tscheduÀ_node
+;
+
+16 
+¥v_li°_t
+ 
+	gSTT
+[
+NUMOFMODES
+];
+
+18 
+ps_£rv™t_t
+ 
+	gcuºít_£rv™t
+;
+
+19 
+ps_£rv™t_t
+ 
+	g√xt_£rv™t
+;
+
+20 
+¥v_tick_t
+ 
+	g√xt_ªÀa£
+;
+
+21 
+	g£rv™t_Êags
+[
+NUMOFSERVANTS
+];
+
+22 
+	gödegªes
+[
+NUMOFSERVANTS
+];
+
+23 
+	gedges
+[
+NUMOFSERVANTS
+][NUMOFSERVANTS];
+
+25 
+ps_èsk_t
+ 
+èsks
+[
+NUMOFTASKS
+];
+
+26 
+ps_£rv™t_t
+ 
+£rv™ts
+[
+NUMOFSERVANTS
+];
+
+27 
+p‹t_£mph_t
+ 
+£m
+[
+NUMOFSERVANTS
+];
+
+28 
+mode_¨øy
+ 
+m¨øy
+;
+
+30 
+¥v_li°_t
+ * 
+	$¥v_ef_gë_de°_li°
+(
+ps_£rv™t_t
+ 
+s
+)
+
+32  &
+ªœti⁄s
+[
+s
+->
+sid
+].
+out
+;
+
+33 
+	}
+}
+
+35 
+¥v_li°_t
+ * 
+	$¥v_ef_gë_§c_li°
+(
+ps_£rv™t_t
+ 
+s
+)
+
+37  &
+ªœti⁄s
+[
+s
+->
+sid
+].
+ö
+;
+
+38 
+	}
+}
+
+40 
+	$¥v_ef_add_ªœti⁄
+(
+ps_£rv™t_t
+ 
+§c
+,Ös_£rv™t_à
+de°
+)
+
+42 
+	`¥v_li°_ö£π
+(
+de°
+, 
+	`¥v_ef_gë_de°_li°
+(
+§c
+));
+
+43 
+	`¥v_li°_ö£π
+(
+§c
+, 
+	`¥v_ef_gë_§c_li°
+(
+de°
+));
+
+44 
+	}
+}
+
+46 
+	$¥v_ef_£t_cuºít_£rv™t
+(
+ps_£rv™t_t
+ 
+s
+)
+
+48 
+cuºít_£rv™t
+ = 
+s
+;
+
+49 
+	}
+}
+
+51 
+ps_£rv™t_t
+ 
+	$¥v_ef_gë_cuºít_£rv™t
+()
+
+53  
+cuºít_£rv™t
+;
+
+54 
+	}
+}
+
+57 
+	$¥v_∑ømëî_öô
+()
+
+59 
+i
+, 
+j
+;
+
+60  
+i
+ = 0; i < 
+NUMOFSERVANTS
+; ++i ){
+
+61 
+£rv™t_Êags
+[
+i
+] = -1;
+
+62 
+ödegªes
+[
+i
+] = 0;
+
+63  
+j
+ = 0; j < 
+NUMOFSERVANTS
+; ++j ){
+
+64 
+edges
+[
+i
+][
+j
+] = 0;
+
+67 
+	}
+}
+
+70 
+	$¥v_edge_add
+(
+ps_£rv™t_t
+ 
+s
+)
+
+72 
+i
+;
+
+73 
+¥v_id_t
+ 
+sid
+ = 
+s
+->sid;
+
+75 
+£rv™t_Êags
+[
+sid
+] = 1;
+
+76 
+ps_£rv™t_t
+ 
+cuºít
+;
+
+78  
+i
+=0; i<
+ªœti⁄s
+[
+sid
+].
+ö
+.
+Àngth
+; ++i ){
+
+80 
+cuºít
+ = (
+ps_£rv™t_t
+)
+	`¥v_li°_gë_cuºít_ítôy
+(
+	`¥v_ef_gë_§c_li°
+(
+s
+));
+
+81 if(
+£rv™t_Êags
+[
+cuºít
+->
+sid
+] == 1){
+
+82 
+edges
+[
+cuºít
+->
+sid
+][sid] = 1;
+
+85  
+i
+=0; i<
+ªœti⁄s
+[
+sid
+].
+out
+.
+Àngth
+; ++i ){
+
+86 
+cuºít
+ = (
+ps_£rv™t_t
+)
+	`¥v_li°_gë_cuºít_ítôy
+(
+	`¥v_ef_gë_de°_li°
+(
+s
+));
+
+87 if(
+£rv™t_Êags
+[
+cuºít
+->
+sid
+] == 1){
+
+88 
+edges
+[
+sid
+][
+cuºít
+->sid] = 1;
+
+91 
+	}
+}
+
+94 
+	$¥v_t›ogøph_upd©e_⁄e
+(
+ps_èsk_t
+ 
+t
+)
+
+96 
+i
+;
+
+97 
+ps_£rv™t_t
+ 
+cuºít
+;
+
+98 
+i
+ = 0; i < 
+t
+->
+£rv™ts
+->
+Àngth
+; ++i){
+
+99 
+cuºít
+ = (
+ps_£rv™t_t
+)
+	`¥v_li°_gë_cuºít_ítôy
+(
+t
+->
+£rv™ts
+);
+
+100 
+	`¥v_edge_add
+(
+cuºít
+);
+
+102 
+	}
+}
+
+105 
+	$¥v_t›ogøph_upd©e
+(
+ps_mode_t
+ 
+m
+)
+
+107 
+i
+, 
+j
+;
+
+108 
+ps_èsk_t
+ 
+cuºít
+;
+
+109 
+i
+ = 0; i < 
+m
+->
+èsks
+->
+Àngth
+; ++i){
+
+110 
+cuºít
+ = (
+ps_èsk_t
+)
+	`¥v_li°_gë_cuºít_ítôy
+(
+m
+->
+èsks
+);
+
+111 if(
+	`¥v_modñtime_is_≥riod_°¨t
+(
+cuºít
+) == 1){
+
+112 
+	`¥v_t›ogøph_upd©e_⁄e
+(
+cuºít
+);
+
+117  
+i
+ = 0; i < 
+NUMOFSERVANTS
+; ++i ){
+
+118 
+ödegªes
+[
+i
+] = 0;
+
+121 
+i
+ = 0; i < 
+NUMOFSERVANTS
+; ++i){
+
+122 
+j
+ = 0; j < 
+NUMOFSERVANTS
+; ++j){
+
+123 if(
+edges
+[
+i
+][
+j
+]){
+
+124 
+ödegªes
+[
+j
+]++;
+
+128 
+	}
+}
+
+131 
+	$com∑ª
+(* 
+s1
+, *
+s2
+)
+
+133 
+ps_£rv™t_t
+ 
+a
+ = 
+s1
+;
+
+134 
+ps_£rv™t_t
+ 
+b
+ = 
+s2
+;
+
+135 
+ps_èsk_t
+ 
+t1
+ = 
+èsks
+[
+a
+->
+tid
+];
+
+136 
+ps_èsk_t
+ 
+t2
+ = 
+èsks
+[
+b
+->
+tid
+];
+
+137 if(
+a
+->
+ty≥
+ < 
+b
+->type){
+
+139 }if(
+a
+->
+ty≥
+ =
+b
+->ty≥ && 
+t1
+->
+Àt
+ < 
+t2
+->let){
+
+141 }if(
+a
+->
+ty≥
+ =
+b
+->ty≥ && 
+t1
+->
+Àt
+ =
+t2
+->Àà&&Å1->
+tid
+ <Å2->tid){
+
+146 
+	}
+}
+
+148 
+	$¥v_£t_öô
+(
+¥v_li°_t
+ *
+S
+)
+
+150 
+i
+;
+
+152 
+S
+->
+Àngth
+ = 0;
+
+153 
+S
+->
+œ°
+ = S->
+fú°
+ = S->
+cuºít
+ = 
+NULL
+;
+
+155 
+i
+ = 0; i < 
+NUMOFSERVANTS
+; ++i){
+
+157 if(!
+ödegªes
+[
+i
+] && 
+£rv™t_Êags
+[i] == 1){
+
+158 
+£rv™t_Êags
+[
+i
+] = -1;
+
+159 
+	`¥v_li°_ö£π_s‹ãd
+(
+£rv™ts
+[
+i
+], 
+S
+, 
+com∑ª
+);
+
+162 
+	}
+}
+
+165 
+	$¥v_£t_upd©e
+(
+ps_£rv™t_t
+ 
+£rv™t
+, 
+¥v_li°_t
+ * 
+S
+)
+
+167 
+i
+;
+
+169 
+¥v_id_t
+ 
+sid
+ = 
+£rv™t
+->sid;
+
+171 
+i
+ = 0; i < 
+NUMOFSERVANTS
+; ++i){
+
+172 if(
+edges
+[
+sid
+][
+i
+]){
+
+173 
+ödegªes
+[
+i
+] --;
+
+174 
+edges
+[
+sid
+][
+i
+] = 0;
+
+176 if(!
+ödegªes
+[
+i
+] && 
+£rv™t_Êags
+[i] == 1){
+
+177 
+£rv™t_Êags
+[
+i
+] = -1;
+
+178 
+	`¥v_li°_ö£π_s‹ãd
+(
+£rv™ts
+[
+i
+], 
+S
+, 
+com∑ª
+);
+
+181 
+	}
+}
+
+184 
+ps_£rv™t_t
+ 
+	$¥v_ef_föd_£rv™t
+(
+¥v_°y≥_t
+ 
+ty≥
+, 
+¥v_li°_t
+ * 
+S
+)
+
+186 
+i
+, 
+Àn
+;
+
+187 
+Àn
+ = 
+S
+->
+Àngth
+;
+
+188 
+ps_£rv™t_t
+ 
+ªsu…
+;
+
+189 
+¥v_ôem_t
+ * 
+ödex
+;
+
+191 
+ödex
+ = 
+	`¥v_li°_gë_fú°_ôem
+(
+S
+);
+
+192 
+i
+ = 0; i < 
+Àn
+; ++i){
+
+193 
+ªsu…
+ = (
+ps_£rv™t_t
+)
+ödex
+->
+ítôy
+;
+
+194 if(
+ªsu…
+->
+ty≥
+ ==Åype){
+
+195 
+ödex
+ = index->
+√xt
+;
+
+196 
+	`¥v_li°_ªmove
+(
+ödex
+->
+¥ev
+);
+
+197  
+ªsu…
+;
+
+199 
+ödex
+ = index->
+√xt
+;
+
+202  
+NULL
+;
+
+203 
+	}
+}
+
+214 
+	$¥v_STT_¸óã
+(
+ps_mode_t
+ 
+m
+)
+
+216 
+¥v_id_t
+ 
+mid
+ = 
+m
+->mid;
+
+217 
+¥v_li°_t
+ * 
+èbÀ
+ = &
+STT
+[
+mid
+];
+
+218 
+¥v_li°_t
+ 
+S
+;
+
+219 
+¥v_li°_t
+ 
+BL
+;
+
+220 
+ps_£rv™t_t
+ 
+tmp_£rv™t
+;
+
+221 
+¥v_tick_t
+ 
+ªÀa£
+;
+
+222 
+scheduÀ_node
+ 
+ñem
+;
+
+224 
+	`¥v_li°_öôülize
+(&
+BL
+);
+
+226 
+	`¥v_t›ogøph_upd©e
+(
+m
+);
+
+227 
+	`¥v_£t_öô
+(&
+S
+);
+
+229 (
+tmp_£rv™t
+ = 
+	`¥v_ef_föd_£rv™t
+(0, &
+S
+)Ë!
+NULL
+){
+
+231 if–(
+ªÀa£
+ = 
+	`¥v_modñtime_run
+(
+tmp_£rv™t
+)) >= 0 ){
+
+232 
+ñem
+ = (
+scheduÀ_node
+)
+	`p‹t_mÆloc
+((
+node
+));
+
+233 
+ñem
+->
+£rv™t
+ = 
+tmp_£rv™t
+;
+
+234 
+ñem
+->
+ªÀa£
+ =Ñelease;
+
+238 
+	`¥v_li°_ö£π
+(
+ñem
+, 
+èbÀ
+);
+
+239 
+	`¥v_£t_upd©e
+(
+tmp_£rv™t
+, &
+S
+);
+
+241 (
+tmp_£rv™t
+ = 
+	`¥v_ef_föd_£rv™t
+(1, &
+S
+)Ë!
+NULL
+){
+
+242 if–(
+ªÀa£
+ = 
+	`¥v_modñtime_run
+(
+tmp_£rv™t
+)) >= 0 ){
+
+243 
+ñem
+ = (
+scheduÀ_node
+)
+	`p‹t_mÆloc
+((
+node
+));
+
+244 
+ñem
+->
+£rv™t
+ = 
+tmp_£rv™t
+;
+
+245 
+ñem
+->
+ªÀa£
+ =Ñelease;
+
+249 
+	`¥v_li°_ö£π
+(
+ñem
+, 
+èbÀ
+);
+
+250 
+	`¥v_£t_upd©e
+(
+tmp_£rv™t
+, &
+S
+);
+
+252 (
+tmp_£rv™t
+ = 
+	`¥v_ef_föd_£rv™t
+(2, &
+S
+)Ë!
+NULL
+){
+
+253 if–(
+ªÀa£
+ = 
+	`¥v_modñtime_run
+(
+tmp_£rv™t
+)) >= 0 ){
+
+254 
+ñem
+ = (
+scheduÀ_node
+)
+	`p‹t_mÆloc
+((
+node
+));
+
+255 
+ñem
+->
+£rv™t
+ = 
+tmp_£rv™t
+;
+
+256 
+ñem
+->
+ªÀa£
+ =Ñelease;
+
+257 
+	`¥v_li°_ö£π
+(
+ñem
+, 
+èbÀ
+);
+
+258 
+	`¥v_£t_upd©e
+(
+tmp_£rv™t
+, &
+S
+);
+
+260 
+	`¥v_li°_ö£π
+(
+tmp_£rv™t
+, &
+BL
+);
+
+263 
+BL
+.
+Àngth
+ > 0){
+
+264 
+tmp_£rv™t
+ = 
+	`¥v_li°_p›
+(&
+BL
+);
+
+266 
+	`¥v_li°_ö£π_s‹ãd
+(
+tmp_£rv™t
+, &
+S
+, 
+com∑ª
+);
+
+268 
+	`¥v_modñtime_£t_√w_unô_°¨t
+();
+
+270 }  !
+	`¥v_modñtime_is_mode_íd
+() );
+
+271 
+	}
+}
+
+273 
+	$¥v_ef_¸óã
+()
+
+275 
+cou¡
+ = 
+m¨øy
+.
+num
+;
+
+276 
+ps_mode_t
+ 
+m
+;
+
+277 
+cou¡
+--){
+
+278 
+m
+ = 
+m¨øy
+.
+modes
+[
+cou¡
+];
+
+279 
+	`¥v_modñtime_öô
+(
+m
+);
+
+280 
+	`¥v_∑ømëî_öô
+();
+
+281 
+	`¥v_STT_¸óã
+(
+m
+);
+
+283 
+	}
+}
+
+296 
+	$¥v_ef_is_time_to_åiggî
+(){
+
+298 
+ps_mode_t
+ 
+cuºít_mode
+ = 
+	`¥v_mode_gë_cuºít_mode
+();
+
+299 
+¥v_ôem_t
+ * 
+cuºít_ôem
+ = 
+	`¥v_li°_gë_cuºít_ôem
+(&
+STT
+[
+cuºít_mode
+->
+mid
+]);
+
+300 
+scheduÀ_node
+ 
+n
+ = (scheduÀ_node)
+cuºít_ôem
+->
+ítôy
+;
+
+301 
+¥v_tick_t
+ 
+cuºít_time
+ = 
+	`p‹t_gë_cuºít_time
+();
+
+302 if(
+cuºít_time
+ >
+n
+->
+ªÀa£
+){
+
+303 
+	`¥v_ef_£t_cuºít_£rv™t
+(
+n
+->
+£rv™t
+);
+
+304 
+	`¥v_li°_£t_cuºít_ôem
+(&
+STT
+[
+cuºít_mode
+->
+mid
+]);
+
+310 
+	}
+}
+
+324 
+	$¥v_ef_åiggîög
+()
+
+326 
+	`p‹t_åiggî
+(
+£m
+[
+cuºít_£rv™t
+->
+sid
+]);
+
+327 
+	}
+}
+
+	@/home/wanbo/workspace/PSPM-C/plibs/event.c
+
+1 
+	~"evít.h
+"
+
+2 
+	~"PSPMp‹t.h
+"
+
+3 
+	~"ef.h
+"
+
+4 
+	~"li°_öã∫Æ.h
+"
+
+5 
+	~"modñtime.h
+"
+
+9 
+ps_mesßge_t
+ 
+	$ps_mesßge_¸óã
+–
+d©a
+ )
+
+11 
+ps_mesßge_t
+ 
+mesßge
+ = 
+	`p‹t_mÆloc
+((message));
+
+13 
+ps_£rv™t_t
+ 
+s
+ = 
+	`¥v_ef_gë_cuºít_£rv™t
+();
+
+14 
+mesßge
+->
+sour˚
+ = 
+s
+;
+
+15 
+mesßge
+->
+d©a
+ = data;
+
+17  
+mesßge
+;
+
+18 
+	}
+}
+
+	@/home/wanbo/workspace/PSPM-C/plibs/hashtable.c
+
+1 
+	~"hashèbÀ.h
+"
+
+2 
+	~"°rög.h
+"
+
+3 
+	~"PSPMp‹t.h
+"
+
+5 
+	#TABLESIZE
+ 20
+
+	)
+
+7 
+	skv
+{
+
+8 
+kv
+ * 
+	m√xt
+;
+
+9 * 
+	mkey
+;
+
+10 * 
+	mvÆue
+;
+
+11 (*
+	m‰ì_vÆue
+)(*);
+
+15 
+	sHashTabÀ
+{
+
+16 
+	mÀngth
+;
+
+17 
+kv
+ ** 
+	mèbÀ
+;
+
+20 
+	$¥v_hashèbÀ_gë_Àngth
+(
+HashTabÀ
+ * 
+ht
+){
+
+21  
+ht
+->
+Àngth
+;
+
+22 
+	}
+}
+
+25 
+	$öô_kv
+(
+kv
+ * kv)
+
+27 
+kv
+->
+√xt
+ = 
+NULL
+;
+
+28 
+kv
+->
+key
+ = 
+NULL
+;
+
+29 
+kv
+->
+vÆue
+
+NULL
+;
+
+30 
+kv
+->
+‰ì_vÆue
+ = 
+NULL
+;
+
+31 
+	}
+}
+
+33 
+	$‰ì_kv
+(
+kv
+ * kv)
+
+35 if(
+kv
+){
+
+36 if(
+kv
+->
+‰ì_vÆue
+){
+
+37 
+kv
+->
+	`‰ì_vÆue
+(kv->
+vÆue
+);
+
+39 
+	`p‹t_‰ì
+(
+kv
+->
+key
+);
+
+40 
+kv
+->
+key
+ = 
+NULL
+;
+
+41 
+	`p‹t_‰ì
+(
+kv
+);
+
+42 
+kv
+ = 
+NULL
+;
+
+44 
+	}
+}
+
+46 
+	$hash_33
+(* 
+key
+)
+
+48 
+hash
+ = 5381;
+
+49 
+i
+;
+
+50  *
+key
+ ){
+
+51 
+hash
+ = (hash << 5Ë+ hash + *(
+key
+++);
+
+54  
+hash
+%
+TABLESIZE
+;
+
+55 
+	}
+}
+
+72 
+¥v_hashèbÀ_t
+ * 
+	$¥v_hashèbÀ_√w
+()
+
+74 
+¥v_hashèbÀ_t
+ * 
+ht
+ = (¥v_hashèbÀ_à*)
+	`p‹t_mÆloc
+((
+HashTabÀ
+));
+
+75 if(
+NULL
+ =
+ht
+){
+
+76 
+	`¥v_hashèbÀ_dñëe
+(
+ht
+);
+
+77  
+NULL
+;
+
+79 
+ht
+->
+èbÀ
+ = 
+	`p‹t_mÆloc
+((
+kv
+ *Ë* 
+TABLESIZE
+);
+
+80 if(
+NULL
+ =
+ht
+->
+èbÀ
+){
+
+81 
+	`¥v_hashèbÀ_dñëe
+(
+ht
+);
+
+82  
+NULL
+;
+
+84 
+	`mem£t
+(
+ht
+->
+èbÀ
+, 0, (
+kv
+*)*
+TABLESIZE
+);
+
+85 
+	}
+}
+
+87 
+	$¥v_hashèbÀ_dñëe
+(
+¥v_hashèbÀ_t
+ *
+ht
+)
+
+89 if(
+ht
+){
+
+90 if(
+ht
+->
+èbÀ
+){
+
+91 
+i
+ = 0;
+
+92 ;
+i
+<
+TABLESIZE
+;++i){
+
+93 
+kv
+ *
+p
+ = 
+ht
+->
+èbÀ
+[
+i
+];
+
+94 
+kv
+ *
+q
+ = 
+NULL
+;
+
+95 
+p
+){
+
+96 
+q
+ = 
+p
+->
+√xt
+;
+
+97 
+	`‰ì_kv
+(
+p
+);
+
+98 
+p
+=
+q
+;
+
+101 
+	`p‹t_‰ì
+(
+ht
+->
+èbÀ
+);
+
+102 
+ht
+->
+èbÀ
+ = 
+NULL
+;
+
+105 
+	}
+}
+
+108 
+¥v_hashèbÀ_put
+(
+¥v_hashèbÀ_t
+ *
+ht
+, *
+key
+, * 
+vÆue
+, (*
+‰ì_vÆue
+)(*))
+
+110 
+i
+ = 
+	`hash_33
+(
+key
+);
+
+111 
+kv
+ * 
+p
+ = 
+ht
+->
+èbÀ
+[
+i
+];
+
+112 
+kv
+ * 
+¥ï
+ = 
+p
+;
+
+114 
+p
+){
+
+115 if(
+	`°rcmp
+(
+p
+->
+key
+, key)==0){
+
+116 if(
+p
+->
+‰ì_vÆue
+){
+
+117 
+p
+->
+	`‰ì_vÆue
+’->
+vÆue
+);
+
+119 
+p
+->
+vÆue
+ = value;
+
+120 
+p
+->
+‰ì_vÆue
+ = 
+vP‹tFªe
+;
+
+123 
+¥ï
+ = 
+p
+;
+
+124 
+p
+ =Ö->
+√xt
+;
+
+127 if(
+p
+ =
+NULL
+){
+
+128 *
+k°r
+ = 
+	`p‹t_mÆloc
+(
+	`°æí
+(
+key
+) + 1);
+
+129 if(
+k°r
+ =
+NULL
+){
+
+132 
+kv
+ *kv = 
+	`p‹t_mÆloc
+((kv));
+
+133 if–
+NULL
+ =
+kv
+ ){
+
+134 
+	`p‹t_‰ì
+(
+k°r
+);
+
+135 
+k°r
+ = 
+NULL
+;
+
+138 
+	`öô_kv
+(
+kv
+);
+
+139 
+	`°r˝y
+(
+k°r
+, 
+key
+);
+
+140 
+kv
+->
+key
+ = 
+k°r
+;
+
+141 
+kv
+->
+vÆue
+ = value;
+
+142 
+kv
+->
+‰ì_vÆue
+ = 
+vP‹tFªe
+;
+
+144 if(
+¥ï
+ =
+NULL
+){
+
+145 
+ht
+->
+èbÀ
+[
+i
+] = 
+kv
+;
+
+147 
+¥ï
+->
+√xt
+ = 
+kv
+;
+
+150 
+ht
+->
+Àngth
+ ++;
+
+153 
+	}
+}
+
+156 * 
+	$¥v_hashèbÀ_gë
+(
+¥v_hashèbÀ_t
+ *
+ht
+, *
+key
+)
+
+158 
+i
+ = 
+	`hash_33
+(
+key
+);
+
+159 
+kv
+ * 
+p
+ = 
+ht
+->
+èbÀ
+[
+i
+];
+
+160 
+p
+){
+
+161 if(
+	`°rcmp
+(
+key
+, 
+p
+->key) == 0){
+
+162  
+p
+->
+vÆue
+;
+
+164 
+p
+ =Ö->
+√xt
+;
+
+166  
+NULL
+;
+
+167 
+	}
+}
+
+170 
+	$¥v_hashèbÀ_ªmove
+(
+¥v_hashèbÀ_t
+ *
+ht
+, *
+key
+)
+
+172 
+i
+ = 
+	`hash_33
+(
+key
+);
+
+173 
+kv
+ * 
+p
+ = 
+ht
+->
+èbÀ
+[
+i
+];
+
+174 
+kv
+ * 
+¥ï
+ = 
+p
+;
+
+175 
+p
+){
+
+176 if(
+	`°rcmp
+(
+key
+, 
+p
+->key) == 0){
+
+177 if(
+p
+ =
+¥ï
+){
+
+178 
+ht
+->
+èbÀ
+[
+i
+] = 
+NULL
+;
+
+180 
+¥ï
+->
+√xt
+ = 
+p
+->next;
+
+182 
+	`‰ì_kv
+(
+p
+);
+
+184 
+¥ï
+ = 
+p
+;
+
+185 
+p
+ı->
+√xt
+;
+
+187 
+	}
+}
+
+	@/home/wanbo/workspace/PSPM-C/plibs/include/PSPMconfigure.h
 
 1 #i‚de‡
 __PSEFMCONFIGURE_H
@@ -362011,34 +364283,26 @@ __PSEFMCONFIGURE_H
 	)
 
 4 
-	~<°dio.h
->
+	~"li°_öã∫Æ.h
+"
 
-6 
-	tid_t
-;
+5 
+	~"hashèbÀ.h
+"
 
-7 
-	ttick_t
-;
-
-8 
-	tboﬁ
-;
-
-11 
+7 
 	#NUMOFMODES
  2
 
-12 
+8 
 	#NUMOFCONDS
  4
 
-13 
+9 
 	#NUMOFTASKS
  4
 
-14 
+10 
 	#NUMOFSERVANTS
  
 NUMOFMODES
@@ -362046,11 +364310,11 @@ NUMOFMODES
 NUMOFTASKS
 *4
 
-15 
+11 
 	#NUMOFINS
  4
 
-16 
+12 
 	#NUMOFRELATIONS
  
 NUMOFINS
@@ -362060,295 +364324,341 @@ NUMOFSERVANTS
 
 	)
 
-18 
+14 
 	#INPUT
  20
 
 	)
 
-19 
+15 
 	#OUTPUT
  20
 
 	)
 
-23 
-	sôem
-{
-
-24 * 
-	môem
+17 
+	t¥v_id_t
 ;
 
-25 * 
-	mow√r
+18 
+	t¥v_°y≥_t
+;
+
+19 
+	t¥v_tick_t
+;
+
+20 
+	t¥v_num_t
+;
+
+21 
+	tboﬁ
+;
+
+23 
+	g£rv™t
+;
+
+24 
+	gmesßge
+;
+
+25 
+	g±ask
 ;
 
 26 
-ôem
- *
-	m√xt
+	gmode
 ;
 
 27 
-ôem
- *
-	m¥ev
+	gc⁄dôi⁄
 ;
 
-28 } 
-	tôem_t
+28 
+	gc⁄dôi⁄_¨øy
 ;
 
-30 
-	sli°
-{
-
-31 
-	mÀngth
+29 
+	gmode_¨øy
 ;
 
-32 
-tick_t
- 
-	móæõ°_time
+31 
+mesßge
+ * 
+	tps_mesßge_t
 ;
 
-33 
-ôem_t
- *
-	mfú°
-;
-
-34 
-ôem_t
- *
-	mœ°
-;
-
-35 } 
-	tli°_t
-;
-
-41 
-tick_t
- 
-	mdódlöe
-;
-
-42 
-tick_t
- 
-	mtime°amp
-;
-
-43 
-	mmi¸o°ï
-;
-
-44 
-	mÀvñ
-;
-
-45 }
-	tps_èg_t
-;
-
-48 
-	mnum
-;
-
-50 
-	md©a
-[
-NUMOFINS
-];
-
-51 } 
-	tps_d©a_t
-;
-
-57 
-	s£rv™t
-{
-
-58 
-id_t
- 
-	m£rv™t_id
-;
-
-59 
-tick_t
- 
-	m°¨t_time
-;
-
-60 
-tick_t
- 
-	mLET
-;
-
-61 
-tick_t
- 
-	mLED
-;
-
-62 
-	m£rv™t_ty≥
-;
-
-63 
-	mnum
-;
-
-64 
-	m¨rive
-;
-
-65 }
+32 
+£rv™t
+ * 
 	tps_£rv™t_t
 ;
 
-69 
-ps_£rv™t_t
+33 
+±ask
  * 
-	mp£rv™t_§c
+	tps_èsk_t
 ;
 
-70 
-ps_£rv™t_t
+34 
+mode
  * 
-	mp£rv™t_de°
+	tps_mode_t
 ;
 
-71 
-ps_èg_t
- 
-	mèg
+35 
+c⁄dôi⁄
+ * 
+	tps_mode_c⁄dôi⁄_t
 ;
 
-72 
-ps_d©a_t
+36 
+c⁄dôi⁄_¨øy
+ * 
+	tps_c⁄dôi⁄_¨øy_t
+;
+
+37 
+mode_¨øy
+ * 
+	tps_mode_¨øy_t
+;
+
+39 
+	s£rv™t
+{
+
+40 
+¥v_id_t
  
+	msid
+;
+
+41 
+¥v_°y≥_t
+ 
+	mty≥
+;
+
+42 
+¥v_tick_t
+ 
+	mw˚t
+;
+
+43 
+¥v_id_t
+ 
+	mtid
+;
+
+44 
+¥v_hashèbÀ_t
+ *
+	möbox
+;
+
+47 
+	smesßge
+{
+
+48 
+ps_£rv™t_t
+ 
+	msour˚
+;
+
+49 
+ps_£rv™t_t
+ 
+	mde°ö©i⁄
+;
+
+56 
 	md©a
 ;
 
-73 
-ôem_t
- 
-	mevítIãm
-;
-
-74 }
-	tps_evít_t
-;
-
-80 
-	sèsk
+59 
+	s±ask
 {
 
-81 
-id_t
+60 
+¥v_id_t
  
-	mèsk_id
+	mtid
 ;
 
-82 
-tick_t
+61 
+¥v_tick_t
  
-	mLET
+	mÀt
 ;
 
-83 
-tick_t
+62 
+¥v_tick_t
  
 	m≥riod
 ;
 
-84 
-tick_t
+63 
+¥v_tick_t
  
 	mdódlöe
 ;
 
-85 
-	m£rv™t_num
-;
-
-86 
-ps_£rv™t_t
- * 
+64 
+¥v_li°_t
+ *
 	m£rv™ts
-[
-NUMOFSERVANTS
-];
-
-87 }
-	tps_èsk_t
 ;
 
-94 
+67 
 	smode
 {
 
-95 
-id_t
+68 
+¥v_id_t
  
-	mmode_id
+	mmid
 ;
 
-96 
-tick_t
+69 
+¥v_tick_t
  
 	m≥riod
 ;
 
-97 
-tick_t
+70 
+¥v_tick_t
  
 	munô
 ;
 
-98 
-	mnum
-;
-
-99 
-ps_èsk_t
- * 
+71 
+¥v_li°_t
+ *
 	mèsks
-[
-NUMOFTASKS
-];
-
-100 }
-	tps_mode_t
 ;
 
-102 
-	sc⁄d
+74 
+	sc⁄dôi⁄
 {
 
-103 
-id_t
+75 
+¥v_id_t
  
-	mmode_de°
+	mmid
 ;
 
-104 
+76 
 boﬁ
  (*
 c⁄dôi⁄
 )();
 
-105 }
-	tps_mode_c⁄d
+79 
+	sc⁄dôi⁄_¨øy
+{
+
+80 
+¥v_num_t
+ 
+	mnum
 ;
 
-	@/home/wanbo/workspace/PSPM-C/plibs/PSEFMport.h
+81 
+ps_mode_c⁄dôi⁄_t
+ 
+	mc⁄dôi⁄s
+[
+NUMOFCONDS
+];
+
+84 
+	smode_¨øy
+{
+
+85 
+¥v_num_t
+ 
+	mnum
+;
+
+86 
+ps_mode_t
+ 
+	mmodes
+[
+NUMOFMODES
+];
+
+90 
+¥v_time_åiggî
+();
+
+92 
+myH¨dw¨eInô
+();
+
+94 
+sy°em_°¨t
+();
+
+97 
+myTø˚Cª©e
+();
+
+99 
+myTø˚SwôchedIn
+();
+
+101 
+myTø˚SwôchedOut
+();
+
+104 
+vAµliˇti⁄TickHook
+( );
+
+110 
+	#m2s
+(
+m
+, 
+s
+Ë((s*)((*)m - 
+	`off£tof
+(s,m)))
+
+	)
+
+112 
+gcd
+(
+a
+, 
+b
+);
+
+114 
+lcm
+(
+a
+, 
+b
+);
+
+118 
+ôﬂ
+(
+n
+ , *
+s
+);
+
+	@/home/wanbo/workspace/PSPM-C/plibs/include/PSPMport.h
 
 1 #i‚de‡
 __PSEFMPORT_H
@@ -362423,17 +364733,21 @@ e
 	)
 
 21 
-	#p‹t_puª_evít_¸óã
+	#p‹t_£mph_¸óã
 (
 e
 Ë
 	`vSem≠h‹eCª©eBö¨y
-”)
+”);
+	`xSem≠h‹eTake
+”, 
+p‹tMAX_DELAY
+)
 
 	)
 
 22 
-	#ps_evít_£m_t
+	#p‹t_£mph_t
  
 xQueueH™dÀ
 
@@ -362458,7 +364772,17 @@ size
 
 	)
 
-33 
+32 
+	#p‹t_‰ì
+(
+poöãr
+Ë
+	`vP‹tFªe
+’oöãr)
+
+	)
+
+35 
 	#p‹t_¥öt
 (
 °rög
@@ -362468,7 +364792,7 @@ size
 
 	)
 
-35 
+37 
 	#p‹t_scheduÀr_°¨t
 (Ë
 	`vTaskSèπScheduÀr
@@ -362476,2169 +364800,7 @@ size
 
 	)
 
-	@/home/wanbo/workspace/PSPM-C/plibs/PSEFMstart.c
-
-1 
-	~"PSEFM°¨t.h
-"
-
-2 
-	~"PSEFMc⁄figuª.h
-"
-
-3 
-	~"PSEFMp‹t.h
-"
-
-4 
-	~"mode.h
-"
-
-6 
-ps_c⁄dôi⁄_¨øy_t
- 
-c⁄d
-;
-
-7 
-ps_mode_¨øy_t
- 
-mod
-;
-
-8 
-ps_evít_£m_t
- 
-£m
-[
-NUMOFSERVANTS
-];
-
-9 
-li°_t
- 
-xEvítGlobÆLi°
-;
-
-10 
-li°_t
- 
-xEvítLoˇlLi°
-;
-
-11 
-li°_t
- 
-xEvítRódyLi°
-;
-
-13 
-	$¥v_time_åiggî
-()
-
-15 
-i
-;
-
-16 
-ps_mode_t
- * 
-cuºít_mode
-;
-
-17 
-ps_èsk_t
- * 
-±ask
-;
-
-19 if–
-xEvítRódyLi°
-.
-óæõ°_time
- <
-	`p‹t_gë_cuºít_time
-() ){
-
-21 
-xEvítRódyLi°
-.
-óæõ°_time
- = 100000000;
-
-22 
-ps_£rv™t_t
- * 
-p£rv™t
- = ((
-ps_evít_t
- *)
-xEvítRódyLi°
-.
-fú°
-->
-ôem
-)->
-p£rv™t_de°
-;
-
-23 
-	`¥v_£rv™t_åiggî
-–
-p£rv™t
- );
-
-25 } if–
-	`¥v_modñ_time_is_mode_íd
-() == 1){
-
-27 
-cuºít_mode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-28 
-i
-=0;i<
-c⁄d
-.
-num
-;++i){
-
-29 if(
-c⁄d
-.
-c⁄dôi⁄s
-[
-i
-].
-	`c⁄dôi⁄
-() == 1){
-
-30 if(
-c⁄d
-.
-c⁄dôi⁄s
-[
-i
-].
-mode_de°
- !
-cuºít_mode
-->
-mode_id
-){
-
-31 
-cuºít_mode
- = 
-mod
-.
-pmode
-[
-c⁄d
-.
-c⁄dôi⁄s
-[
-i
-].
-mode_de°
-];
-
-32 
-	`¥v_modñ_time_ª£t
-();
-
-35 
-	`¥v_mode_°¨t
-(
-c⁄d
-.
-c⁄dôi⁄s
-[
-i
-].
-mode_de°
-);
-
-39 if(
-i
- =
-c⁄d
-.
-num
-){
-
-40 
-	`¥v_mode_°¨t
-(
-cuºít_mode
-->
-mode_id
-);
-
-42 
-	`¥v_modñ_time_futuª_ª£t
-();
-
-44 }if–
-	`¥v_modñ_time_is_unô_°¨t
-() == 1 ){
-
-46 
-cuºít_mode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-47 
-i
- = 0; i < 
-mod
-.
-pmode
-[
-cuºít_mode
-->
-mode_id
-]->
-num
-; ++i){
-
-48 
-±ask
- = 
-mod
-.
-pmode
-[
-cuºít_mode
-->
-mode_id
-]->
-èsks
-[
-i
-];
-
-49 if(1 =
-	`¥v_modñ_time_is_≥riod_°¨t
-(
-±ask
-)){
-
-50 
-	`¥v_èsk_°¨t
-–
-±ask
-);
-
-53 
-	`¥v_modñ_time_futuª_ª£t
-();
-
-55 }if–
-xEvítRódyLi°
-.
-Àngth
- == 0 &&
-
-56 –
-xEvítGlobÆLi°
-.
-óæõ°_time
- <
-	`p‹t_gë_cuºít_time
-() ||
-
-57 
-xEvítLoˇlLi°
-.
-óæõ°_time
- <
-	`p‹t_gë_cuºít_time
-())){
-
-59 
-	`p‹t_åiggî
-–
-£m
-[
-NUMOFSERVANTS
--1] );
-
-64 
-	}
-}
-
-67 
-	$myH¨dw¨eInô
-(){
-
-68 
-	`öô_Àd
-();
-
-69 
-	`öô_rs232
-();
-
-70 
-	`íabÀ_rs232_öãºu±s
-();
-
-71 
-	`íabÀ_rs232
-();
-
-72 
-	}
-}
-
-74 
-	$sy°em_°¨t
-()
-
-76 
-	`myH¨dw¨eInô
-();
-
-77 
-	`¥v_modñ_time_öôülize
-();
-
-78 
-	`¥v_evít_li°_öôülize
-();
-
-79 
-	`¥v_ef_¸óã
-();
-
-80 
-	`¥v_mode_°¨t
-(0);
-
-81 
-	`p‹t_scheduÀr_°¨t
-();
-
-82 
-	}
-}
-
-84 
-	$myTø˚Cª©e
- (){
-
-85 
-	}
-}
-
-87 
-	$myTø˚SwôchedIn
- (){
-
-88 
-	}
-}
-
-90 
-	$myTø˚SwôchedOut
- (){
-
-91 
-	}
-}
-
-94 
-	$vAµliˇti⁄TickHook
-( )
-
-96 
-	`¥v_time_åiggî
-();
-
-97 
-	}
-}
-
-	@/home/wanbo/workspace/PSPM-C/plibs/event.c
-
-1 
-	~"evít.h
-"
-
-2 
-	~"exec_Êow.h
-"
-
-3 
-	~"li°_öã∫Æ.h
-"
-
-4 
-	~"modñ_time.h
-"
-
-7 
-ps_£rv™t_t
- 
-£rv™ts
-[
-NUMOFSERVANTS
-];
-
-8 
-tick_t
- 
-xFutuªModñTime
-;
-
-10 
-li°_t
- 
-	gxEvítIdÀLi°
-;
-
-11 
-li°_t
- 
-	gxEvítGlobÆLi°
-;
-
-12 
-li°_t
- 
-	gxEvítLoˇlLi°
-;
-
-13 
-li°_t
- 
-	gxEvítRódyLi°
-;
-
-14 
-ps_evít_t
- 
-	gevíts
-[
-NUMOFRELATIONS
-];
-
-15 
-ps_evít_£m_t
- 
-	g£m
-[
-NUMOFSERVANTS
-];
-
-17 
-	$¥v_evít_£m_öôülize
-()
-
-19 
-i
-;
-
-20  
-i
- = 0; i < 
-NUMOFSERVANTS
-; ++ i){
-
-21 
-	`p‹t_puª_evít_¸óã
-–
-£m
-[
-i
-] );
-
-22 
-	`p‹t_waô
-–
-£m
-[
-i
-] );
-
-24 
-	}
-}
-
-26 
-	$¥v_evít_öôülize
-()
-
-28 
-i
-;
-
-29  
-i
- = 0; i < 
-NUMOFRELATIONS
-; ++i ){
-
-30 
-evíts
-[
-i
-].
-p£rv™t_§c
- = 
-NULL
-;
-
-31 
-evíts
-[
-i
-].
-p£rv™t_de°
- = 
-NULL
-;
-
-32 
-	`¥v_ôem_öôülize
-–(*)&
-evíts
-[
-i
-], &evíts[i].
-evítIãm
-);
-
-34 
-	`¥v_li°_ö£π
-(&
-evíts
-[
-i
-].
-evítIãm
-, &
-xEvítIdÀLi°
-);
-
-37 
-	`¥v_evít_£m_öôülize
-();
-
-38 
-	}
-}
-
-40 
-	$¥v_evít_li°_öôülize
-()
-
-42 
-	`¥v_li°_öôülize
-(&
-xEvítIdÀLi°
-);
-
-43 
-	`¥v_li°_öôülize
-(&
-xEvítGlobÆLi°
-);
-
-44 
-	`¥v_li°_öôülize
-(&
-xEvítLoˇlLi°
-);
-
-45 
-	`¥v_li°_öôülize
-(&
-xEvítRódyLi°
-);
-
-47 
-	`¥v_evít_öôülize
-();
-
-48 
-	}
-}
-
-52 
-	$¥v_evít_£nd
-(
-ps_evít_t
- *
-≥vít
-)
-
-54 
-	`¥v_li°_ö£π
-(&
-≥vít
-->
-evítIãm
-, &
-xEvítGlobÆLi°
-);
-
-55 if–
-xEvítGlobÆLi°
-.
-óæõ°_time
- > 
-≥vít
-->
-èg
-.
-time°amp
-){
-
-56 
-xEvítGlobÆLi°
-.
-óæõ°_time
- = 
-≥vít
-->
-èg
-.
-time°amp
-;
-
-58 
-	}
-}
-
-60 
-	$¥v_evít_dñëe
-(
-ps_evít_t
- * 
-≥vít
-)
-
-62 
-	`¥v_li°_ö£π
-(&
-≥vít
-->
-evítIãm
-, &
-xEvítIdÀLi°
-);
-
-63 
-	}
-}
-
-65 
-	$¥v_evít_èg_£t
-(
-ps_evít_t
- * 
-≥vít
-, 
-mi¸o°ï
-)
-
-67 
-ps_£rv™t_t
- * 
-p£rv™t_§c
- = 
-≥vít
-->pservant_src;
-
-68 
-ps_£rv™t_t
- * 
-p£rv™t_de°
- = 
-≥vít
-->pservant_dest;
-
-70 if(
-	`¥v_£rv™t_gë_ty≥
-(
-p£rv™t_de°
-) == 1){
-
-71 if–
-	`¥v_£rv™t_gë_ty≥
-(
-p£rv™t_§c
-) == 0){
-
-72 
-≥vít
-->
-èg
-.
-time°amp
- = 
-	`¥v_modñ_time_öput_íd
-();
-
-74 
-≥vít
-->
-èg
-.
-time°amp
- = 
-	`¥v_£rv™t_gë_°¨t_time
-(
-p£rv™t_§c
-Ë+ 
-	`¥v_£rv™t_gë_LED
-(pservant_src);
-
-77 if–
-	`¥v_£rv™t_gë_ty≥
-(
-p£rv™t_de°
-) == 2){
-
-78 
-≥vít
-->
-èg
-.
-time°amp
- = 
-	`¥v_modñ_time_ouçut_°¨t
-();
-
-81 
-	`p‹t_¥öt
-("error: unknowÉventÅype inÖrv_event_tag_set()\n\r");
-
-83 
-≥vít
-->
-èg
-.
-mi¸o°ï
- = microstep;
-
-84 
-≥vít
-->
-èg
-.
-Àvñ
- = 
-	`¥v_£rv™t_gë_id
-(
-p£rv™t_de°
-);
-
-85 
-	}
-}
-
-91 
-	$¥v_evít_is_ovîœp
-(
-ps_evít_t
- * 
-≥vít
-)
-
-93 
-tick_t
- 
-Àd
- = 
-≥vít
-->
-p£rv™t_de°
-->
-LED
-;
-
-94 if–
-≥vít
-->
-èg
-.
-time°amp
- + 
-Àd
- > 
-	`¥v_modñ_time_ouçut_°¨t
-()){
-
-99 
-	}
-}
-
-101 
-	$¥v_evít_èg_upd©e
-(
-ps_evít_t
- * 
-≥vít
-)
-
-103 
-≥vít
-->
-èg
-.
-time°amp
- = 
-xFutuªModñTime
-;
-
-104 
-tick_t
- 
-Àd
- = 
-≥vít
-->
-p£rv™t_de°
-->
-LED
-;
-
-105 if–!
-	`¥v_evít_is_ovîœp
-(
-≥vít
-Ë&& 
-xFutuªModñTime
- < 
-	`¥v_modñ_time_ouçut_°¨t
-()){
-
-107 
-xFutuªModñTime
- +
-Àd
-;
-
-109 }i‡(
-	`¥v_evít_is_ovîœp
-(
-≥vít
-Ë&& 
-xFutuªModñTime
- < 
-	`¥v_modñ_time_ouçut_°¨t
-()){
-
-110 
-xFutuªModñTime
- = 
-	`¥v_modñ_time_ouçut_íd
-()+
-INPUT
-;
-
-111 
-≥vít
-->
-èg
-.
-time°amp
- = 
-xFutuªModñTime
-;
-
-112 
-xFutuªModñTime
- +
-Àd
-;
-
-115 
-xFutuªModñTime
- +
-Àd
-;
-
-118 
-	}
-}
-
-123 
-	$¥v_evít_ˇn_¥o˚ss
-(
-ps_evít_t
- * 
-≥vít
-)
-
-125 
-£rv™t_ty≥
- = 
-≥vít
-->
-p£rv™t_de°
-->servant_type;
-
-127 if–
-£rv™t_ty≥
- == 2){
-
-130 i‡(
-£rv™t_ty≥
- == 1){
-
-131 if(
-	`¥v_evít_èg_upd©e
-(
-≥vít
-)){
-
-137 
-	}
-}
-
-140 
-	$ps_evít_waô
-–* 
-∑ø
- )
-
-142 
-id_t
- 
-£rv™t_id
- = * (id_à*Ë
-∑ø
-;
-
-143 
-	`p‹t_waô
-(
-£m
-[
-£rv™t_id
-]);
-
-144 
-	`¥v_ef_£t_cuºít_£rv™t
-–&
-£rv™ts
-[
-£rv™t_id
-] );
-
-145 
-	}
-}
-
-148 
-ps_d©a_t
- * 
-	$ps_evít_ª˚ive
-()
-
-150 
-Àn
-, 
-i
-, 
-fú°_evít
- = -1, 
-cou¡
- ;
-
-151 
-ps_evít_t
- * 
-≥vít
-[
-NUMOFINS
-];
-
-152 
-ps_£rv™t_t
- * 
-p£rv™t
-;
-
-153 
-ôem_t
- * 
-ôem
-;
-
-154 if–0 !(
-Àn
- = 
-	`¥v_li°_gë_Àngth
-–&
-xEvítRódyLi°
- ) ) )
-
-157 
-p£rv™t
- = 
-	`¥v_ef_gë_cuºít_£rv™t
-();
-
-160 
-i
- = 0, 
-cou¡
- = 0; i < 
-Àn
- && cou¡ < 
-p£rv™t
-->
-num
-; ++i){
-
-161 
-ôem
- = 
-	`¥v_li°_ª˚ive
-–&
-xEvítRódyLi°
- );
-
-162 
-≥vít
-[
-i
-] = (
-ps_evít_t
- *)
-ôem
-->item;
-
-164 if–
-fú°_evít
- =-1 && 
-≥vít
-[
-i
-]->
-p£rv™t_de°
- =
-p£rv™t
- ){
-
-165 
-fú°_evít
- = 
-i
-;
-
-166 
-	`¥v_£rv™t_£t_°¨t_time
-–
-p£rv™t
-, 
-≥vít
-[
-i
-]->
-èg
-.
-time°amp
-);
-
-167 
-cou¡
- ++;
-
-168 
-	`¥v_evít_dñëe
-(
-≥vít
-[
-i
-]);
-
-172 if–
-≥vít
-[
-i
-]->
-p£rv™t_de°
- =
-p£rv™t
- ){
-
-173 
-≥vít
-[
-fú°_evít
-]->
-d©a
-.d©a[
-cou¡
-++] =Öevít[
-i
-]->data.data[0];
-
-174 
-	`¥v_evít_dñëe
-(
-≥vít
-[
-i
-]);
-
-178 
-	`¥v_li°_óæõ°_time_upd©e
-(&
-xEvítRódyLi°
-);
-
-179  &
-≥vít
-[
-fú°_evít
-]->
-d©a
-;
-
-181  
-NULL
-;
-
-182 
-	}
-}
-
-185 
-	$ps_evít_¸óã
-–
-ps_d©a_t
- * 
-pd©a
-)
-
-187 
-i
-, 
-num
-;
-
-188 
-ôem_t
- * 
-pôem
-;
-
-189 
-ps_evít_t
- * 
-≥vít_ãmp
-;
-
-191 
-ps_£rv™t_t
- * 
-p£rv™t
- = 
-	`¥v_ef_gë_cuºít_£rv™t
-();
-
-192 
-num
- = 
-	`¥v_ef_gë_de°_num
-(
-p£rv™t
-);
-
-194  
-i
- = 0; i < 
-num
-; ++i ){
-
-195 
-pôem
- = 
-	`¥v_li°_ª˚ive
-(&
-xEvítIdÀLi°
-);
-
-197 if(
-pôem
- =
-NULL
-){
-
-198 
-	`p‹t_waô
-("error:Ço idleÉventÜeft. inÖs_event_create()Örv_list_receive() Error!!!\n\r");
-
-201 
-≥vít_ãmp
- = (
-ps_evít_t
- *)
-pôem
-->
-ôem
-;
-
-203 
-≥vít_ãmp
-->
-p£rv™t_§c
- = 
-p£rv™t
-;
-
-204 
-≥vít_ãmp
-->
-p£rv™t_de°
- = 
-	`¥v_ef_gë_ôh_de°
-(
-p£rv™t
-,
-i
-);
-
-207 
-	`¥v_evít_èg_£t
-(
-≥vít_ãmp
-, 
-i
-);
-
-208 
-≥vít_ãmp
-->
-d©a
-.d©a[0] = 
-pd©a
-->data[0];
-
-209 
-≥vít_ãmp
-->
-d©a
-.
-num
- = 1;
-
-211 
-	`¥v_evít_£nd
-(
-≥vít_ãmp
-);
-
-213 
-	}
-}
-
-	@/home/wanbo/workspace/PSPM-C/plibs/exec_flow.c
-
-1 
-	~"exec_Êow.h
-"
-
-3 
-	sªœti⁄
-{
-
-4 
-	mnum
-;
-
-5 
-ps_£rv™t_t
- * 
-	mp£rv™ts
-[
-NUMOFINS
-];
-
-6 } 
-	tps_ªœti⁄_t
-;
-
-8 
-ps_ªœti⁄_t
- 
-	g§cs
-[
-NUMOFSERVANTS
-];
-
-9 
-ps_ªœti⁄_t
- 
-	gde°s
-[
-NUMOFSERVANTS
-];
-
-11 
-ps_£rv™t_t
- * 
-	gpcuºít_£rv™t
-;
-
-12 
-ps_£rv™t_t
- * 
-p£rv™ts
-[
-NUMOFSERVANTS
-];
-
-13 
-li°_t
- 
-xEvítGlobÆLi°
-;
-
-14 
-li°_t
- 
-xEvítRódyLi°
-;
-
-15 
-li°_t
- 
-xEvítLoˇlLi°
-;
-
-16 
-ps_evít_£m_t
- 
-£m
-[
-NUMOFSERVANTS
-];
-
-18 
-	$¥v_ef_gë_de°_num
-(
-ps_£rv™t_t
- * 
-p£rv™t
-)
-
-20  
-de°s
-[
-p£rv™t
-->
-£rv™t_id
-].
-num
-;
-
-21 
-	}
-}
-
-23 
-ps_£rv™t_t
- * 
-	$¥v_ef_gë_ôh_de°
-(
-ps_£rv™t_t
- * 
-p£rv™t
-, 
-i
-)
-
-25  
-de°s
-[
-p£rv™t
-->
-£rv™t_id
-].
-p£rv™ts
-[
-i
-];
-
-26 
-	}
-}
-
-28 
-	$¥v_ef_£t_cuºít_£rv™t
-(
-ps_£rv™t_t
- * 
-p£rv™t
-)
-
-30 
-pcuºít_£rv™t
- = 
-p£rv™t
-;
-
-31 
-	}
-}
-
-33 
-ps_£rv™t_t
- * 
-	$¥v_ef_gë_cuºít_£rv™t
-()
-
-35  
-pcuºít_£rv™t
-;
-
-36 
-	}
-}
-
-38 
-	$¥v_ef_add_ªœti⁄
-(
-ps_£rv™t_t
- * 
-p£rv™t_§c
-,Ös_£rv™t_à* 
-p£rv™t_de°
-)
-
-40 
-num
- = 
-de°s
-[
-p£rv™t_§c
-->
-£rv™t_id
-].num;
-
-41 
-de°s
-[
-p£rv™t_§c
-->
-£rv™t_id
-].
-p£rv™ts
-[
-num
-] = 
-p£rv™t_de°
-;
-
-42 
-de°s
-[
-p£rv™t_§c
-->
-£rv™t_id
-].
-num
- ++;
-
-44 
-num
- = 
-§cs
-[
-p£rv™t_de°
-->
-£rv™t_id
-].num;
-
-45 
-§cs
-[
-p£rv™t_de°
-->
-£rv™t_id
-].
-p£rv™ts
-[
-num
-] = 
-p£rv™t_§c
-;
-
-46 
-§cs
-[
-p£rv™t_de°
-->
-£rv™t_id
-].
-num
- ++;
-
-47 
-	}
-}
-
-50 
-	$¥v_ef_s‹tög
-()
-
-52 
-i
-,
-Àn
-;
-
-53 
-ôem_t
- * 
-≥vít_ôem
-, *
-≥vít_ãmp
-;
-
-54 
-tick_t
- 
-pcuºít_time
- = 
-	`p‹t_gë_cuºít_time
-();
-
-58 
-≥vít_ôem
- = 
-	`¥v_li°_gë_fú°_ôem
-–&
-xEvítGlobÆLi°
- );
-
-59 
-Àn
- = 
-	`¥v_li°_gë_Àngth
-–&
-xEvítGlobÆLi°
- );
-
-60  
-i
- = 0; i < 
-Àn
-; ++i){
-
-62 if(
-	`¥v_evít_gë_time°amp
-((
-ps_evít_t
- *)
-	`¥v_ôem_gë_ítôy
-(
-≥vít_ôem
-)Ë<
-pcuºít_time
-){
-
-63 
-≥vít_ãmp
- = 
-≥vít_ôem
-;
-
-64 
-≥vít_ôem
- = 
-	`¥v_ôem_gë_√xt
-(Öevent_item);
-
-65 
-	`¥v_li°_ªmove
-(
-≥vít_ãmp
-);
-
-66 
-	`¥v_li°_ö£π_s‹ãd
-–
-≥vít_ãmp
-, &
-xEvítLoˇlLi°
-);
-
-69 
-	`¥v_£rv™t_add_¨rive
-–
-	`¥v_evít_gë_de°
-((
-ps_evít_t
- *)
-	`¥v_ôem_gë_ítôy
-(
-≥vít_ãmp
-)));
-
-71 
-≥vít_ôem
- = 
-	`¥v_ôem_gë_√xt
-(Öevent_item );
-
-74 
-	`¥v_li°_óæõ°_time_upd©e
-–&
-xEvítGlobÆLi°
-);
-
-75 
-	}
-}
-
-78 
-	$¥v_ef_åiggîög
-()
-
-80 
-ôem_t
- * 
-≥vít_ôem
-, *
-≥vít_ãmp
-, *
-≥vít_ôî©‹
-;
-
-81 
-ps_£rv™t_t
- * 
-p£rv™t
-;
-
-82 
-§c_num
-, 
-i
-, 
-j
-, 
-Àn
-, 
-Êag
-;
-
-83 
-tick_t
- 
-time°amp
-;
-
-85 
-Àn
- = 
-	`¥v_li°_gë_Àngth
-(&
-xEvítLoˇlLi°
-);
-
-86 
-≥vít_ôem
- = 
-	`¥v_li°_gë_fú°_ôem
-(&
-xEvítLoˇlLi°
-);
-
-89  
-i
- = 0 ; i < 
-Àn
-; i++){
-
-92 
-p£rv™t
- = 
-	`¥v_evít_gë_de°
-((
-ps_evít_t
- *)
-	`¥v_ôem_gë_ítôy
-(
-≥vít_ôem
-));
-
-93 
-§c_num
- = 
-	`¥v_£rv™t_gë_num
-(
-p£rv™t
-);
-
-95 if(
-	`¥v_£rv™t_gë_¨rive
-(
-p£rv™t
-Ë=
-§c_num
-){
-
-96 
-	`¥v_£rv™t_˛ón_¨rive
-(
-p£rv™t
-);
-
-97 
-Êag
- = 
-	`¥v_evít_ˇn_¥o˚ss
-((
-ps_evít_t
- *)
-	`¥v_ôem_gë_ítôy
-(
-≥vít_ôem
-));
-
-99 if(2 =
-Êag
- || 1 == flag){
-
-100 
-time°amp
- = 
-	`¥v_evít_gë_time°amp
-(
-	`¥v_ôem_gë_ítôy
-(
-≥vít_ôem
-));
-
-101 
-≥vít_ôî©‹
- = 
-≥vít_ôem
-;
-
-102 
-j
- = 0; j < 
-§c_num
- && 
-i
- < 
-Àn
-;){
-
-103 if(
-p£rv™t
- =
-	`¥v_evít_gë_de°
-((
-ps_evít_t
- *)
-≥vít_ôî©‹
-->
-ôem
-)){
-
-105 
-≥vít_ãmp
- = 
-≥vít_ôî©‹
-;
-
-106 
-≥vít_ôî©‹
- = 
-	`¥v_ôem_gë_√xt
-(pevent_iterator);
-
-109 ((
-ps_evít_t
- *)
-≥vít_ãmp
-->
-ôem
-)->
-èg
-.
-time°amp
- =Åimestamp;
-
-110 
-	`¥v_li°_ªmove
-(
-≥vít_ãmp
-);
-
-111 
-	`¥v_li°_ö£π
-(
-≥vít_ãmp
-, &
-xEvítRódyLi°
-);
-
-112 
-j
- ++;
-
-114 
-≥vít_ôî©‹
- = 
-	`¥v_ôem_gë_√xt
-(pevent_iterator);
-
-116 
-i
- ++;
-
-122 
-≥vít_ãmp
- = 
-≥vít_ôem
-;
-
-123 
-≥vít_ôem
- = 
-	`¥v_ôem_gë_√xt
-(pevent_item);
-
-124 
-	`¥v_li°_ªmove
-(
-≥vít_ãmp
-);
-
-125 
-	`¥v_li°_ö£π
-(
-≥vít_ãmp
-,&
-xEvítGlobÆLi°
-);
-
-128 
-≥vít_ôem
- = 
-	`¥v_ôem_gë_√xt
-(pevent_item);
-
-131 
-	`¥v_li°_óæõ°_time_upd©e
-–&
-xEvítLoˇlLi°
-);
-
-132 
-	}
-}
-
-135 
-	$R_Sîv™t
-()
-
-138 
-	`p‹t_waô
-(
-£m
-[
-NUMOFSERVANTS
--1]);
-
-141 
-	`¥v_ef_s‹tög
-();
-
-142 
-	`¥v_ef_åiggîög
-();
-
-144 
-	}
-}
-
-146 
-	$¥v_ef_¸óã
-()
-
-148 
-	`p‹t_£rv™t_¸óã
-(
-R_Sîv™t
-,
-NULL
-, 1);
-
-149 
-	}
-}
-
-	@/home/wanbo/workspace/PSPM-C/plibs/include/PSEFMstart.h
-
-1 #i‚de‡
-__PSEFMSTART_H
-
-
-2 
-	#__PSEFMSTART_H
-
-
-	)
-
-3 
-	~"PSEFMc⁄figuª.h
-"
-
-4 
-	~"PSEFMp‹t.h
-"
-
-17 
-¥v_time_åiggî
-();
-
-30 
-myH¨dw¨eInô
-();
-
-42 
-sy°em_°¨t
-();
-
-44 
-myTø˚Cª©e
-();
-
-46 
-myTø˚SwôchedIn
-();
-
-48 
-myTø˚SwôchedOut
-();
-
-50 
-vAµliˇti⁄TickHook
-();
-
-	@/home/wanbo/workspace/PSPM-C/plibs/include/event.h
-
-1 #i‚de‡
-__EVENT_H
-
-
-2 
-	#__EVENT_H
-
-
-	)
-
-4 
-	~"PSEFMc⁄figuª.h
-"
-
-5 
-	~"PSEFMp‹t.h
-"
-
-32 
-	#¥v_evít_gë_time°amp
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-èg
-.
-time°amp
-)
-
-	)
-
-33 
-	#¥v_evít_gë_mi¸o°ï
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-èg
-.
-mi¸o°ï
-)
-
-	)
-
-34 
-	#¥v_evít_gë_Àvñ
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-èg
-.
-Àvñ
-)
-
-	)
-
-35 
-	#¥v_evít_gë_dódlöe
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-èg
-.
-dódlöe
-)
-
-	)
-
-36 
-	#¥v_evít_gë_d©a
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-d©a
-.d©a)
-
-	)
-
-37 
-	#¥v_evít_gë_d©a_num
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-d©a
-.
-num
-)
-
-	)
-
-38 
-	#¥v_evít_gë_§c
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-p£rv™t_§c
-)
-
-	)
-
-39 
-	#¥v_evít_gë_de°
-(
-≥vít
-Ë(–(
-ps_evít_t
- *Ìevít)->
-p£rv™t_de°
-)
-
-	)
-
-51 
-¥v_evít_£nd
-(
-ps_evít_t
- * 
-≥vít
-);
-
-63 
-¥v_evít_dñëe
-(
-ps_evít_t
- * 
-≥vít
-);
-
-75 
-¥v_evít_li°_öôülize
-();
-
-89 
-¥v_evít_öôülize
-();
-
-101 
-¥v_evít_èg_£t
-(
-ps_evít_t
- * 
-≥vít
-, 
-mi¸o°ï
-);
-
-114 
-¥v_evít_is_ovîœp
-(
-ps_evít_t
- * 
-≥vít
-);
-
-128 
-¥v_evít_èg_upd©e
-(
-ps_evít_t
- * 
-≥vít
-);
-
-144 
-¥v_evít_ˇn_¥o˚ss
-(
-ps_evít_t
- * 
-≥vít
-);
-
-160 
-ps_evít_waô
-–* 
-∑ø
- );
-
-173 
-ps_d©a_t
- * 
-ps_evít_ª˚ive
-();
-
-189 
-ps_evít_¸óã
-(
-ps_d©a_t
- *
-pd©a
-);
-
-	@/home/wanbo/workspace/PSPM-C/plibs/include/exec_flow.h
+	@/home/wanbo/workspace/PSPM-C/plibs/include/ef.h
 
 1 #i‚de‡
 __EXEC_FLOW_H
@@ -364651,11 +364813,11 @@ __EXEC_FLOW_H
 	)
 
 4 
-	~"PSEFMc⁄figuª.h
+	~"PSPMc⁄figuª.h
 "
 
 5 
-	~"PSEFMp‹t.h
+	~"PSPMp‹t.h
 "
 
 6 
@@ -364678,59 +364840,195 @@ __EXEC_FLOW_H
 	~"li°_öã∫Æ.h
 "
 
-26 
-¥v_ef_gë_de°_num
-(
-ps_£rv™t_t
- * 
-p£rv™t
-);
-
-27 
-ps_£rv™t_t
- * 
-¥v_ef_gë_ôh_de°
-’s_£rv™t_à* 
-p£rv™t
-, 
-i
-);
-
-40 
-ps_£rv™t_t
- * 
-¥v_ef_gë_cuºít_£rv™t
-();
-
-41 
-¥v_ef_£t_cuºít_£rv™t
-(
-ps_£rv™t_t
- * 
-p£rv™t
-);
-
-56 
+23 
 ¥v_ef_add_ªœti⁄
 (
 ps_£rv™t_t
- * 
-p£rv™t_§c
-,Ös_£rv™t_à* 
-p£rv™t_de°
+ 
+§c
+,Ös_£rv™t_à
+de°
 );
 
-71 
-¥v_ef_s‹tög
+36 
+ps_£rv™t_t
+ 
+¥v_ef_gë_cuºít_£rv™t
 ();
 
-85 
+37 
+¥v_ef_£t_cuºít_£rv™t
+(
+ps_£rv™t_t
+ 
+s
+);
+
+41 
+¥v_ef_åiggî_fú°
+();
+
+53 
+¥v_ef_pick_√xt
+();
+
+65 
 ¥v_ef_åiggîög
 ();
 
-97 
+77 
 ¥v_ef_¸óã
 ();
+
+	@/home/wanbo/workspace/PSPM-C/plibs/include/event.h
+
+1 #i‚de‡
+__EVENT_H
+
+
+2 
+	#__EVENT_H
+
+
+	)
+
+4 
+	~"PSPMc⁄figuª.h
+"
+
+5 
+	~"PSPMp‹t.h
+"
+
+7 
+	#¥v_mesßge_gë_d©a
+(
+e
+Ë(–(
+ps_mesßge_t
+ *Î)->
+d©a
+)
+
+	)
+
+8 
+	#¥v_mesßge_gë_§c
+(
+e
+Ë(–(
+ps_mesßge_t
+ *Î)->
+sour˚
+)
+
+	)
+
+9 
+	#¥v_mesßge_gë_de°
+(
+e
+Ë(–(
+ps_mesßge_t
+ *Î)->
+de°ö©i⁄
+)
+
+	)
+
+12 
+ps_mesßge_t
+ 
+ps_mesßge_¸óã
+(
+d©a
+);
+
+	@/home/wanbo/workspace/PSPM-C/plibs/include/hashtable.h
+
+2 #i‚de‡
+__HASHTABLE_H
+
+
+3 
+	#__HASHTABLE_H
+
+
+	)
+
+5 
+	~"li°_öã∫Æ.h
+"
+
+7 
+HashTabÀ
+ 
+	t¥v_hashèbÀ_t
+;
+
+9 
+¥v_hashèbÀ_t
+ * 
+¥v_hashèbÀ_√w
+();
+
+11 
+¥v_hashèbÀ_dñëe
+(
+¥v_hashèbÀ_t
+ * 
+ht
+);
+
+13 
+	#¥v_hashèbÀ_add
+(
+ht
+,
+key
+,
+vÆue
+Ë
+	`¥v_hashèbÀ_put
+(ht,key,vÆue, 
+NULL
+)
+
+	)
+
+15 * 
+¥v_hashèbÀ_gë
+(
+¥v_hashèbÀ_t
+ * 
+ht
+, *
+key
+);
+
+17 
+¥v_hashèbÀ_ªmove
+(
+¥v_hashèbÀ_t
+ *
+ht
+, *
+key
+);
+
+19 
+¥v_hashèbÀ_put
+(
+¥v_hashèbÀ_t
+ *
+ht
+, *
+key
+, * 
+vÆue
+, (*
+‰ì_vÆue
+)(*));
 
 	@/home/wanbo/workspace/PSPM-C/plibs/include/list_internal.h
 
@@ -364744,176 +365042,228 @@ __LIST_INTERNAL_H
 
 	)
 
-4 
-	~"PSEFMp‹t.h
-"
+8 
+	sôem
+{
 
-5 
-	~"PSEFMc⁄figuª.h
-"
+9 * 
+	mítôy
+;
 
-27 
+10 * 
+	mow√r
+;
+
+11 
+ôem
+ *
+	m√xt
+;
+
+12 
+ôem
+ *
+	m¥ev
+;
+
+13 } 
+	t¥v_ôem_t
+;
+
+15 
+	sli°
+{
+
+16 
+	mÀngth
+;
+
+17 
+¥v_ôem_t
+ *
+	mfú°
+;
+
+18 
+¥v_ôem_t
+ *
+	mœ°
+;
+
+19 
+¥v_ôem_t
+ *
+	mcuºít
+;
+
+20 } 
+	t¥v_li°_t
+;
+
+24 
 	#¥v_li°_gë_Àngth
 (
-≥vít_li°
+L
 Ë(((
-li°_t
- *Ìevít_li°)->
+¥v_li°_t
+ *)L)->
 Àngth
 )
 
 	)
 
-28 
-	#¥v_li°_gë_óæõ°_time
-(
-≥vít_li°
-Ë(((
-li°_t
- *Ìevít_li°)->
-óæõ°_time
-)
-
-	)
-
-29 
+25 
 	#¥v_li°_gë_fú°_ôem
 (
-≥vít_li°
+L
 Ë(((
-li°_t
- *Ìevít_li°)->
+¥v_li°_t
+ *)L)->
 fú°
 )
 
 	)
 
-30 
+26 
 	#¥v_li°_gë_œ°_ôem
 (
-≥vít_li°
+L
 Ë(((
-li°_t
- *Ìevít_li°)->
+¥v_li°_t
+ *)L)->
 œ°
 )
 
 	)
 
-32 
-	#¥v_ôem_gë_ítôy
+27 
+	#¥v_li°_gë_cuºít_ôem
 (
-≥vít_ôem
+L
 Ë(((
-ôem_t
- *Ìevít_ôem)->
-ôem
+¥v_li°_t
+ *)L)->
+cuºít
 )
 
 	)
 
-33 
+30 
+	#¥v_ôem_gë_ítôy
+(
+ôem
+Ë(((
+¥v_ôem_t
+ *)ôem)->
+ítôy
+)
+
+	)
+
+31 
 	#¥v_ôem_gë_ow√r
 (
-≥vít_ôem
+ôem
 Ë(((
-ôem_t
- *Ìevít_ôem)->
+¥v_ôem_t
+ *)ôem)->
 ow√r
 )
 
 	)
 
-34 
+32 
 	#¥v_ôem_gë_√xt
 (
-≥vít_ôem
+ôem
 Ë(((
-ôem_t
- *Ìevít_ôem)->
+¥v_ôem_t
+ *)ôem)->
 √xt
 )
 
 	)
 
-35 
+33 
 	#¥v_ôem_gë_¥ev
 (
-≥vít_ôem
+ôem
 Ë(((
-ôem_t
- *Ìevít_ôem)->
+¥v_ôem_t
+ *)ôem)->
 ¥ev
 )
 
 	)
 
-48 
+35 
+¥v_li°_£t_cuºít_ôem
+(
+¥v_li°_t
+ *);
+
+46 
 ¥v_li°_öôülize
 (
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
+L
 );
 
-49 
+47 
 ¥v_ôem_öôülize
 (* 
-ôem
+ítôy
 , 
-ôem_t
+¥v_ôem_t
  * 
-pEvítIãm
+ôem
 );
 
-54 
+49 * 
+¥v_li°_gë_cuºít_ítôy
+(
+¥v_li°_t
+ * 
+L
+);
+
+53 
 ¥v_li°_ö£π
-–
-ôem_t
- * 
-pEvítIãm
+–* 
+ítôy
 , 
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
+L
 );
 
 55 
 ¥v_li°_ö£π_s‹ãd
-(
-ôem_t
- * 
-pEvítIãm
+(* 
+ítôy
 , 
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
-);
+L
+, (*
+com∑ª
+)(*, *));
 
 68 
-¥v_li°_óæõ°_time_upd©e
+	`¥v_li°_ªmove
 (
-li°_t
+¥v_ôem_t
  * 
-pEvítLi°
+ôem
 );
 
-80 
-¥v_li°_ªmove
+70 * 
+	`¥v_li°_p›
 (
-ôem_t
+¥v_li°_t
  * 
-pEvítIãm
-);
-
-93 
-ôem_t
- * 
-¥v_li°_ª˚ive
-(
-li°_t
- * 
-pEvítLi°
+L
 );
 
 	@/home/wanbo/workspace/PSPM-C/plibs/include/mode.h
@@ -364929,7 +365279,7 @@ __MODE_H
 	)
 
 4 
-	~"PSEFMc⁄figuª.h
+	~"PSPMc⁄figuª.h
 "
 
 5 
@@ -364940,143 +365290,105 @@ __MODE_H
 	~"evít.h
 "
 
-8 
-	sps_c⁄dôi⁄_¨øy_t
-{
-
-9 
-	mnum
-;
-
-10 
-ps_mode_c⁄d
- 
-	mc⁄dôi⁄s
-[
-NUMOFCONDS
-];
-
-13 
-	sps_mode_¨øy_t
-{
-
-14 
-	mnum
-;
-
-15 
+8 
+	#¥v_mode_gë_èsk_num
+(
+mode
+Ë(((
 ps_mode_t
- * 
-	mpmode
-[
-NUMOFMODES
-];
+)mode)->
+èsks
+.
+Àg¡h
+)
 
-28 
+	)
+
+9 
+	#¥v_mode_gë_≥riod
+(
+mode
+Ë(((
+ps_mode_t
+)mode)->
+≥riod
+)
+
+	)
+
+10 
+	#¥v_mode_gë_unô
+(
+mode
+Ë(((
+ps_mode_t
+)mode)->
+unô
+)
+
+	)
+
+11 
+	#¥v_mode_gë_èsks
+(
+mode
+Ë(((
+ps_mode_t
+)mode)->
+èsks
+)
+
+	)
+
+22 
 ps_mode_¸óã
 (
-id_t
+¥v_id_t
  
-mode_id
+mid
 , 
-ps_èsk_t
- * 
-èsk_¨øy
-[], 
+¥v_num_t
+ 
 num
-);
-
-41 
-¥v_mode_add_èsk
-(
-id_t
- 
-mode_id
 , 
 ps_èsk_t
- * 
-±ask
-);
+ 
+èsk_¨øy
+[]);
 
-56 
-tick_t
- 
-¥v_mode_gë_mode_≥riod
- ( 
-id_t
- 
-mode_id
-);
-
-57 
-tick_t
- 
-¥v_mode_gë_mode_unô
- ( 
-id_t
- 
-mode_id
-);
-
-58 
-¥v_mode_gë_èsk_num
- ( 
-id_t
- 
-mode_id
-);
-
-72 
-¥v_mode_£t_mode_unô
- ( 
-id_t
- 
-mode_id
-, 
-tick_t
- 
-unô
-);
-
-73 
-¥v_mode_£t_mode_≥riod
- ( 
-id_t
- 
-mode_id
- , 
-tick_t
- 
-≥riod
-);
-
-85 
+35 
 ps_mode_swôch_¸óã
 (
 	$boﬁ
  (*
 c⁄dôi⁄
 )(), 
-id_t
+¥v_id_t
  
 mode_de°
 );
 
-98 
-	`¥v_mode_°¨t
-(
-id_t
- 
-mode_id
-);
+48 
+	`¥v_mode_swôch
+();
 
-110 
+60 
 ps_mode_t
- * 
+ 
 	`¥v_mode_gë_cuºít_mode
 ();
 
-	@/home/wanbo/workspace/PSPM-C/plibs/include/model_time.h
+63 
+¥v_tick_t
+ 
+	`¥v_mode_gë_mode°¨t
+();
+
+65 
+	`¥v_mode_is_≥riod_íd
+();
+
+	@/home/wanbo/workspace/PSPM-C/plibs/include/modeltime.h
 
 1 #i‚de‡
 __MODEL_TIME_H
@@ -365089,102 +365401,74 @@ __MODEL_TIME_H
 	)
 
 4 
-	~"PSEFMc⁄figuª.h
+	~"PSPMc⁄figuª.h
 "
 
 5 
 	~"mode.h
 "
 
-15 
-tick_t
+7 
+¥v_modñtime_öô
+(
+ps_mode_t
  
-¥v_modñ_time_unô_°¨t
+m
+);
+
+10 
+¥v_tick_t
+ 
+¥v_modñtime_unô_°¨t
+();
+
+11 
+¥v_tick_t
+ 
+¥v_modñtime_compuã_°¨t
+();
+
+12 
+¥v_tick_t
+ 
+¥v_modñtime_ouçut_°¨t
+();
+
+13 
+¥v_tick_t
+ 
+¥v_modñtime_unô_íd
 ();
 
 16 
-tick_t
+¥v_tick_t
  
-¥v_modñ_time_ouçut_°¨t
-();
-
-17 
-tick_t
- 
-¥v_modñ_time_ouçut_íd
-();
-
-18 
-tick_t
- 
-¥v_modñ_time_öput_íd
-();
-
-30 
-boﬁ
- 
-¥v_modñ_time_is_unô_°¨t
-();
-
-31 
-boﬁ
- 
-¥v_modñ_time_is_mode_íd
-();
-
-32 
-boﬁ
- 
-¥v_modñ_time_is_≥riod_°¨t
+¥v_modñtime_run
 (
-ps_èsk_t
- * 
-±ask
+ps_£rv™t_t
+ 
+s
 );
 
-44 
-tick_t
+18 
+¥v_modñtime_£t_√w_unô_°¨t
+();
+
+20 
+boﬁ
  
-¥v_modñ_time_öput_Àngth
+¥v_modñtime_is_mode_íd
 ();
 
-45 
-tick_t
+21 
+boﬁ
  
-¥v_modñ_time_ouçut_Àngth
-();
-
-57 
-¥v_modñ_time_unô_öôülize
-();
-
-58 
-¥v_modñ_time_≥riod_öôülize
-();
-
-59 
-¥v_modñ_time_öôülize
-();
-
-72 
-¥v_modñ_time_ª£t
-();
-
-73 
-¥v_modñ_time_futuª_ª£t
-();
-
-85 
-tick_t
+¥v_modñtime_is_≥riod_°¨t
+(
+ps_èsk_t
  
-¥v_modñ_time_gë_modñ_time
-();
-
-86 
-tick_t
- 
-¥v_modñ_time_gë_futuª_modñ_time
-();
+t
+);
 
 	@/home/wanbo/workspace/PSPM-C/plibs/include/ptask.h
 
@@ -365199,118 +365483,98 @@ __TASK_H
 	)
 
 4 
-	~"PSEFMc⁄figuª.h
+	~"£rv™t.h
 "
 
-19 
+20 
 	#¥v_èsk_gë_id
 (
-±ask
+t
 Ë(–(
 p_èsk_t
- *Ìèsk)->
-èsk_id
-)
-
-	)
-
-20 
-	#¥v_èsk_gë_LET
-(
-±ask
-Ë(–(
-p_èsk_t
- *Ìèsk)->
-LET
+È)->
+tid
 )
 
 	)
 
 21 
-	#¥v_èsk_gë_≥riod
+	#¥v_èsk_gë_Àt
 (
-±ask
+t
 Ë(–(
 p_èsk_t
- *Ìèsk)->
-≥riod
+È)->
+Àt
 )
 
 	)
 
 22 
-	#¥v_èsk_gë_dódlöe
+	#¥v_èsk_gë_≥riod
 (
-±ask
+t
 Ë(–(
 p_èsk_t
- *Ìèsk)->
-dódlöe
+È)->
+≥riod
 )
 
 	)
 
 23 
-	#¥v_èsk_gë_£rv™t_num
+	#¥v_èsk_gë_dódlöe
 (
-±ask
+t
 Ë(–(
 p_èsk_t
- *Ìèsk)->
-num
+È)->
+dódlöe
 )
 
 	)
 
-25 
-ps_£rv™t_t
- * 
-¥v_èsk_gë_£ns‹
- ( 
-ps_èsk_t
- *);
-
-26 
-ps_£rv™t_t
- * 
-¥v_èsk_gë_a˘u©‹
- ( 
-ps_èsk_t
- *);
-
-39 
-¥v_èsk_°¨t
+24 
+	#¥v_èsk_gë_£rv™t_num
 (
-ps_èsk_t
- * 
-±ask
-);
+t
+Ë(–(
+p_èsk_t
+È)->
+£rv™ts
+->
+Àngth
+)
 
-54 
+	)
+
+36 
 ps_èsk_t
- * 
+ 
 ps_èsk_¸óã
 (
-id_t
+¥v_id_t
  
-èsk_id
+tid
 ,
 
-55 
-tick_t
+37 
+¥v_tick_t
  
-LET
+Àt
 ,
 
-56 
+38 
+¥v_num_t
+ 
+num
+,
+
+39 
 ps_£rv™t_t
- * 
+ 
 £rv™ts
-[],
-
-57 
-£rv™t_num
-);
+[]);
 
 	@/home/wanbo/workspace/PSPM-C/plibs/include/servant.h
 
@@ -365325,184 +365589,160 @@ __SERVANT_H
 	)
 
 4 
-	~"PSEFMc⁄figuª.h
+	~"PSPMc⁄figuª.h
 "
 
 5 
-	~"PSEFMp‹t.h
+	~"PSPMp‹t.h
 "
 
 6 
-	~"exec_Êow.h
+	~"li°_öã∫Æ.h
 "
 
-23 
-	#¥v_£rv™t_gë_id
-(
-p£rv™t
-Ë(–(
-ps_£rv™t_t
- *Ì£rv™t)->
-£rv™t_id
-)
+7 
+	~"hashèbÀ.h
+"
 
-	)
-
-24 
-	#¥v_£rv™t_gë_°¨t_time
-(
-p£rv™t
-Ë(–(
-ps_£rv™t_t
- *Ì£rv™t)->
-°¨t_time
-)
-
-	)
-
-25 
-	#¥v_£rv™t_gë_LED
-(
-p£rv™t
-Ë(–(
-ps_£rv™t_t
- *Ì£rv™t)->
-LED
-)
-
-	)
+8 
+	~"ef.h
+"
 
 26 
-	#¥v_£rv™t_gë_LET
+	#¥v_£rv™t_gë_id
 (
-p£rv™t
-Ë(–(
+s
+Ë(((
 ps_£rv™t_t
- *Ì£rv™t)->
-LET
+)s)->
+sid
 )
 
 	)
 
 27 
-	#¥v_£rv™t_gë_ty≥
+	#¥v_£rv™t_gë_w˚t
 (
-p£rv™t
-Ë(–(
+s
+Ë(((
 ps_£rv™t_t
- *Ì£rv™t)->
-£rv™t_ty≥
+)s)->
+w˚t
 )
 
 	)
 
 28 
-	#¥v_£rv™t_gë_num
+	#¥v_£rv™t_gë_ty≥
 (
-p£rv™t
-Ë(–(
+s
+Ë(((
 ps_£rv™t_t
- *Ì£rv™t)->
-num
+)s)->
+ty≥
 )
 
 	)
 
 29 
-	#¥v_£rv™t_gë_¨rive
+	#¥v_£rv™t_gë_èsk
 (
-p£rv™t
-Ë(–(
+s
+Ë(((
 ps_£rv™t_t
- *Ì£rv™t)->
-¨rive
+)s)->
+tid
 )
 
 	)
 
-38 
-¥v_£rv™t_add_¨rive
- ( 
-ps_£rv™t_t
- *
-p£rv™t
-);
-
-39 
-¥v_£rv™t_£t_¨rive
- ( 
-ps_£rv™t_t
- * 
-p£rv™t
-, 
-n
-);
-
-40 
-¥v_£rv™t_˛ón_¨rive
- ( 
-ps_£rv™t_t
- * 
-p£rv™t
-);
-
-41 
-¥v_£rv™t_£t_°¨t_time
- ( 
-ps_£rv™t_t
- *
-p£rv™t
-, 
-tick_t
- 
-°¨t_time
-);
-
-53 
-¥v_£rv™t_åiggî
-–
-ps_£rv™t_t
- * 
-p£rv™t
-);
-
-73 
-ps_£rv™t_t
- * 
-ps_£rv™t_¸óã
+30 
+	#¥v_£rv™t_gë_öbox
 (
-id_t
+s
+Ë(((
+ps_£rv™t_t
+)s)->
+öbox
+)
+
+	)
+
+51 
+ps_£rv™t_t
  
-£rv™t_id
-,
-
-74 
-£rv™t_ty≥
-,
-
-75 
-tick_t
+ps_£rv™t_¸óã
+–
+¥v_id_t
  
-LED
+sid
 ,
 
-76 
+52 
+¥v_°y≥_t
+ 
+ty≥
+,
+
+53 
+¥v_tick_t
+ 
+w˚t
+,
+
+54 
+¥v_num_t
+ 
 num
 ,
 
-77 
+55 
 ps_£rv™t_t
- *
+ 
 §c_¨øy
 [],
 
-78 (*
+56 (*
 ru¬abÀ
 )(*));
 
-90 
-	`ps_£rv™t_co›î©e
-();
+68 
+	`ps_£rv™t_wake
+–
+ps_£rv™t_t
+ * 
+s
+);
+
+81 
+	`ps_£rv™t_waô
+(
+¥v_id_t
+ 
+sid
+);
+
+94 
+	`ps_mesßge_£nd
+–
+ps_£rv™t_t
+ 
+èrgë
+, 
+ps_mesßge_t
+ 
+mesßge
+ );
+
+106 
+ps_mesßge_t
+ 
+	`ps_mesßge_ª˚ive
+(
+ps_£rv™t_t
+ 
+§c
+);
 
 	@/home/wanbo/workspace/PSPM-C/plibs/list_internal.c
 
@@ -365511,766 +365751,616 @@ ru¬abÀ
 "
 
 2 
-	~"evít.h
+	~"PSPMc⁄figuª.h
 "
 
-4 
+3 
+	~"PSPMp‹t.h
+"
+
+6 
 	$¥v_li°_öôülize
 (
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
+L
 )
 
-6 
-pEvítLi°
+8 
+L
 ->
 Àngth
  = 0;
 
-7 
-pEvítLi°
-->
-óæõ°_time
- = 100000000;
-
-8 
-pEvítLi°
+9 
+L
 ->
 fú°
- =ÖEvítLi°->
+ = L->
 œ°
+ = L->
+cuºít
  = 
 NULL
 ;
 
-9 
+10 
 	}
 }
 
-11 
+12 
 	$¥v_ôem_öôülize
 (* 
-ôem
+ítôy
 , 
-ôem_t
+¥v_ôem_t
  * 
-pEvítIãm
+ôem
 )
 
-13 
-pEvítIãm
-->
-ôem
- = item;
-
 14 
-pEvítIãm
+ôem
 ->
-ow√r
- = 
-NULL
-;
+ítôy
+=Éntity;
 
 15 
-pEvítIãm
+ôem
 ->
-√xt
+ow√r
  = 
 NULL
 ;
 
 16 
-pEvítIãm
+ôem
 ->
-¥ev
+√xt
  = 
 NULL
 ;
 
 17 
+ôem
+->
+¥ev
+ = 
+NULL
+;
+
+18 
 	}
 }
 
-19 
-	$¥v_li°_ö£π
-–
-ôem_t
+20 
+	$¥v_li°_£t_cuºít_ôem
+(
+¥v_li°_t
  * 
-pEvítIãm
-, 
-li°_t
- * 
-pEvítLi°
+l
 )
 
-21 
-ps_evít_t
- * 
-≥vít
- = (ps_evít_à*)
-	`¥v_ôem_gë_ítôy
+22 
+l
+->
+cuºít
+ =Ü->cuºít->
+√xt
+;
+
+23 
+	}
+}
+
+25 * 
+	$¥v_li°_gë_cuºít_ítôy
 (
-pEvítIãm
+¥v_li°_t
+ * 
+L
+)
+
+27 * 
+s
+ = ((
+¥v_li°_t
+ *)
+L
+)->
+cuºít
+->
+ítôy
+;
+
+28 ((
+¥v_li°_t
+ *)
+L
+)->
+cuºít
+ = (’rv_li°_à*)L)->cuºít->
+√xt
+;
+
+30  
+s
+;
+
+31 
+	}
+}
+
+33 
+	$¥v_li°_ö£π
+–* 
+ítôy
+, 
+¥v_li°_t
+ * 
+L
+)
+
+35 
+¥v_ôem_t
+ * 
+ôem
+ = (¥v_ôem_t*)
+	`p‹t_mÆloc
+((prv_item_t));
+
+36 
+	`¥v_ôem_öôülize
+(
+ítôy
+, 
+ôem
 );
 
-23 if(
-pEvítLi°
+38 if(
+L
 ->
 Àngth
  == 0){
 
-24 
-pEvítLi°
+39 
+L
 ->
 fú°
- =ÖEvítLi°->
+ = L->
 œ°
- = 
-pEvítIãm
+ = L->
+cuºít
+
+ôem
 ;
 
-25 
-pEvítIãm
+40 
+ôem
 ->
 ¥ev
- = 
-NULL
-;
+ = item;
 
-26 
-pEvítIãm
+41 
+ôem
 ->
 √xt
- = 
-NULL
-;
+ = item;
 
-28 
-pEvítLi°
+43 
+L
 ->
 œ°
 ->
 √xt
  = 
-pEvítIãm
+ôem
 ;
 
-29 
-pEvítLi°
+44 
+L
 ->
 fú°
 ->
 ¥ev
  = 
-pEvítIãm
+ôem
 ;
 
-31 
-pEvítIãm
+46 
+ôem
 ->
 ¥ev
  = 
-pEvítLi°
+L
 ->
 œ°
 ;
 
-32 
-pEvítIãm
+47 
+ôem
 ->
 √xt
  = 
-pEvítLi°
+L
 ->
 fú°
 ;
 
-33 
-pEvítLi°
+48 
+L
 ->
 œ°
  = 
-pEvítIãm
+ôem
 ;
 
-36 
-pEvítLi°
+52 
+L
 ->
 Àngth
  ++;
 
-37 
-pEvítIãm
+53 
+ôem
 ->
 ow√r
  = (*)
-pEvítLi°
+L
 ;
 
-39 if–
-pEvítLi°
-->
-óæõ°_time
- > 
-≥vít
-->
-èg
-.
-time°amp
-){
-
-40 
-pEvítLi°
-->
-óæõ°_time
- = 
-≥vít
-->
-èg
-.
-time°amp
-;
-
-42 
+54 
 	}
 }
 
-44 
-	$èg_com∑ª
-(
-ps_evít_t
- * 
-≥1
-,Ös_evít_à*
-≥2
-)
-
-46 if–
-≥1
-->
-èg
-.
-time°amp
- < 
-≥2
-->tag.timestamp ){
-
-48 }if–
-≥1
-->
-èg
-.
-time°amp
- =
-≥2
-->tag.timestamp ){
-
-49 if–
-≥1
-->
-èg
-.
-mi¸o°ï
- < 
-≥2
-->tag.microstep ){
-
-51 }if–
-≥1
-->
-èg
-.
-mi¸o°ï
- =
-≥2
-->tag.microstep ){
-
-52 if–
-≥1
-->
-èg
-.
-Àvñ
- < 
-≥2
-->tag.level ){
-
-59 
-	}
-}
-
-61 
-	$¥v_li°_ö£π_s‹ãd
-(
-ôem_t
- * 
-pEvítIãm
+57 
+¥v_li°_ö£π_s‹ãd
+(* 
+ítôy
 , 
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
-)
+L
+, (*
+com∑ª
+)(*, *))
 
-63 
-ps_evít_t
- * 
-≥vít
- = (ps_evít_à*)
-	`¥v_ôem_gë_ítôy
-(
-pEvítIãm
-);
-
-64 vﬁ©ûê
-ôem_t
+59 vﬁ©ûê
+¥v_ôem_t
  * 
 pIndex
 ;
 
-65 
+60 
 i
-, 
-Àn
 ;
 
-67 if(
-pEvítLi°
-->
-Àngth
+61 
+Àn
+ = 
+	`¥v_li°_gë_Àngth
+(
+L
+);
+
+63 
+¥v_ôem_t
+ * 
+ôem
+ = (¥v_ôem_t*)
+	`p‹t_mÆloc
+((prv_item_t));
+
+64 
+	`¥v_ôem_öôülize
+(
+ítôy
+, 
+ôem
+);
+
+66 if(
+Àn
  == 0){
 
-68 
-pEvítLi°
+67 
+L
 ->
 fú°
- =ÖEvítLi°->
+ = L->
 œ°
+ = L->
+cuºít
  = 
-pEvítIãm
+ôem
 ;
 
-69 
-pEvítIãm
+68 
+ôem
 ->
 ¥ev
- =ÖEventItem;
+ = item;
 
-70 
-pEvítIãm
+69 
+ôem
 ->
 √xt
- =ÖEventItem;
+ = item;
 
-72 
-Àn
- = 
-pEvítLi°
-->
-Àngth
-;
-
-73 
+71 
 pIndex
  = 
 	`¥v_li°_gë_fú°_ôem
 (
-pEvítLi°
+L
 );
 
-74  
+72  
 i
  = 0; i < 
 Àn
-; ++i){
+; ++i, 
+pIndex
+ = 
+	`¥v_ôem_gë_√xt
+(pIndex)){
 
-75 if(1 =
-	`èg_com∑ª
+73 if(1 =
+	`com∑ª
 (
-≥vít
+ítôy
 , 
 	`¥v_ôem_gë_ítôy
 (
 pIndex
 ))){
 
-76 if–
+74 if–
 i
  == 0 ){
 
-77 
-pEvítLi°
+75 
+L
 ->
 fú°
  = 
-pEvítIãm
+ôem
 ;
 
-81 
-pIndex
- = 
-	`¥v_ôem_gë_√xt
-(pIndex);
-
-83 if–
+80 if–
 i
  =
 Àn
  ){
 
-84 
-pEvítLi°
+81 
+L
 ->
 œ°
  = 
-pEvítIãm
+ôem
 ;
 
-86 
-pEvítIãm
+83 
+ôem
 ->
 √xt
  = (
-ôem_t
+¥v_ôem_t
  *)
 pIndex
 ;
 
-87 
-pEvítIãm
+84 
+ôem
 ->
 ¥ev
  = 
 pIndex
 ->prev;
 
-88 
+85 
 pIndex
 ->
 ¥ev
 ->
 √xt
  = 
-pEvítIãm
+ôem
 ;
 
-89 
+86 
 pIndex
 ->
 ¥ev
  = 
-pEvítIãm
+ôem
 ;
 
-92 
-pEvítLi°
+89 
+L
 ->
 Àngth
  ++;
 
-93 
-pEvítIãm
+90 
+ôem
 ->
 ow√r
  = (*)
-pEvítLi°
+L
 ;
 
-94 if–
-pEvítLi°
-->
-óæõ°_time
- > 
-≥vít
-->
-èg
-.
-time°amp
-){
-
-95 
-pEvítLi°
-->
-óæõ°_time
- = 
-≥vít
-->
-èg
-.
-time°amp
-;
-
-97 
+91 
 	}
 }
 
-99 
+94 
 	$¥v_li°_ªmove
 (
-ôem_t
+¥v_ôem_t
  * 
-pEvítIãm
+ôem
 )
 
-101 
-li°_t
+96 
+¥v_li°_t
  * 
-pLi°
- = (li°_à*)
-pEvítIãm
+L
+ = (¥v_li°_à*)
+ôem
 ->
 ow√r
 ;
 
-103 if(
-pLi°
+98 if(
+L
 ->
 Àngth
  == 0){
 
-104 
-	`p‹t_¥öt
-("error:ÇoÉvent could beÑemove inÅhisÉventÜist; inÖrv_list_remove()\n\r");
-
-107 if(
-pLi°
+103 if(
+L
 ->
 Àngth
  == 1){
 
-108 
-pLi°
+104 
+L
 ->
 fú°
  = 
 NULL
 ;
 
-109 
-pLi°
+105 
+L
 ->
 œ°
  = 
 NULL
 ;
 
-111 if(
-pEvítIãm
+106 
+L
+->
+cuºít
+ = 
+NULL
+;
+
+108 if(
+ôem
  =
 	`¥v_li°_gë_fú°_ôem
 (
-pLi°
+L
 )){
 
-112 
-pLi°
+109 
+L
 ->
 fú°
  = 
-pEvítIãm
+ôem
 ->
 √xt
 ;
 
-114 if(
-pEvítIãm
+111 if(
+ôem
  =
 	`¥v_li°_gë_œ°_ôem
 (
-pLi°
+L
 )){
 
-115 
-pLi°
+112 
+L
 ->
 œ°
  = 
-pEvítIãm
+ôem
 ->
 ¥ev
 ;
 
-117 
-pEvítIãm
+114 
+ôem
 ->
 ¥ev
 ->
 √xt
- =ÖEventItem->next;
+ = item->next;
+
+115 
+ôem
+->
+√xt
+->
+¥ev
+ = item->prev;
 
 118 
-pEvítIãm
-->
-√xt
-->
-¥ev
- =ÖEventItem->prev;
+	`p‹t_‰ì
+(
+ôem
+);
 
-120 
-pEvítIãm
-->
-ow√r
+119 
+ôem
  = 
 NULL
 ;
 
-121 
-pLi°
+120 
+L
 ->
 Àngth
  --;
 
-122 
+121 
 	}
 }
 
-125 
-	$¥v_li°_óæõ°_time_upd©e
+125 * 
+	$¥v_li°_p›
 (
-li°_t
+¥v_li°_t
  * 
-pEvítLi°
+L
 )
 
-127 
-i
-, 
-Àn
-;
-
-128 if(
-pEvítLi°
-->
-Àngth
- == 0)
-
-130 
-pEvítLi°
-->
-óæõ°_time
- = 100000000;
-
-132 
-Àn
- = 
-	`¥v_li°_gë_Àngth
-(
-pEvítLi°
-);
-
-133 vﬁ©ûê
-ôem_t
- * 
-pIndex
- = 
-	`¥v_li°_gë_fú°_ôem
-(
-pEvítLi°
-);
-
-134 
-pEvítLi°
-->
-óæõ°_time
- = ((
-ps_evít_t
- *)
-pIndex
-->
-ôem
-)->
-èg
-.
-time°amp
-;
-
-136  
-i
- = 0; i < 
-Àn
-; i++ , 
-pIndex
- = 
-	`¥v_ôem_gë_√xt
-(pIndex)){
-
-137 if(
-pEvítLi°
-->
-óæõ°_time
- > ((
-ps_evít_t
- *)
-pIndex
-->
-ôem
-)->
-èg
-.
-time°amp
-)
-
-139 
-pEvítLi°
-->
-óæõ°_time
- = ((
-ps_evít_t
- *)
-pIndex
-->
-ôem
-)->
-èg
-.
-time°amp
-;
-
-143 
-	}
-}
-
-146 
-ôem_t
- * 
-	$¥v_li°_ª˚ive
-(
-li°_t
- * 
-pEvítLi°
-)
-
-148 if(
-pEvítLi°
+127 if(
+L
 ->
 Àngth
  == 0){
 
-149  
+128  
 NULL
 ;
 
-152 
-ôem_t
- * 
-pôem
+131 * 
+ítôy
  = 
-pEvítLi°
+L
 ->
 fú°
-;
+->entity;
 
-153 
+132 
 	`¥v_li°_ªmove
 (
-pôem
+L
+->
+fú°
 );
 
-155  
-pôem
+134  
+ítôy
 ;
 
-156 
+135 
 	}
 }
 
@@ -366280,933 +366370,711 @@ pôem
 	~"mode.h
 "
 
-3 
-ps_c⁄dôi⁄_¨øy_t
+6 
+mode_¨øy
  
-	gc⁄d
+	gm¨øy
 ;
 
-4 
-ps_mode_¨øy_t
+7 
+c⁄dôi⁄_¨øy
  
-	gmod
- = {0, 
-NULL
-};
-
-7 
-ps_mode_t
- 
-	gmodes
-[
-NUMOFMODES
-];
+	gˇºay
+;
 
 9 
+¥v_tick_t
+ 
+	gmode°¨t
+;
+
+10 
 ps_mode_t
- * 
+ 
 	gcuºít_mode
 ;
 
-11 
-	$¥v_mode_add_èsk
-(
-id_t
- 
-mode_id
-, 
-ps_èsk_t
- * 
-±ask
-)
-
-13 
-num
- = 
-modes
-[
-mode_id
-].num;
-
-14 
-modes
-[
-mode_id
-].
-èsks
-[
-num
-] = 
-±ask
-;
-
-15 
-modes
-[
-mode_id
-].
-num
- =Çum + 1;
-
-16 
-	}
-}
-
-18 
+12 
 ps_mode_t
- * 
+ 
 	$¥v_mode_gë_cuºít_mode
 ()
 
-20  
+14  
 cuºít_mode
-;
-
-21 
-	}
-}
-
-23 
-	$¥v_mode_gë_èsk_num
-(
-id_t
- 
-mode_id
-)
-
-25  
-modes
-[
-mode_id
-].
-num
-;
-
-26 
-	}
-}
-
-28 
-tick_t
- 
-	$¥v_mode_gë_mode_≥riod
-(
-id_t
- 
-mode_id
-)
-
-30  
-modes
-[
-mode_id
-].
-≥riod
-;
-
-31 
-	}
-}
-
-33 
-	$¥v_mode_£t_mode_≥riod
-(
-id_t
- 
-mode_id
- , 
-tick_t
- 
-≥riod
-)
-
-35 
-modes
-[
-mode_id
-].
-≥riod
- =Öeriod;
-
-36 
-	}
-}
-
-38 
-tick_t
- 
-	$¥v_mode_gë_mode_unô
-(
-id_t
- 
-mode_id
-)
-
-40  
-modes
-[
-mode_id
-].
-unô
-;
-
-41 
-	}
-}
-
-43 
-	$¥v_mode_£t_mode_unô
-(
-id_t
- 
-mode_id
-, 
-tick_t
- 
-unô
-)
-
-45 
-modes
-[
-mode_id
-].
-unô
- = unit;
-
-46 
-	}
-}
-
-50 
-	$ps_mode_¸óã
-(
-id_t
- 
-mode_id
-, 
-ps_èsk_t
- * 
-èsk_¨øy
-[], 
-num
-)
-
-52 
-i
-;
-
-54 
-modes
-[
-mode_id
-].mode_id = mode_id;
-
-55 
-i
-=0;i<
-num
-;++i){
-
-56 
-	`¥v_mode_add_èsk
-(
-mode_id
-, 
-èsk_¨øy
-[
-i
-]);
-
-59 
-mod
-.
-pmode
-[mod.
-num
-] = &
-modes
-[
-mode_id
-];
-
-60 
-mod
-.
-num
- ++;
-
-62 
-	}
-}
-
-64 
-	$¥v_mode_°¨t
-(
-id_t
- 
-mode_id
-)
-
-67 
-i
-;
-
-68 
-cuºít_mode
- = &
-modes
-[
-mode_id
-];
-
-69 
-i
-=0;i<
-modes
-[
-mode_id
-].
-num
-;++i){
-
-70 
-	`¥v_èsk_°¨t
-–
-modes
-[
-mode_id
-].
-èsks
-[
-i
-]);
-
-72 
-	}
-}
-
-75 
-ps_mode_swôch_¸óã
-(
-	$boﬁ
- (*
-c⁄dôi⁄
-)(), 
-id_t
- 
-mode_de°
-)
-
-77 
-num
- = 
-c⁄d
-.num;
-
-78 
-c⁄d
-.
-c⁄dôi⁄s
-[
-num
-].
-mode_de°
- = mode_dest;
-
-79 
-c⁄d
-.
-c⁄dôi⁄s
-[
-num
-].
-c⁄dôi⁄
- = condition;
-
-80 
-c⁄d
-.
-num
- =Çum + 1;
-
-81 
-	}
-}
-
-	@/home/wanbo/workspace/PSPM-C/plibs/model_time.c
-
-1 
-	~"modñ_time.h
-"
-
-3 
-tick_t
- 
-	gxModñTimeSèπ
- ;
-
-4 
-tick_t
- 
-	gxFutuªModñTime
-;
-
-5 
-ps_mode_¨øy_t
- 
-mod
-;
-
-8 
-tick_t
- 
-	$GCD
-(
-tick_t
- 
-a
-,Åick_à
-b
-){
-
-9  
-b
-==0?
-a
-:
-	`GCD
-(b,a%b);
-
-10 
-	}
-}
-
-12 
-tick_t
- 
-	$¥v_modñ_time_unô_Àngth
-(
-ps_mode_t
- * 
-pmode
-)
-
-14 
-i
 ;
 
 15 
-tick_t
- 
-unô_Àn
- = 
-pmode
-->
-èsks
-[0]->
-≥riod
-;
-
-16  
-i
- = 1; i < 
-pmode
-->
-num
-; ++i){
+	}
+}
 
 17 
-unô_Àn
- = 
-	`GCD
-(unô_Àn, 
-pmode
-->
-èsks
-[
-i
-]->
-≥riod
-);
+¥v_tick_t
+ 
+	$¥v_mode_gë_mode°¨t
+()
 
 19  
-unô_Àn
+mode°¨t
 ;
 
 20 
 	}
 }
 
-22 
-tick_t
- 
-	$¥v_modñ_time_≥riod_Àngth
-(
-ps_mode_t
- * 
-pmode
-)
-
-24 
-i
-;
-
-25 
-tick_t
- 
-≥riod_Àn
- = 
-pmode
-->
-èsks
-[0]->
-≥riod
-;
-
-26 
-tick_t
- 
-gcd
-;
-
-27  
-i
- = 1; i < 
-pmode
-->
-num
-; ++i){
-
-28 
-gcd
- = 
-	`GCD
-(
-≥riod_Àn
-, 
-pmode
-->
-èsks
-[
-i
-]->
-≥riod
-);
-
-29 
-≥riod_Àn
- = (≥riod_À¿* 
-pmode
-->
-èsks
-[
-i
-]->
-≥riod
-)/
-gcd
-;
-
-31  
-≥riod_Àn
-;
-
-32 
-	}
-}
-
-34 
-	$¥v_modñ_time_unô_öôülize
+22 
+	$¥v_mode_is_≥riod_íd
 ()
 
-36 
-i
-;
-
-37  
-i
- = 0; i < 
-mod
-.
-num
-; ++i){
-
-38 
-	`¥v_mode_£t_mode_unô
-(
-i
-,
-	`¥v_modñ_time_unô_Àngth
-(
-mod
-.
-pmode
-[i]));
-
-41 
-	}
-}
-
-43 
-	$¥v_modñ_time_≥riod_öôülize
-()
-
-45 
-i
-;
-
-46  
-i
- = 0; i < 
-mod
-.
-num
-; ++i){
-
-47 
-	`¥v_mode_£t_mode_≥riod
-(
-i
-,
-	`¥v_modñ_time_≥riod_Àngth
-(
-mod
-.
-pmode
-[i]));
-
-49 
-	}
-}
-
-51 
-	$¥v_modñ_time_öôülize
-()
-
-53 
-	`¥v_modñ_time_unô_öôülize
-();
-
-54 
-	`¥v_modñ_time_≥riod_öôülize
-();
-
-55 
-	`¥v_modñ_time_ª£t
-();
-
-56 
-	`¥v_modñ_time_futuª_ª£t
-();
-
-57 
-	}
-}
-
-59 
-tick_t
+24 
+¥v_tick_t
  
-	$¥v_modñ_time_öput_Àngth
-()
-
-61  
-INPUT
-;
-
-62 
-	}
-}
-
-64 
-tick_t
- 
-	$¥v_modñ_time_ouçut_Àngth
-()
-
-66  
-OUTPUT
-;
-
-67 
-	}
-}
-
-70 
-tick_t
- 
-	$¥v_modñ_time_unô_°¨t
-()
-
-72 
-ps_mode_t
- * 
-pmode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-73 
-id_t
- 
-mode_id
- = 
-pmode
-->mode_id;
-
-74 
-tick_t
- 
-cuºít_modñ_time
+ªÆtime
  = 
 	`p‹t_gë_cuºít_time
 ();
 
-76  
-cuºít_modñ_time
- - (cuºít_modñ_timê- 
-xModñTimeSèπ
-)%(
-	`¥v_mode_gë_mode_unô
+25 if(
+ªÆtime
+ =
+	`¥v_mode_gë_≥riod
 (
-mode_id
+cuºít_mode
+Ë+ 
+mode°¨t
+){
+
+30 
+	}
+}
+
+32 
+	$ps_mode_¸óã
+(
+¥v_id_t
+ 
+mid
+, 
+¥v_num_t
+ 
+num
+, 
+ps_èsk_t
+ 
+èsk_¨øy
+[])
+
+34 
+i
+;
+
+35 
+i_gcd
+ = 0 , 
+i_lcm
+ = 1;
+
+36 
+m¨øy
+.
+modes
+[
+mid
+] = (
+ps_mode_t
+)
+	`p‹t_mÆloc
+((
+mode
 ));
+
+37 
+m¨øy
+.
+modes
+[
+mid
+]->
+èsks
+ = (
+¥v_li°_t
+ *)
+	`p‹t_mÆloc
+((
+li°
+));
+
+39 
+m¨øy
+.
+modes
+[
+mid
+]->mid = mid;
+
+40 
+i
+=0;i<
+num
+;++i){
+
+41 
+	`¥v_li°_ö£π
+(
+èsk_¨øy
+[
+i
+], 
+m¨øy
+.
+modes
+[
+mid
+]->
+èsks
+);
+
+42 
+i_gcd
+ = 
+	`gcd
+(
+èsk_¨øy
+[
+i
+]->
+≥riod
+, i_gcd);
+
+43 
+i_lcm
+ = 
+	`lcm
+(
+èsk_¨øy
+[
+i
+]->
+≥riod
+, i_lcm);
+
+46 
+m¨øy
+.
+modes
+[
+mid
+]->
+≥riod
+ = 
+i_lcm
+;
+
+47 
+m¨øy
+.
+modes
+[
+mid
+]->
+unô
+ = 
+i_gcd
+;
+
+49 
+m¨øy
+.
+num
+ ++;
+
+50 
+	}
+}
+
+53 
+ps_mode_swôch_¸óã
+(
+	$boﬁ
+ (*
+c⁄dôi⁄
+)(), 
+¥v_id_t
+ 
+èrgë
+)
+
+55 
+num
+ = 
+ˇºay
+.num;
+
+56 
+ˇºay
+.
+c⁄dôi⁄s
+[
+num
+] = (
+ps_mode_c⁄dôi⁄_t
+)
+	`p‹t_mÆloc
+((
+c⁄dôi⁄
+));
+
+57 
+ˇºay
+.
+c⁄dôi⁄s
+[
+num
+]->
+mid
+
+èrgë
+;
+
+58 
+ˇºay
+.
+c⁄dôi⁄s
+[
+num
+]->
+c⁄dôi⁄
+ = condition;
+
+59 
+ˇºay
+.
+num
+ ++;
+
+60 
+	}
+}
+
+63 
+	$¥v_mode_swôch
+()
+
+65 
+i
+, 
+tmp
+;
+
+66  
+i
+ = 0; i < 
+ˇºay
+.
+num
+; ++i ){
+
+67 if–(
+tmp
+ = 
+ˇºay
+.
+c⁄dôi⁄s
+[
+i
+]->
+	`c⁄dôi⁄
+()) == 1){
+
+68 
+cuºít_mode
+ = 
+m¨øy
+.
+modes
+[
+ˇºay
+.
+c⁄dôi⁄s
+[
+i
+]->
+mid
+];
+
+69 
+mode°¨t
+ = 
+	`p‹t_gë_cuºít_time
+();
+
+74 
+cuºít_mode
+ = 
+m¨øy
+.
+modes
+[0];
+
+75 
+mode°¨t
+ = 
+	`p‹t_gë_cuºít_time
+();
 
 77 
 	}
 }
 
-79 
-boﬁ
- 
-	$¥v_modñ_time_is_unô_°¨t
-()
+	@/home/wanbo/workspace/PSPM-C/plibs/modeltime.c
 
-81 
+1 
+	~"modñtime.h
+"
+
+3 
+¥v_tick_t
+ 
+	gmode°¨t
+;
+
+4 
+¥v_tick_t
+ 
+	gmodñtime
+;
+
+5 
 ps_mode_t
- * 
-pmode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-82 
-id_t
  
-mode_id
- = 
-pmode
-->mode_id;
+	gcuºít_mode
+;
 
-83 
-tick_t
+6 
+ps_èsk_t
  
-cuºít_modñ_time
- = 
-	`p‹t_gë_cuºít_time
-();
+èsks
+[
+NUMOFTASKS
+];
 
-85 if–(
-cuºít_modñ_time
- - 
-xModñTimeSèπ
-)%(
-	`¥v_mode_gë_mode_unô
+8 
+	$¥v_modñtime_öô
 (
-mode_id
-)) == 0 ){
+ps_mode_t
+ 
+m
+)
 
-90 
+10 
+cuºít_mode
+ = 
+m
+;
+
+11 
+mode°¨t
+ = 0;
+
+12 
+modñtime
+ = 0;
+
+13 
 	}
 }
 
-92 
+16 
+¥v_tick_t
+ 
+	$¥v_modñtime_di
+()
+
+18  
+INPUT
+;
+
+19 
+	}
+}
+
+22 
+¥v_tick_t
+ 
+	$¥v_modñtime_do
+()
+
+24  
+OUTPUT
+;
+
+25 
+	}
+}
+
+27 
+¥v_tick_t
+ 
+	$¥v_modñtime_unô_°¨t
+()
+
+29  
+modñtime
+ - (modñtimê- 
+mode°¨t
+)%(
+	`¥v_mode_gë_unô
+(
+cuºít_mode
+));
+
+30 
+	}
+}
+
+32 
+¥v_tick_t
+ 
+	$¥v_modñtime_compuã_°¨t
+()
+
+34  
+	`¥v_modñtime_unô_°¨t
+(Ë+ 
+	`¥v_modñtime_di
+();
+
+35 
+	}
+}
+
+37 
+¥v_tick_t
+ 
+	$¥v_modñtime_ouçut_°¨t
+()
+
+39  
+	`¥v_modñtime_unô_°¨t
+(Ë+ 
+	`¥v_mode_gë_unô
+(
+cuºít_mode
+Ë- 
+	`¥v_modñtime_do
+();
+
+40 
+	}
+}
+
+42 
+¥v_tick_t
+ 
+	$¥v_modñtime_unô_íd
+()
+
+44  
+	`¥v_modñtime_ouçut_°¨t
+(Ë+ 
+	`¥v_modñtime_do
+();
+
+45 
+	}
+}
+
+48 
+¥v_tick_t
+ 
+	$¥v_modñtime_run
+(
+ps_£rv™t_t
+ 
+s
+ )
+
+50 
+¥v_tick_t
+ 
+ªÀa£
+;
+
+51 if(
+s
+->
+ty≥
+ == 0){
+
+53 
+ªÀa£
+ = 
+modñtime
+;
+
+54 
+modñtime
+ +
+s
+->
+w˚t
+;
+
+55 }if(
+s
+->
+ty≥
+ == 1){
+
+56 if(
+modñtime
+ < 
+	`¥v_modñtime_compuã_°¨t
+()){
+
+57 
+modñtime
+ = 
+	`¥v_modñtime_compuã_°¨t
+();
+
+58 
+ªÀa£
+ = 
+modñtime
+;
+
+60 if(
+modñtime
+ + 
+s
+->
+w˚t
+ <
+	`¥v_modñtime_ouçut_°¨t
+()){
+
+61 
+ªÀa£
+ = 
+modñtime
+;
+
+62 
+modñtime
+ +
+s
+->
+w˚t
+;
+
+67 if(
+modñtime
+ < 
+	`¥v_modñtime_ouçut_°¨t
+()){
+
+68 
+modñtime
+ = 
+	`¥v_modñtime_ouçut_°¨t
+();
+
+70 if(0 =(
+	`¥v_modñtime_ouçut_°¨t
+(Ë+ 
+OUTPUT
+Ë% 
+èsks
+[
+s
+->
+tid
+]->
+≥riod
+){
+
+71 
+ªÀa£
+ = 
+modñtime
+;
+
+72 
+modñtime
+ +
+s
+->
+w˚t
+;
+
+74 
+ªÀa£
+ = -1;
+
+77  
+ªÀa£
+;
+
+78 
+	}
+}
+
+82 
+	$¥v_modñtime_£t_√w_unô_°¨t
+()
+
+84 
+modñtime
+ = 
+	`¥v_modñtime_unô_íd
+();
+
+85 
+	}
+}
+
+87 
 boﬁ
  
-	$¥v_modñ_time_is_≥riod_°¨t
+	$¥v_modñtime_is_mode_íd
+()
+
+89 if(
+modñtime
+ =
+mode°¨t
+ + 
+	`¥v_mode_gë_≥riod
+(
+cuºít_mode
+)){
+
+94 
+	}
+}
+
+96 
+boﬁ
+ 
+	$¥v_modñtime_is_≥riod_°¨t
 (
 ps_èsk_t
- * 
-±ask
+ 
+t
 )
 
-94 if–(
-	`p‹t_gë_cuºít_time
-(Ë- 
-xModñTimeSèπ
+98 if–(
+modñtime
+ - 
+mode°¨t
 Ë% 
-±ask
+t
 ->
 ≥riod
  == 0){
 
-99 
-	}
-}
-
-101 
-	$¥v_modñ_time_ª£t
-()
-
 103 
-xModñTimeSèπ
- = 
-	`p‹t_gë_cuºít_time
-();
-
-104 
-	}
-}
-
-107 
-	$¥v_modñ_time_futuª_ª£t
-()
-
-109 
-xFutuªModñTime
- = 
-	`¥v_modñ_time_öput_íd
-();
-
-110 
-	}
-}
-
-112 
-tick_t
- 
-	$¥v_modñ_time_gë_modñ_time
-()
-
-114  
-xModñTimeSèπ
-;
-
-115 
-	}
-}
-
-117 
-tick_t
- 
-	$¥v_modñ_time_gë_futuª_modñ_time
-()
-
-119  
-xFutuªModñTime
-;
-
-120 
-	}
-}
-
-122 
-tick_t
- 
-	$¥v_modñ_time_öput_íd
-()
-
-124  
-	`¥v_modñ_time_unô_°¨t
-()+
-INPUT
-;
-
-125 
-	}
-}
-
-127 
-tick_t
- 
-	$¥v_modñ_time_ouçut_íd
-()
-
-129 
-ps_mode_t
- *
-pmode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-130 
-id_t
- 
-mode_id
- = 
-pmode
-->mode_id;
-
-131  
-	`¥v_modñ_time_unô_°¨t
-()+
-	`¥v_mode_gë_mode_unô
-(
-mode_id
-);
-
-132 
-	}
-}
-
-134 
-tick_t
- 
-	$¥v_modñ_time_ouçut_°¨t
-()
-
-136  
-	`¥v_modñ_time_ouçut_íd
-()-
-OUTPUT
-;
-
-137 
-	}
-}
-
-139 
-boﬁ
- 
-	$¥v_modñ_time_is_mode_íd
-()
-
-141 
-ps_mode_t
- *
-pmode
- = 
-	`¥v_mode_gë_cuºít_mode
-();
-
-142 
-id_t
- 
-mode_id
- = 
-pmode
-->mode_id;
-
-143 
-tick_t
- 
-cuºít_time
- = 
-	`p‹t_gë_cuºít_time
-();
-
-145 if–
-cuºít_time
- > 
-xModñTimeSèπ
- && 0 =–cuºít_timê- xModñTimeSèπ ) % 
-	`¥v_mode_gë_mode_≥riod
-(
-mode_id
-)){
-
-150 
 	}
 }
 
@@ -367217,278 +367085,132 @@ mode_id
 "
 
 2 
-	~"PSEFMc⁄figuª.h
+	~"ef.h
 "
 
 3 
-	~"PSEFMp‹t.h
+	~"PSPMc⁄figuª.h
 "
 
-5 
-	sps_èsk_¨øy_t
-{
+4 
+	~"PSPMp‹t.h
+"
 
-6 
-	mnum
-;
-
-7 
+6 
 ps_èsk_t
  
-	mèsks
+	gèsks
 [
 NUMOFTASKS
-*
-NUMOFMODES
 ];
 
-10 
-ps_èsk_¨øy_t
+8 
+ps_èsk_t
  
-	gtsk
- = {0};
-
-13 
-ps_£rv™t_t
- * 
-	$¥v_èsk_gë_£ns‹
-(
-ps_èsk_t
- * 
-±ask
-)
-
-15 
-i
-;
-
-16 
-i
- = 0; i < 
-±ask
-->
-£rv™t_num
-; ++i){
-
-17 if(
-±ask
-->
-£rv™ts
-[
-i
-]->
-£rv™t_ty≥
- == 0){
-
-18  
-±ask
-->
-£rv™ts
-[
-i
-];
-
-21  
-NULL
-;
-
-22 
-	}
-}
-
-24 
-ps_£rv™t_t
- * 
-	$¥v_èsk_gë_a˘u©‹
-(
-ps_èsk_t
- * 
-±ask
-)
-
-26 
-i
-;
-
-27 
-i
- = 0; i < 
-±ask
-->
-£rv™t_num
-; ++i){
-
-28 if(
-±ask
-->
-£rv™ts
-[
-i
-]->
-£rv™t_ty≥
- == 2){
-
-29  
-±ask
-->
-£rv™ts
-[
-i
-];
-
-32  
-NULL
-;
-
-33 
-	}
-}
-
-35 
-	$¥v_èsk_°¨t
-(
-ps_èsk_t
- * 
-±ask
-)
-
-37 
-ps_£rv™t_t
- * 
-£ns‹
- = 
-	`¥v_èsk_gë_£ns‹
-(
-±ask
-);
-
-38 
-	`¥v_£rv™t_åiggî
-–
-£ns‹
- );
-
-39 
-	}
-}
-
-41 
-ps_èsk_t
- * 
 	$ps_èsk_¸óã
 (
-id_t
+¥v_id_t
  
-èsk_id
-, 
-tick_t
- 
-LET
+tid
 ,
 
-42 
+9 
+¥v_tick_t
+ 
+Àt
+,
+
+10 
+¥v_num_t
+ 
+num
+,
+
+11 
 ps_£rv™t_t
- * 
+ 
 £rv™ts
-[],
+[])
 
-43 
-£rv™t_num
-)
-
-45 
+13 
 i
 ;
 
-46 
-pos
- = 
-tsk
-.
-num
-;
-
-47 
-tsk
-.
+14 
 èsks
 [
-pos
-].
-èsk_id
- =Åask_id;
+tid
+] = (
+ps_èsk_t
+)
+	`p‹t_mÆloc
+((
+±ask
+));
 
-48 
-tsk
-.
+15 
 èsks
 [
-pos
-].
-LET
- =Åsk.èsks[pos].
+tid
+]->
+£rv™ts
+ = (
+¥v_li°_t
+ *)
+	`p‹t_mÆloc
+((prv_list_t));
+
+16 
+èsks
+[
+tid
+]->tid =Åid;
+
+17 
+èsks
+[
+tid
+]->
+Àt
+ =Åasks[tid]->
 ≥riod
- =Åsk.èsks[pos].
+ =Åasks[tid]->
 dódlöe
- = LET;
+ =Üet;
 
-49 
-tsk
-.
-èsks
-[
-pos
-].
-£rv™t_num
- = servant_num;
-
-51 
+19 
 i
 =0;i<
-£rv™t_num
+num
 ;++i){
 
-52 
-tsk
-.
-èsks
-[
-pos
-].
+20 
+	`¥v_li°_ö£π
+(
 £rv™ts
 [
 i
-] = servants[i];
-
-53 
-tsk
-.
+], 
 èsks
 [
-pos
-].
+tid
+]->servants);
+
+21 
 £rv™ts
 [
 i
 ]->
-LET
- = LET;
+tid
+ =Åid;
 
-55 
-tsk
-.
-num
- ++;
-
-57  &
-tsk
-.
+24  
 èsks
 [
-pos
+tid
 ];
 
-58 
+25 
 	}
 }
 
@@ -367499,17 +367221,21 @@ pos
 "
 
 2 
-	~"exec_Êow.h
+	~"evít.h
 "
 
 3 
-	~"PSEFMc⁄figuª.h
+	~"ef.h
 "
 
-5 
-ps_evít_£m_t
+4 
+	~"PSPMc⁄figuª.h
+"
+
+6 
+p‹t_£mph_t
  
-£m
+	g£m
 [
 NUMOFSERVANTS
 ];
@@ -367522,255 +367248,349 @@ ps_£rv™t_t
 NUMOFSERVANTS
 ];
 
-10 
-	$¥v_£rv™t_£t_¨rive
-–
+11 
 ps_£rv™t_t
- * 
-p£rv™t
-, 
-n
-)
-
-12 
-p£rv™t
-->
-¨rive
- = 
-n
-;
-
-13 
-	}
-}
-
-15 
-	$¥v_£rv™t_˛ón_¨rive
-–
-ps_£rv™t_t
- * 
-p£rv™t
-)
-
-17 
-	`¥v_£rv™t_£t_¨rive
-(
-p£rv™t
-, 0);
-
-18 
-	}
-}
-
-20 
-	$¥v_£rv™t_add_¨rive
-(
-ps_£rv™t_t
- *
-p£rv™t
-)
-
-22 
-p£rv™t
-->
-¨rive
- ++;
-
-23 
-	}
-}
-
-25 
-	$¥v_£rv™t_åiggî
-–
-ps_£rv™t_t
- * 
-p£rv™t
-)
-
-27 
-id_t
  
-£rv™t_id
- = 
-	`¥v_£rv™t_gë_id
-–
-p£rv™t
- );
-
-28 
-	`p‹t_åiggî
-(
-£m
-[
-£rv™t_id
-]);
-
-29 
-	}
-}
-
-31 
-	$¥v_£rv™t_£t_°¨t_time
- ( 
-ps_£rv™t_t
- *
-p£rv™t
-, 
-tick_t
- 
-°¨t_time
-)
-
-33 
-p£rv™t
-->
-°¨t_time
- = start_time;
-
-34 
-	}
-}
-
-37 
-ps_£rv™t_t
- * 
 ps_£rv™t_¸óã
-(
-id_t
+–
+¥v_id_t
  
-£rv™t_id
-, 
-£rv™t_ty≥
-, 
-tick_t
- 
-LED
+sid
 ,
 
-38 
+12 
+¥v_°y≥_t
+ 
+ty≥
+,
+
+13 
+¥v_tick_t
+ 
+w˚t
+,
+
+14 
+¥v_num_t
+ 
 num
 ,
 
-39 
+15 
 ps_£rv™t_t
- *
+ 
 §c_¨øy
 [],
 
-40 (*
+16 (*
 ru¬abÀ
 )(*))
 
-42 
+18 
 i
 ;
 
-43 
-ps_£rv™t_t
- * 
-p£rv™t
- = &
-£rv™ts
+19 
+ch
+[10];
+
+20 
+ps_mesßge_t
+ 
+mesßge
 [
-£rv™t_id
+num
 ];
 
-45 
-p£rv™t
-->
-£rv™t_id
- = servant_id;
+21 
+£rv™ts
+[
+sid
+] = (
+ps_£rv™t_t
+)
+	`p‹t_mÆloc
+((
+£rv™t
+));
 
-46 
-p£rv™t
-->
-£rv™t_ty≥
- = servant_type;
+22 
+ps_£rv™t_t
+ 
+s
+ = 
+£rv™ts
+[
+sid
+];
 
-47 
-p£rv™t
-->
-°¨t_time
- = 0;
+23 
+	`p‹t_£mph_¸óã
+ ( 
+£m
+[
+sid
+] );
 
-48 
-p£rv™t
-->
-LED
- = LED;
+24 
+¥v_hashèbÀ_t
+ * 
+ht
+ = 
+	`¥v_hashèbÀ_√w
+();
 
-49 
-p£rv™t
+26 
+s
 ->
-num
- =Çum;
+sid
+ = sid;
 
-50 
-p£rv™t
+27 
+s
 ->
-¨rive
- = 0;
+ty≥
+ =Åype;
 
-52 
+28 
+s
+->
+w˚t
+ = wcet;
+
+29 
+s
+->
+öbox
+ = 
+ht
+;
+
+31 
 	`p‹t_£rv™t_¸óã
 (
 ru¬abÀ
 , &
-p£rv™t
+s
 ->
-£rv™t_id
- , 2);
+sid
+, 2);
 
-54 
+33 
 i
  = 0; i < 
 num
 ; ++ i){
 
-55 
+34 
 	`¥v_ef_add_ªœti⁄
 (
 §c_¨øy
 [
 i
 ], 
-p£rv™t
+s
 );
 
-58  
-p£rv™t
+35 
+mesßge
+[
+i
+] = 
+	`p‹t_mÆloc
+((message));
+
+36 
+mesßge
+[
+i
+]->
+d©a
+ = 0;
+
+37 
+mesßge
+[
+i
+]->
+sour˚
+ = 
+§c_¨øy
+[i];
+
+38 
+mesßge
+[
+i
+]->
+de°ö©i⁄
+ = 
+s
 ;
 
-59 
+39 
+	`ôﬂ
+(
+§c_¨øy
+[
+i
+]->
+sid
+, 
+ch
+);
+
+46  
+s
+;
+
+47 
 	}
 }
 
-61 
-	$ps_£rv™t_co›î©e
-()
+49 
+	$ps_£rv™t_waô
+(
+¥v_id_t
+ 
+sid
+)
 
-64 
+53 
+	`p‹t_waô
+–
+£m
+[
+sid
+] );
+
+54 
+	}
+}
+
+56 
+	$ps_£rv™t_wake
+–
 ps_£rv™t_t
  * 
-p£rv™t
+s
+ )
+
+58 
+¥v_id_t
+ 
+sid
+ = 
+	`¥v_£rv™t_gë_id
+(
+s
+);
+
+59 
+	`p‹t_åiggî
+–
+£m
+[
+sid
+] );
+
+60 
+	}
+}
+
+62 
+	$ps_mesßge_£nd
+–
+ps_£rv™t_t
+ 
+èrgë
+, 
+ps_mesßge_t
+ 
+mesßge
+)
+
+64 
+ch
+[10];
+
+65 
+	`ôﬂ
+(
+èrgë
+->
+sid
+, 
+ch
+);
+
+67 
+	`¥v_hashèbÀ_add
+(
+èrgë
+->
+öbox
+, 
+ch
+, 
+mesßge
+);
+
+68 
+	}
+}
+
+70 
+ps_mesßge_t
+ 
+	$ps_mesßge_ª˚ive
+(
+ps_£rv™t_t
+ 
+§c
+)
+
+72 
+ch
+[10];
+
+73 
+	`ôﬂ
+(
+§c
+->
+sid
+, 
+ch
+);
+
+74 
+ps_£rv™t_t
+ 
+s
  = 
 	`¥v_ef_gë_cuºít_£rv™t
 ();
 
-65 
-	`vPrötNumbî
+75 
+ps_mesßge_t
+ 
+mesßge
+ = (ps_mesßge_t)
+	`¥v_hashèbÀ_gë
 (
-p£rv™t
+s
 ->
-°¨t_time
+öbox
+, 
+ch
 );
 
-66 
-	`p‹t_£rv™t_yõld
-();
+76  
+mesßge
+;
 
-67 
+77 
 	}
 }
 
@@ -367778,8 +367598,8 @@ p£rv™t
 1
 .
 0
-279
-22109
+280
+22156
 /home/wanbo/workspace/PSPM-C/apps/FreeRTOSConfig.h
 /home/wanbo/workspace/PSPM-C/apps/app.c
 /home/wanbo/workspace/PSPM-C/apps/app.h
@@ -368041,21 +367861,22 @@ p£rv™t
 /home/wanbo/workspace/PSPM-C/libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c
 /home/wanbo/workspace/PSPM-C/libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c
 /home/wanbo/workspace/PSPM-C/main.c
-/home/wanbo/workspace/PSPM-C/plibs/PSEFMconfigure.h
-/home/wanbo/workspace/PSPM-C/plibs/PSEFMport.h
-/home/wanbo/workspace/PSPM-C/plibs/PSEFMstart.c
+/home/wanbo/workspace/PSPM-C/plibs/PSPMconfigure.c
+/home/wanbo/workspace/PSPM-C/plibs/ef.c
 /home/wanbo/workspace/PSPM-C/plibs/event.c
-/home/wanbo/workspace/PSPM-C/plibs/exec_flow.c
-/home/wanbo/workspace/PSPM-C/plibs/include/PSEFMstart.h
+/home/wanbo/workspace/PSPM-C/plibs/hashtable.c
+/home/wanbo/workspace/PSPM-C/plibs/include/PSPMconfigure.h
+/home/wanbo/workspace/PSPM-C/plibs/include/PSPMport.h
+/home/wanbo/workspace/PSPM-C/plibs/include/ef.h
 /home/wanbo/workspace/PSPM-C/plibs/include/event.h
-/home/wanbo/workspace/PSPM-C/plibs/include/exec_flow.h
+/home/wanbo/workspace/PSPM-C/plibs/include/hashtable.h
 /home/wanbo/workspace/PSPM-C/plibs/include/list_internal.h
 /home/wanbo/workspace/PSPM-C/plibs/include/mode.h
-/home/wanbo/workspace/PSPM-C/plibs/include/model_time.h
+/home/wanbo/workspace/PSPM-C/plibs/include/modeltime.h
 /home/wanbo/workspace/PSPM-C/plibs/include/ptask.h
 /home/wanbo/workspace/PSPM-C/plibs/include/servant.h
 /home/wanbo/workspace/PSPM-C/plibs/list_internal.c
 /home/wanbo/workspace/PSPM-C/plibs/mode.c
-/home/wanbo/workspace/PSPM-C/plibs/model_time.c
+/home/wanbo/workspace/PSPM-C/plibs/modeltime.c
 /home/wanbo/workspace/PSPM-C/plibs/ptask.c
 /home/wanbo/workspace/PSPM-C/plibs/servant.c

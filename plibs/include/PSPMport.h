@@ -18,8 +18,8 @@
 #define port_wait(e)   xSemaphoreTake( e, portMAX_DELAY)
 #define port_trigger(e) xSemaphoreGive( e )
 // create semaphore and take the token away
-#define port_pure_event_create(e)  vSemaphoreCreateBinary(e)
-#define ps_event_sem_t xQueueHandle
+#define port_semph_create(e)  vSemaphoreCreateBinary(e);xSemaphoreTake(e, portMAX_DELAY)
+#define port_semph_t xQueueHandle
 
 
 // get current information
@@ -28,6 +28,8 @@
 // prv_ef_get_current_servant()
 
 #define port_malloc(size) pvPortMalloc(size)
+
+#define port_free(pointer) vPortFree(pointer)
 
 //#define port_print(string)  { int i = 0; while( (char)string[i]!='\0') { send_byte((char)string[i]); i++;}}
 #define port_print(string) vPrintString((char *) string)

@@ -1,6 +1,6 @@
-### PSEFM-C
+### PSPM-C
 
-PSEFM-C is a coordinate real time programming language which is based on c language.
+PSPM-C is a time-triggered coordinate real time programming language which is based on c language.
 
 
 ### How to Install

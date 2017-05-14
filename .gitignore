@@ -1,5 +1,4 @@
-*.out
 *.list
-*.files
-*.text
+*.txt
 tags
+cscope.*

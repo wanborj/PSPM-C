@@ -12,18 +12,6 @@ void prv_modeltime_init(ps_mode_t m)
 	modeltime = 0;
 }
 
-// duration of input phase
-static prv_tick_t prv_modeltime_di()
-{
-	return INPUT;
-}
-
-// duration of output phase
-static prv_tick_t prv_modeltime_do()
-{
-	return OUTPUT;
-}
-
 prv_tick_t prv_modeltime_unit_start()
 {
 	// I'am a genius, to implement the duration like (x,y]
@@ -33,17 +21,17 @@ prv_tick_t prv_modeltime_unit_start()
 
 prv_tick_t prv_modeltime_compute_start()
 {
-	return prv_modeltime_unit_start() +  prv_modeltime_di();
+	return prv_modeltime_unit_start() +  prv_duration_get_input();
 }
 
 prv_tick_t prv_modeltime_output_start()
 {
-	return prv_modeltime_unit_start() + prv_mode_get_unit(current_mode) - prv_modeltime_do();
+	return prv_modeltime_unit_start() + prv_mode_get_unit(current_mode) - prv_duration_get_output();
 }
 
 prv_tick_t prv_modeltime_unit_end()
 {
-	return prv_modeltime_output_start() + prv_modeltime_do();
+	return prv_modeltime_output_start() + prv_duration_get_output();
 }
 
 // simulate the execution of a servant and return its release time
@@ -69,7 +57,7 @@ prv_tick_t prv_modeltime_run(ps_servant_t s )
 		if(modeltime < prv_modeltime_output_start()){
 			modeltime = prv_modeltime_output_start();
 		}
-		if(0 == (prv_modeltime_output_start() + OUTPUT) % tasks[s->tid]->period){
+		if(0 == (prv_modeltime_output_start() + prv_duration_get_output()) % tasks[s->tid]->period){
 			release = modeltime;
 			modeltime += s->wcet;
 		}else{

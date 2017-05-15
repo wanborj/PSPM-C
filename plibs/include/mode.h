@@ -62,6 +62,9 @@ ps_mode_t prv_mode_get_current_mode();
 // called by ef
 prv_tick_t prv_mode_get_modestart();
 
+// called by prv_ef_is_time_to_trigger()
+void prv_mode_set_modestart(prv_tick_t t);
+
 int prv_mode_is_period_end();
 
 #endif

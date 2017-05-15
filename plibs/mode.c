@@ -19,6 +19,12 @@ prv_tick_t prv_mode_get_modestart()
 	return modestart;
 }
 
+void prv_mode_set_modestart(prv_tick_t t)
+{
+	// t is the period of current mode
+	modestart = t;
+}
+
 int prv_mode_is_period_end()
 {
 	prv_tick_t realtime = port_get_current_time();
@@ -66,13 +72,11 @@ void prv_mode_switch()
 	for( i = 0; i < carray.num; ++i ){
 		if( (tmp = carray.conditions[i]->condition()) == 1){
 			current_mode = marray.modes[carray.conditions[i]->mid];
-			modestart	= port_get_current_time();
 			return;
 		}
 	}
 	// no mode switch happens
 	current_mode = marray.modes[0];
-	modestart = port_get_current_time();
 
 }
 

@@ -16,15 +16,13 @@ typedef struct node * schedule_node;
 prv_list_t	STT[NUMOFMODES];
 
 static ps_servant_t current_servant;
-static ps_servant_t next_servant;
-static prv_tick_t   next_release;
 static int servant_flags[NUMOFSERVANTS];
 static int indegrees[NUMOFSERVANTS];
 static int edges[NUMOFSERVANTS][NUMOFSERVANTS];
 
 extern ps_task_t	tasks[NUMOFTASKS];
 extern ps_servant_t servants[NUMOFSERVANTS];
-extern port_semph_t sem[NUMOFSERVANTS];   // semaphore, each one of which trigger one servant
+extern port_semph_t sem[NUMOFSERVANTS];
 extern struct mode_array marray;
 
 static prv_list_t * prv_ef_get_dest_list(ps_servant_t s)
@@ -70,10 +68,10 @@ static void prv_parameter_init()
 static void prv_ef_edge_add(ps_servant_t s)
 {
 	int i;
+	ps_servant_t current;
 	prv_id_t sid = s->sid;
 	// active the servants
 	servant_flags[sid] = 1;
-	ps_servant_t current;
 
 	for( i=0; i<relations[sid].in.length; ++i ){
 		// only when two servants of the edge are in scheduling list, the edge is added
@@ -101,7 +99,7 @@ static void prv_ef_topograph_update_one(ps_task_t t)
 	}
 }
 
-// being invoked at the beginning of each unit
+// being invoked once per unit
 static void prv_ef_topograph_update(ps_mode_t m)
 {
 	int i, j;
@@ -145,12 +143,15 @@ static int compare(void * s1, void *s2)
 	}
 }
 
+//being invoked once per mode
 static void prv_ef_set_init(prv_list_t *S)
 {
+
 	S->length = 0;
-	S->last = S->first = S->current = NULL;
+	S->first = S->last = S->current = NULL;
 }
 
+//being invoked once per unit
 static void prv_ef_set_unit_update(prv_list_t *S)
 {
 	int i;
@@ -163,6 +164,7 @@ static void prv_ef_set_unit_update(prv_list_t *S)
 	}
 }
 
+// being invoked for each sorted servant
 // update the set S that contains nodes without edges
 static void prv_ef_set_servant_update(ps_servant_t servant, prv_list_t * S)
 {
@@ -174,15 +176,14 @@ static void prv_ef_set_servant_update(ps_servant_t servant, prv_list_t * S)
 		if(edges[sid][i]){
 			indegrees[i] --;
 			edges[sid][i] = 0;
-		}
-		if(!indegrees[i] && servant_flags[i] == 1){
-			servant_flags[i] = -1; // deactive the servant
-			prv_list_insert_sorted(servants[i], S, compare);
+			if(!indegrees[i] && servant_flags[i] == 1){
+				servant_flags[i] = -1; // deactive  the servant
+				prv_list_insert_sorted(servants[i], S, compare);
+			}
 		}
 	}
 }
 
-// find a specific type of servant in the set which contains servants without indegree
 static ps_servant_t prv_ef_find_servant(prv_stype_t type, prv_list_t * S)
 {
 	int i, len;
@@ -207,10 +208,11 @@ static ps_servant_t prv_ef_find_servant(prv_stype_t type, prv_list_t * S)
 /*
  * function: prv_STT_create, implement the improvedTSA algorithm
  * call:prv_modeltime_is_mode_end()
- *		prv_set_init()
+ *		prv_ef_topograph_update(m);
+ *		prv_ef_set_init()
  *		prv_ef_find_servant();
  *		prv_modeltime_run
- *		prv_set_update
+ *		prv_ef_set_update
  * */
 
 static void prv_STT_create(ps_mode_t m)
@@ -226,7 +228,6 @@ static void prv_STT_create(ps_mode_t m)
 	do{
 		prv_ef_topograph_update(m);
 		prv_ef_set_unit_update(&S);
-
 		while((tmp_servant = prv_ef_find_servant(0, &S)) != NULL){
 			// construct a schedule node in STT
 			if( (release = prv_modeltime_run(tmp_servant)) >= 0 ){
@@ -239,12 +240,15 @@ static void prv_STT_create(ps_mode_t m)
 			prv_list_insert(elem, table);
 			prv_ef_set_servant_update(tmp_servant, &S);
 		}
+		// function prv_ef_find_servant() find the servant and remove it from the original list
 		while((tmp_servant = prv_ef_find_servant(1, &S)) != NULL){
 			if( (release = prv_modeltime_run(tmp_servant)) >= 0 ){
 				elem = (schedule_node)port_malloc(sizeof(struct node));
 				elem->servant = tmp_servant;
 				elem->release = release;
 			}else{
+				// set the flag into true
+				// then the prv_ef_set_unit_update() will insert the servant into S again
 				servant_flags[tmp_servant->sid] = 1;
 				break;
 			}
@@ -259,12 +263,16 @@ static void prv_STT_create(ps_mode_t m)
 				prv_list_insert(elem, table);
 				prv_ef_set_servant_update(tmp_servant, &S);
 			}else{
+				// set the flag into true
+				// then the prv_ef_set_unit_update() will insert the servant into S again
 				servant_flags[tmp_servant->sid] = 1;
 			}
 		}
+
+		// push forward the model time for simulation
 		prv_modeltime_set_new_unit_start();
 
-	} while( !prv_modeltime_is_mode_end() );
+	}while( !prv_modeltime_is_mode_end() );
 }
 
  void prv_ef_create()
@@ -279,61 +287,28 @@ static void prv_STT_create(ps_mode_t m)
 	}
 }
 
-//void prv_ef_trigger_first()
-//{
-//	ps_mode_t current_mode = prv_mode_get_current_mode();
-//	schedule_node n = prv_list_get_current_entity(&STT[current_mode->mid]);
-//	next_servant = n->servant;
-//	next_release = n->release + prv_mode_get_modestart();
-//}
-
-// called once system enter idle state.
-// don't support aperiodic task
-
-int prv_ef_is_time_to_trigger(){
-
+int prv_ef_is_time_to_trigger()
+{
 	ps_mode_t current_mode = prv_mode_get_current_mode();
 	prv_item_t * current_item = prv_list_get_current_item(&STT[current_mode->mid]);
 	schedule_node n = (schedule_node)current_item->entity;
 	prv_tick_t current_time = port_get_current_time();
-	if(current_time >= n->release){
+
+	if(current_time >= n->release + prv_mode_get_modestart()){
 		prv_ef_set_current_servant(n->servant);
 		prv_list_set_current_item(&STT[current_mode->mid]);
+		if(current_item == STT[current_mode->mid].last){
+			prv_mode_set_modestart(prv_mode_get_modestart() + current_mode->period);
+		}
 		return 1;
 	}else{
 		return 0;
 	}
-
 }
 
-/*
-void prv_ef_pick_next()
-{
-	ps_mode_t current_mode = prv_mode_get_current_mode();
-	schedule_node n = prv_list_get_current_entity(&STT[current_mode->mid]);
-	next_servant = n->servant;
-	// the real time to release
-	next_release = n->release + prv_mode_get_modestart();
-}
-*/
-
-// called at next_release time point
 void prv_ef_triggering()
 {
 	port_trigger(sem[current_servant->sid]);
 }
 
-/*
-int prv_ef_is_time_to_trigger()
-{
-	prv_tick_t current_time = port_get_current_time();
-	if(next_release <= current_time){
-		prv_ef_set_current_servant(next_servant);
-		prv_ef_pick_next();
-		return 1;
-	}else{
-		return 0;
-	}
-}
-*/
 

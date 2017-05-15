@@ -11,14 +11,21 @@
 #define NUMOFINS 4   // max in degree of every servants
 #define NUMOFRELATIONS NUMOFINS*NUMOFSERVANTS
 
-#define INPUT 20
-#define OUTPUT 20
 
 typedef int		prv_id_t;
 typedef int		prv_stype_t;
 typedef long	prv_tick_t;
 typedef int		prv_num_t;
 typedef int		bool;
+
+// set the INPUT and OUTPUT
+// in the main function of PSPM program
+void ps_duration_set_input(prv_tick_t t);
+void ps_duration_set_output(prv_tick_t t);
+prv_tick_t prv_duration_get_input();
+prv_tick_t prv_duration_get_output();
+
+
 
 struct servant;
 struct message;

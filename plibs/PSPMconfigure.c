@@ -2,6 +2,9 @@
 #include "PSPMport.h"
 #include "mode.h"
 
+static prv_tick_t INPUT;
+static prv_tick_t OUTPUT;
+
 
 void prv_time_trigger()
 {
@@ -27,6 +30,26 @@ void system_start()
     prv_ef_create();
 	prv_mode_switch();
     port_scheduler_start();
+}
+
+void ps_duration_set_input(prv_tick_t t)
+{
+	INPUT = t;
+}
+
+void ps_duration_set_output(prv_tick_t t)
+{
+	OUTPUT = t;
+}
+
+prv_tick_t prv_duration_get_input(prv_tick_t t)
+{
+	return INPUT;
+}
+
+prv_tick_t prv_duration_get_output(prv_tick_t t)
+{
+	return OUTPUT;
 }
 
 void myTraceCreate      (){

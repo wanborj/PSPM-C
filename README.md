@@ -55,7 +55,7 @@ git submodule update --init dtc || sudo apt-get install libfdt-dev
 make -j4
 ```
 
-#### install PSEFM
+#### install PSPM
 ```
 git clone git://github.com/wanborj/PSPM-C.git
 cd PSPM-C
@@ -65,7 +65,7 @@ make qemu
 The PSPM example app in ./apps will run after that.
 
 
-### How to use PSEFM-C
+### How to use PSPM-C
 
 #### Programming API
 
@@ -109,10 +109,35 @@ switch_condition: The condition that mode switch happened
 target_mode_id: The id of target mode after mode switch
 ```
 
+#### Servant Runnable
+```
+Servant is create to invoke the runnable function to run concurrent with other servants at specific time.
+The runnable function must be defined with following framework:
+
+void (*func_name)(void * parameter)
+{
+	prv_id_t id = *(prv_id_t *)parameter;
+	while(1){
+		// For synchronizing
+		// PSPM-C dosen't implement the servant management mechanism
+		// Servants are managed by the task management mechanism of freeRTOS
+		ps_servant_wait(parameter);
+		
+		// Message receiving or do nothing
+		// Computing processing
+		// Result producing
+		...
+
+	}
+}
+
+```
+
 #### PSPM start
 ```
 system_start()
 ```
+
 
 
 

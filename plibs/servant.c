@@ -46,6 +46,8 @@ ps_servant_t ps_servant_create(   prv_id_t sid,
 	return s;
 }
 
+
+
 void ps_servant_wait(prv_id_t sid)
 {
 	//ps_servant_t s = prv_ef_get_current_servant();
@@ -53,27 +55,83 @@ void ps_servant_wait(prv_id_t sid)
 	port_wait( sem[sid] );
 }
 
+// not used
 void ps_servant_wake( ps_servant_t * s )
 {
 	prv_id_t  sid = prv_servant_get_id(s);
 	port_trigger( sem[sid] );
 }
 
-void ps_message_send( ps_servant_t target, ps_message_t message)
+void ps_servant_send( prv_id_t sid, int data)
 {
 	char ch[10];
-	itoa(target->sid, ch);
+	ps_servant_t send = prv_ef_get_current_servant();
+	itoa(send->sid, ch);
+	ps_message_t message = port_malloc(sizeof(struct message));
+	message->source = send;
+	message->destination = servants[sid];
+	message->data = data;
 
-	prv_hashtable_add(target->inbox, ch, message);
+	prv_hashtable_add(servants[sid]->inbox, ch, message);
 }
 
-ps_message_t ps_message_receive(ps_servant_t src)
+int ps_servant_receive(prv_id_t sid)
 {
 	char ch[10];
-	itoa(src->sid, ch);
+	itoa(sid, ch);
 	ps_servant_t s = prv_ef_get_current_servant();
 	ps_message_t message = (ps_message_t)prv_hashtable_get(s->inbox, ch);
-	return message;
+	return message->data;
 }
 
 
+int ps_servant_getsrcnum()
+{
+	ps_servant_t s = prv_ef_get_current_servant();
+	prv_list_t * src = prv_ef_get_src_list(s);
+	return src->length;
+}
+
+int ps_servant_getsrcsid(int index)
+{
+	int i;
+	ps_servant_t s = prv_ef_get_current_servant();
+	prv_list_t * src = prv_ef_get_src_list(s);
+	prv_item_t * result = src->first;
+
+	if(index >= src->length){
+		return -1;
+	}
+
+	while(index--){
+		result = result->next;
+	}
+
+	return ((ps_servant_t)(result->entity))->sid;
+}
+
+int ps_servant_get_destnum()
+{
+	ps_servant_t s = prv_ef_get_current_servant();
+	prv_list_t * dest = prv_ef_get_dest_list(s);
+	return dest->length;
+}
+
+
+int ps_servant_getdestsid(int index)
+{
+	int i;
+	ps_servant_t s = prv_ef_get_current_servant();
+	prv_list_t *  dest = prv_ef_get_dest_list(s);
+	prv_item_t * result = dest->first;
+
+	if(index >= dest->length){
+		return -1;
+	}
+
+	while(index--){
+		result = result->next;
+	}
+
+	return ((ps_servant_t)(result->entity))->sid;
+}

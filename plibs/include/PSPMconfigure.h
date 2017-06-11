@@ -110,6 +110,8 @@ void myTraceSwitchedOut();
 
 void vApplicationTickHook( void );
 
+void vApplicationIdleHook(void );
+
 //#define offsetof(s, m)   (char *)&(((s *)0)->m)
 /**
  *get struct pointer from member pointer

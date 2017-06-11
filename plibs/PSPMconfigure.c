@@ -66,6 +66,15 @@ void vApplicationTickHook( void )
 	prv_time_trigger();
 }
 
+void vApplicationIdleHook()
+{
+	int result ;
+	result = prv_ef_coroutine_trigger();
+	if( result == 2){ // could enter low power mode;
+		// lower power mode
+	}
+}
+
 //#define offsetof(s, m)   (char *)&(((s *)0)->m)
 /**
  *get struct pointer from member pointer

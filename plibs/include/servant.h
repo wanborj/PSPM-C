@@ -91,7 +91,7 @@ Output:
 Return:
 Others:
  * *****************************************************/
-void ps_message_send( ps_servant_t target, ps_message_t message );
+void ps_servant_send(prv_id_t sid, int data);
 
 /******************************************************
 Function: ps_servant_receive
@@ -103,7 +103,17 @@ Output:
 Return:
 Others:
  * *****************************************************/
-ps_message_t ps_message_receive(ps_servant_t src);
+int ps_servant_receive(prv_id_t sid);
+
+int ps_servant_getsrcnum();
+
+// return the id of a source servant according to the id of src list
+int ps_servant_getsrcsid(int index);
+
+int ps_servant_getdestnum();
+
+int ps_servant_getdestsid(int index);
+
 
 
 #endif

@@ -9,6 +9,10 @@
 #include "servant.h"
 #include "list_internal.h"
 
+
+prv_list_t * prv_ef_get_dest_list(ps_servant_t s);
+
+prv_list_t * prv_ef_get_src_list(ps_servant_t s);
 /******************************************************
 Function: prv_ef_add_relation
 Description: Kernel function, build the communication relationship among servants
@@ -37,21 +41,6 @@ ps_servant_t prv_ef_get_current_servant();
 void         prv_ef_set_current_servant(ps_servant_t s);
 
 
-
-void prv_ef_trigger_first();
-
-/******************************************************
-Function: prv_ef_pick_next
-Description: kernel function, pick the next servant in the scheduling table
-Calls:
-Called by:
-Input:
-Output:
-Return:
-Others:
- * *****************************************************/
-void prv_ef_pick_next();
-
 /******************************************************
 unction: prv_ef_triggering
 Description: kernel function, trigger the servant
@@ -75,5 +64,9 @@ Return:
 Others:
  * *****************************************************/
 void prv_ef_create();
+
+
+int prv_ef_is_time_to_trigger();
+int prv_ef_coroutine_trigger();
 
 #endif

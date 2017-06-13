@@ -62,12 +62,11 @@ void ps_servant_wake( ps_servant_t * s )
 	port_trigger( sem[sid] );
 }
 
-void ps_servant_send( prv_id_t sid, int data)
+void ps_servant_send( prv_id_t sid, int data, ps_message_t message)
 {
 	char ch[10];
 	ps_servant_t send = prv_ef_get_current_servant();
 	itoa(send->sid, ch);
-	ps_message_t message = port_malloc(sizeof(struct message));
 	message->source = send;
 	message->destination = servants[sid];
 	message->data = data;

@@ -5,8 +5,8 @@
 
 int main()
 {
-	ps_servant_t ps_servants[NUMOFSERVANTS];
-	ps_task_t ps_tasks[NUMOFTASKS];
+	ps_servant_t ps_servants[8];
+	ps_task_t ps_tasks[2];
 
 	// the duration of input phase and output phase of a Unit
 	// which is the max jitter tolerance of system

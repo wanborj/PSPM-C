@@ -91,7 +91,7 @@ Output:
 Return:
 Others:
  * *****************************************************/
-void ps_servant_send(prv_id_t sid, int data);
+void ps_servant_send(prv_id_t sid, int data, ps_message_t msg);
 
 /******************************************************
 Function: ps_servant_receive

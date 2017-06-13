@@ -113,11 +113,12 @@ int prv_hashtable_put(prv_hashtable_t *ht, char *key, void * value, void (*free_
 
 	while(p){
 		if(strcmp(p->key, key)==0){
-			if(p->free_value){
-				p->free_value(p->value);
-			}
+			// no free function needs, because message are created as a stack variable instead of heap variable
+			//if(p->free_value){
+			//	p->free_value(p->value);
+			//}
 			p->value = value;
-			p->free_value = vPortFree; // port_free can not be a pointer
+			//p->free_value = vPortFree; // port_free can not be a pointer
 			break;
 		}
 		prep = p;
@@ -131,7 +132,7 @@ int prv_hashtable_put(prv_hashtable_t *ht, char *key, void * value, void (*free_
 		}
 		struct kv *kv = port_malloc(sizeof(struct kv));
 		if( NULL == kv ){
-			port_free(kstr);
+			vPortFree(kstr);
 			kstr = NULL;
 			return -1;
 		}

@@ -42,12 +42,12 @@ void ps_duration_set_output(prv_tick_t t)
 	OUTPUT = t;
 }
 
-prv_tick_t prv_duration_get_input(prv_tick_t t)
+prv_tick_t prv_duration_get_input()
 {
 	return INPUT;
 }
 
-prv_tick_t prv_duration_get_output(prv_tick_t t)
+prv_tick_t prv_duration_get_output()
 {
 	return OUTPUT;
 }
@@ -68,11 +68,6 @@ void vApplicationTickHook( void )
 
 void vApplicationIdleHook()
 {
-	int result ;
-	result = prv_ef_coroutine_trigger();
-	if( result == 2){ // could enter low power mode;
-		// lower power mode
-	}
 }
 
 //#define offsetof(s, m)   (char *)&(((s *)0)->m)

@@ -6,7 +6,10 @@
 #include "semphr.h"
 #include "queue.h"
 // based on FreeRTOS API
-
+// for configuring the mode of prv_ef_is_time_to_trigger in ef.c file
+// 0, complete deterministic mode
+// otherwise, support C-Servants execute advance for power saving
+#define configUSE_OPTIMIZATION  1
 // servant operation
 #define port_servant_create(runnable, para, prio) xTaskCreate(runnable, NULL, 128, para, prio, NULL)
 

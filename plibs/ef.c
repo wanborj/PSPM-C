@@ -288,7 +288,8 @@ static void prv_STT_create(ps_mode_t m)
 }
 
 // fixed time slot
-/*
+#if (configUSE_OPTIMIZATION==0)
+
 int prv_ef_is_time_to_trigger()
 {
 	ps_mode_t current_mode = prv_mode_get_current_mode();
@@ -310,9 +311,10 @@ int prv_ef_is_time_to_trigger()
 		return 0;
 	}
 }
-*/
 
+#else
 // advance execution of C-Servants
+
 int prv_ef_is_time_to_trigger()
 {
 	ps_mode_t current_mode = prv_mode_get_current_mode();
@@ -338,33 +340,17 @@ int prv_ef_is_time_to_trigger()
 	}else{
 		// cope with C-Servant: allow next C-Servant to be triggered advance
 		// one the previous finish its execution
-		return 0;
+		if(current_time >= prv_mode_get_modestart() + prv_duration_get_input()){
+			prv_ef_set_current_servant(n->servant);
+			prv_list_set_current_item(&STT[current_mode->mid]);
+			return 1;
+		}else{
+			return 0;
+		}
 	}
 }
 
-// trigger C-Servant with coroutine paradigm
-int prv_ef_coroutine_trigger()
-{
-	ps_mode_t current_mode = prv_mode_get_current_mode();
-	prv_item_t * current_item = prv_list_get_current_item(&STT[current_mode->mid]);
-	schedule_node n = (schedule_node)current_item->entity;
-	prv_tick_t current_time = port_get_current_time();
-
-	// if the next one is O-Servant, idle task enter low power mode
-	if(prv_servant_get_type(n->servant) == 2){
-		return 2;
-	}else if(prv_servant_get_type(n->servant) == 1){
-		// set the n->servant as current Servant
-		prv_ef_set_current_servant(n->servant);
-
-		// force the current iterator point to the next C-Servant
-		prv_list_set_current_item(&STT[current_mode->mid]);
-		prv_ef_triggering(); // trigger the C-Servant to run
-		return 1;
-	}else{
-		return 0;
-	}
-}
+#endif
 
 void prv_ef_triggering()
 {

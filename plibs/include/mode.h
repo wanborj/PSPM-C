@@ -67,4 +67,12 @@ void prv_mode_set_modestart(prv_tick_t t);
 
 int prv_mode_is_period_end();
 
+void ps_duration_set_input(prv_tick_t t);
+
+void ps_duration_set_output(prv_tick_t t);
+
+prv_tick_t prv_duration_get_input();
+
+prv_tick_t prv_duration_get_output();
+
 #endif
